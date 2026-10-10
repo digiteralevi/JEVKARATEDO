@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEV Eagle Hand Karatedo Philippines | World-Class Karate sa Malasiqui</title>
+  <meta name="description" content="Maging disiplinado, matatag, at palaban sa buhay. Matuto ng authentic karate sa ilalim ng 7th Dan at 5th Dan masters sa Malasiqui sa halagang ₱800/buwan lang.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-bg: #0A1810;
+      --brand-bg-alt: #102419;
+      --brand-card: rgba(22, 163, 74, 0.05);
+      --brand-card-solid: #132a1e;
+      --brand-accent: #16A34A;
+      --brand-accent-glow: rgba(22, 163, 74, 0.35);
+      --brand-secondary: #CA8A04;
+      --brand-text: #F0FDF4;
+      --brand-text-muted: rgba(240, 253, 244, 0.72);
+      --font-display: 'Big Shoulders Display', sans-serif;
+      --font-accent: 'Newsreader', serif;
+      --font-body: 'DM Sans', sans-serif;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-subtle: 0 10px 28px rgba(0,0,0,0.25);
+      --shadow-heavy: 0 20px 45px rgba(0,0,0,0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--brand-bg);
+      color: var(--brand-text);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.65;
+      overflow-x: hidden;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Scroll & Micro-Animations Required Block */
+    .fc-reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+    }
+    .fc-reveal.fc-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fc-hover-lift {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .fc-hover-lift:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+    }
+    .fc-btn-primary, [id="fc-cta-main"] {
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .fc-btn-primary:hover, [id="fc-cta-main"]:hover {
+      transform: translateY(-2px) scale(1.02);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fc-reveal { opacity: 1; transform: none; transition: none; }
+      .fc-hover-lift:hover, .fc-btn-primary:hover, [id="fc-cta-main"]:hover { transform: none; }
+    }
+
+    /* Speed Stripe Signature Accent */
+    .speed-stripes {
+      display: inline-flex;
+      gap: 5px;
+      vertical-align: middle;
+      margin-right: 12px;
+      transform: skewX(-20deg);
+    }
+    .speed-stripes span {
+      display: block;
+      width: 4px;
+      height: 24px;
+      background: var(--brand-accent);
+      border-radius: 2px;
+    }
+    .speed-stripes span:nth-child(2) { background: var(--brand-secondary); }
+    .speed-stripes span:nth-child(3) { background: #fff; }
+
+    /* Modern Card 3D Depth */
+    .card-depth-container {
+      perspective: 800px;
+    }
+    .card-depth-item {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card-depth-item:hover {
+      transform: translateY(-6px) rotateX(2deg);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Global Layout Helpers */
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-padding {
+      padding: clamp(72px, 8vw, 130px) 0;
+      position: relative;
+    }
+
+    /* Diagonal Cuts */
+    .slash-cut-top {
+      clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%);
+      margin-top: -4vw;
+      padding-top: calc(clamp(72px, 8vw, 130px) + 3vw);
+    }
+    .slash-cut-both {
+      clip-path: polygon(0 3.5vw, 100% 0, 100% calc(100% - 3.5vw), 0 100%);
+      margin-top: -3.5vw;
+      padding-top: calc(clamp(72px, 8vw, 130px) + 3vw);
+      padding-bottom: calc(clamp(72px, 8vw, 130px) + 3vw);
+    }
+
+    /* Glass UI */
+    .glass-nav-pill {
+      margin: 16px auto 0;
+      max-width: 1120px;
+      padding: 12px 28px;
+      border-radius: 999px;
+      backdrop-filter: blur(14px) saturate(1.4);
+      -webkit-backdrop-filter: blur(14px) saturate(1.4);
+      background: rgba(16, 36, 25, 0.65);
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 12px 30px rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 30;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 0.98;
+    }
+    .accent-italic {
+      font-family: var(--font-accent);
+      font-style: italic;
+      text-transform: none;
+      font-weight: 400;
+      color: var(--brand-accent);
+      letter-spacing: normal;
+    }
+
+    /* Buttons */
+    .btn-solid-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--brand-accent);
+      color: #05140b;
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      padding: 16px 36px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 24px var(--brand-accent-glow);
+    }
+    .btn-arrow-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #05140b;
+      color: var(--brand-accent);
+    }
+
+    /* Hero Section Structure */
+    .hero-wrapper {
+      min-height: 92svh;
+      position: relative;
+      background: radial-gradient(circle at 20% 30%, #173822 0%, var(--brand-bg) 70%);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 40px 0 80px;
+    }
+    .hero-split-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-media-box {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .hero-cut-border {
+      position: absolute;
+      bottom: 15%;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: var(--brand-accent);
+      box-shadow: 0 0 15px var(--brand-accent);
+      transform: rotate(-8.5deg);
+      transform-origin: center right;
+      z-index: 5;
+    }
+    .hero-skew-cta {
+      position: absolute;
+      bottom: 24px;
+      right: 20px;
+      z-index: 10;
+      transform: skewX(-8deg);
+    }
+    .hero-skew-cta .btn-solid-primary {
+      transform: skewX(8deg);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.6);
+    }
+
+    /* Announcement Bar */
+    .announcement-bar {
+      background: linear-gradient(90deg, #102419 0%, #154527 50%, #102419 100%);
+      border-bottom: 1px solid rgba(22, 163, 74, 0.3);
+      padding: 10px 16px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #bbf7d0;
+      letter-spacing: 0.02em;
+    }
+    .announcement-bar strong {
+      color: #fff;
+    }
+
+    /* Flex Grid System for Cards */
+    .cards-flex-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+    .card-item-standard {
+      flex: 0 1 340px;
+      background: rgba(128, 128, 128, 0.06);
+      border: 1px solid rgba(128, 128, 128, 0.14);
+      border-radius: var(--radius-md);
+      padding: 30px 26px;
+      box-shadow: var(--shadow-subtle);
+    }
+    .card-item-compact {
+      flex: 0 1 260px;
+      background: rgba(128, 128, 128, 0.06);
+      border: 1px solid rgba(128, 128, 128, 0.14);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      box-shadow: var(--shadow-subtle);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Numbered Slab */
+    .slab-number {
+      position: absolute;
+      right: -8px;
+      top: -16px;
+      font-family: var(--font-display);
+      font-size: 88px;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.04);
+      user-select: none;
+      line-height: 1;
+    }
+
+    /* Sticky CTA */
+    .sticky-bottom-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(10, 24, 16, 0.95);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(22, 163, 74, 0.35);
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 99;
+      transform: translateY(110%);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 -8px 25px rgba(0,0,0,0.5);
+    }
+    .sticky-bottom-cta.active {
+      transform: translateY(0);
+    }
+
+    /* Social Proof Toast */
+    .toast-popup {
+      position: fixed;
+      bottom: 90px;
+      left: 24px;
+      background: #132a1e;
+      border: 1px solid rgba(22, 163, 74, 0.4);
+      padding: 12px 18px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+      z-index: 95;
+      transform: translateY(150px);
+      opacity: 0;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      max-width: 330px;
+    }
+    .toast-popup.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Schedule Table */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      background: rgba(128, 128, 128, 0.05);
+      border-radius: 16px;
+      border: 1px solid rgba(128, 128, 128, 0.14);
+      box-shadow: var(--shadow-subtle);
+      margin-top: 24px;
+    }
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    .schedule-table th, .schedule-table td {
+      padding: 18px 22px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .schedule-table th {
+      background: rgba(22, 163, 74, 0.15);
+      font-family: var(--font-display);
+      font-size: 19px;
+      letter-spacing: 0.04em;
+      color: #fff;
+    }
+
+    /* FAQ */
+    .faq-item {
+      background: rgba(128,128,128,0.06);
+      border: 1px solid rgba(128,128,128,0.14);
+      border-radius: var(--radius-md);
+      margin-bottom: 14px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .faq-question {
+      padding: 22px 26px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #fff;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 26px;
+      color: var(--brand-text-muted);
+    }
+    .faq-item.open .faq-answer {
+      max-height: 250px;
+      padding: 0 26px 22px;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+
+    @media (max-width: 860px) {
+      .hero-split-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-media-box {
+        height: 380px;
+      }
+      .hero-skew-cta {
+        position: static;
+        transform: none;
+        margin-top: 16px;
+      }
+      .hero-skew-cta .btn-solid-primary {
+        transform: none;
+        width: 100%;
+      }
+      .glass-nav-pill {
+        margin: 12px;
+        padding: 10px 18px;
+      }
+      .sticky-bottom-cta {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+    }
+  </style>
+
+<!-- SEO: meta description (search engines look for this exact tag — separate from the og:description used by social sharing previews below) -->
+<meta name="description" content="Affordable, world-class karate training under 7th Dan and 5th Dan masters for only ₱800/month. Join a 30-year legacy dojo in Poblacion, Malasiqui that builds di">
+<!-- Open Graph / social share preview -->
+<meta property="og:title" content="FunnelCraft">
+<meta property="og:description" content="Affordable, world-class karate training under 7th Dan and 5th Dan masters for only ₱800/month. Join a 30-year legacy dojo in Poblacion, Malasiqui that builds di">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"FunnelCraft","description":"Affordable, world-class karate training under 7th Dan and 5th Dan masters for only ₱800/month. Join a 30-year legacy dojo in Poblacion, Malasiqui that builds discipline, confidence, and champions.\n=== SPECIAL DIRECTIVES FROM THE OWNER (FOLLOW THESE ON TOP OF ALL RULES) ===\nBuild a 'Meet Our Coaches'","offers":{"@type":"Offer","price":"800","priceCurrency":"USD","availability":"https://schema.org/InStock"}}
+</script>
+
+
+<script>
+(function(){
+try {
+var params = new URLSearchParams(location.search);
+var names = ['ref','aff','affid','affiliate','partner','via'];
+for (var i=0;i<names.length;i++){
+var v = params.get(names[i]);
+if (v) { localStorage.setItem('fc_ref', v); break; }
+}
+} catch(e){}
+})();
+</script>
+</head>
+<body style="margin:0;">
+
+<div id="fc-page-sales" class="fc-page" style="display:none;">
+
+<div style="position:sticky;top:0;z-index:999;background:#0A1810;border-bottom:1px solid rgba(255,255,255,0.08);">
+<div style="max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:14px 24px;">
+<a href="#sales" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+<span style="font-weight:700;color:#F0FDF4;font-size:16px;">JEV EAGLE HAND KARATEDO PHILIPPINES</span>
+</a>
+<div style="display:flex;gap:22px;flex-wrap:wrap;font-size:13px;">
+<a href="#sales" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Home</a>
+<a href="#about" style="color:#F0FDF4;opacity:.75;text-decoration:none;">About</a><a href="#services" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Services</a><a href="#faq" style="color:#F0FDF4;opacity:.75;text-decoration:none;">FAQ</a><a href="#contact" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Contact</a><a href="#booking" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Book a Call</a>
+</div>
+</div>
+</div>
+
+
+  <!-- 1. ANNOUNCEMENT BAR (Normal flow, directly below nav) -->
+  <div class="announcement-bar">
+    <span>🏆 <strong>MALASIQUI DOJO ENROLLMENT OPEN:</strong> 30-Taong Karatedo Legacy! <strong>₱800/buwan lang</strong>. Libreng 1st Trial Class para sa mga bagong estudyante!</span>
+  </div>
+
+  <!-- FLOATING FROSTED NAV PILL -->
+  <header style="padding: 0 16px;">
+    <div class="glass-nav-pill">
+      <div>
+        <span style="font-family:serif;font-size:22px;font-weight:900;">JEV EAGLE HAND KARATEDO PHILIPPINES</span>
+      </div>
+      <div>
+        <a href="#pricing" style="color:var(--brand-accent);text-decoration:none;font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:6px;">
+          <span>Sumali Ngayon</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION (Diagonal Cut Template with Speed-Lit Track) -->
+  <section class="hero-wrapper">
+    <div class="container">
+      <div class="hero-split-grid">
+        
+        <!-- Left Side: Copy & Direct Value -->
+        <div>
+          <!-- Announcement Pill -->
+          <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(22,163,74,0.15);border:1px solid rgba(22,163,74,0.3);margin-bottom:18px;">
+            <span style="width:8px;height:8px;border-radius:50%;background:var(--brand-accent);display:inline-block;"></span>
+            <span style="font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#86efac;">Poblacion, Montemayor St., Malasiqui</span>
+          </div>
+
+          <!-- Hero H1 Headline -->
+          <h1 id="fc-main-headline" style="font-size:clamp(44px, 6.2vw, 84px);margin-bottom:16px;color:#fff;">
+            HUBUGIN ANG DISIPLINA AT <span class="accent-italic">Kampeon</span> SA BUHAY NG ANAK MO.
+          </h1>
+
+          <p style="font-size:clamp(17px, 2vw, 20px);color:var(--brand-text-muted);margin-bottom:28px;max-width:540px;line-height:1.5;">
+            Matuto ng tunay na tradisyunal na karate sa ilalim ng <strong>7th Dan at 5th Dan masters</strong>. Iiwan ang gadget, magkakaroon ng lakas ng loob at respeto — sa abot-kayang halaga na <strong>₱800 kada buwan</strong>.
+          </p>
+
+          <!-- Stat/Benefit Chips -->
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px;">
+            <div style="padding:8px 14px;background:rgba(255,255,255,0.05);border-radius:8px;border:1px solid rgba(255,255,255,0.1);font-size:14px;font-weight:700;">
+              🥋 30 Taong Dojo Legacy
+            </div>
+            <div style="padding:8px 14px;background:rgba(255,255,255,0.05);border-radius:8px;border:1px solid rgba(255,255,255,0.1);font-size:14px;font-weight:700;">
+              🥇 Dosenang Medals & Trophies
+            </div>
+            <div style="padding:8px 14px;background:rgba(255,255,255,0.05);border-radius:8px;border:1px solid rgba(255,255,255,0.1);font-size:14px;font-weight:700;">
+              🛡️ Safe & Family Dojo
+            </div>
+          </div>
+
+          <div style="display:none;" id="mobile-hero-cta">
+            <!-- Fallback anchor for accessibility -->
+          </div>
+        </div>
+
+        <!-- Right Side: Diagonal Cut Video Showcase -->
+        <div style="position:relative;">
+          <div class="hero-media-box">
+            <video data-fc-hero src="https://res.cloudinary.com/dqo0bc4u/video/upload/v1791590129/Martial_artists_practicing_synch__20261010075506_vvd2r8.mp4" poster="images/hero.jpg" autoplay muted loop playsinline preload="metadata" disablepictureinpicture aria-label="FunnelCraft" style="clip-path:polygon(0 0,100% 0,100% 85%,0 100%);width:100%;height:100%;object-fit:cover;"></video>
+            <div class="hero-cut-border"></div>
+          </div>
+
+          <!-- Skewed CTA Anchored to Diagonal Cut -->
+          <div class="hero-skew-cta">
+            <a id="fc-main-cta" href="#" onclick="if(typeof fcTrackEvent==='function'){fcTrackEvent('InitiateCheckout');}var b=document.getElementById('fc-bump-checkbox');var bp=b&&b.checked;var ne=document.getElementById('fc-checkout-name');var ee=document.getElementById('fc-checkout-email');if(ne&&ee){var nm=ne.value.trim();var em=ee.value.trim();if(!nm||!em){alert(&quot;Pakilagay ang pangalan at email mo bago magpatuloy.&quot;);return false;}}var h=bp?&quot;&quot;:&quot;&quot;;if(h&&h!=='#'){window.open(h,'_blank','noopener');}return false;" class="btn-solid-primary">
+              <span>I-reserve ang Free Trial Class</span>
+              <span class="btn-arrow-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. THIS IS FOR YOU IF... SECTION -->
+  <section class="section-padding slash-cut-top" style="background:var(--brand-bg-alt);">
+    <div class="container fc-reveal">
+      <div style="text-align:center;max-width:760px;margin:0 auto 50px;">
+        <div class="speed-stripes"><span></span><span></span><span></span></div>
+        <h2 style="font-size:clamp(32px, 5vw, 54px);margin-bottom:14px;color:#fff;">
+          PARA SA IYO AT SA PAMILYA MO <span class="accent-italic">Ang Dojo Na 'To</span>
+        </h2>
+        <p style="color:var(--brand-text-muted);font-size:18px;">
+          Kung naghahanap ka ng totoo, subok, at may malasakit na martial arts community dito sa Pangasinan, basahin mo ito nang mabuti:
+        </p>
+      </div>
+
+      <div class="cards-flex-wrap card-depth-container">
+        
+        <!-- Bullet 1 -->
+        <div class="card-item-standard fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.08s;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(22,163,74,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--brand-accent);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3 style="font-size:22px;margin-bottom:10px;color:#fff;">MGA MAGULANG NA GUSTONG ILAYO ANG ANAK SA SCREEN</h3>
+          <p style="color:var(--brand-text-muted);font-size:15px;line-height:1.6;">
+            Pagod ka na bang makita ang anak mo na maghapong nakayuko sa cellphone o Roblox? Dito, matututo silang mag-focus, magpawis, at magkaroon ng tunay na pisikal na lakas.
+          </p>
+        </div>
+
+        <!-- Bullet 2 -->
+        <div class="card-item-standard fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.16s;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(22,163,74,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--brand-accent);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 style="font-size:22px;margin-bottom:10px;color:#fff;">GUSTONG MATUTO NG PROTEKSYON AT SELF-DEFENSE</h3>
+          <p style="color:var(--brand-text-muted);font-size:15px;line-height:1.6;">
+            Gusto mong magkaroon ng kakayahang ipagtanggol ang sarili kapag kailangan — pero ayaw mo sa mga magulong gym o barumbadong training na puro yabang lang.
+          </p>
+        </div>
+
+        <!-- Bullet 3 -->
+        <div class="card-item-standard fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.24s;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(22,163,74,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--brand-accent);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+          </div>
+          <h3 style="font-size:22px;margin-bottom:10px;color:#fff;">ADULTS NA NA-STRESS AT WALANG AFFORDABLE NA GYM</h3>
+          <p style="color:var(--brand-text-muted);font-size:15px;line-height:1.6;">
+            Kung working adult ka sa Malasiqui o karatig-bayan, ito ang pinaka-sulit na paraan para mag-destress, magbawas ng timbang, at patatagin ang katawan nang hindi gumagastos ng libo-libo.
+          </p>
+        </div>
+
+        <!-- Bullet 4 -->
+        <div class="card-item-standard fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.32s;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(22,163,74,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--brand-accent);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 style="font-size:22px;margin-bottom:10px;color:#fff;">NAGHAHANAP NG FAMILY-FRIENDLY & RESPECTFUL DOJO</h3>
+          <p style="color:var(--brand-text-muted);font-size:15px;line-height:1.6;">
+            Isang dojo kung saan ang bawat baguhan ay nirerespeto, inaalalayan, at itinuturing na kapamilya — mula sa pinakabatang white belt hanggang sa pinaka-beteranong black belt.
+          </p>
+        </div>
+
+        <!-- Bullet 5 -->
+        <div class="card-item-standard fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.40s;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(22,163,74,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--brand-accent);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <h3 style="font-size:22px;margin-bottom:10px;color:#fff;">MGA NANGANGARAP MAGING BLACK BELT O CHAMPION</h3>
+          <p style="color:var(--brand-text-muted);font-size:15px;line-height:1.6;">
+            Gusto mong sumabak sa mga lehitimong torneo at matuto ng championship-caliber form mula sa mga coaches na napatunayan na ang galing sa loob ng 3 dekada.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. PAIN POINTS SECTION -->
+  <section class="section-padding" style="background:var(--brand-bg);">
+    <div class="container fc-reveal">
+      <div style="max-width:820px;margin:0 auto;">
+        
+        <div style="display:inline-flex;align-items:center;margin-bottom:16px;">
+          <div class="speed-stripes"><span></span><span></span><span></span></div>
+          <span style="font-family:var(--font-display);font-size:20px;letter-spacing:0.06em;color:var(--brand-secondary);text-transform:uppercase;">Maging Tapat Tayo</span>
+        </div>
+
+        <h2 style="font-size:clamp(34px, 5.2vw, 56px);margin-bottom:24px;color:#fff;">
+          Pamilyar Ba Sa'yo Ang <span class="accent-italic">Mga Problemang 'To?</span>
+        </h2>
+
+        <p style="font-size:18px;color:var(--brand-text-muted);margin-bottom:32px;">
+          Hindi madaling magpalaki ng bata sa panahon ngayon, at lalong hindi madaling maghanap ng matinong paglalaanan ng oras at kalusugan dito sa probinsya nang hindi sumasakit ang bulsa:
+        </p>
+
+        <!-- Ordered Pain Points (mild annoying to deeply painful) -->
+        <div style="display:flex;flex-direction:column;gap:18px;">
+          
+          <div style="background:rgba(255,255,255,0.03);border-left:4px solid var(--brand-secondary);padding:20px 24px;border-radius:0 12px 12px 0;">
+            <p style="font-size:17px;line-height:1.6;">
+              <strong>"Maghapon na lang nakatutok sa cellphone o iPad ang anak ko."</strong> Nakikita mong lumalabo ang mata, sumasama ang postura, at madaling mainip kapag walang hawak na gadget.
+            </p>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.03);border-left:4px solid var(--brand-secondary);padding:20px 24px;border-radius:0 12px 12px 0;">
+            <p style="font-size:17px;line-height:1.6;">
+              <strong>"Nawawala ang respeto at mabilis sumagot-sagot."</strong> Walang venue para matutunan ang lumang values ng paggalang sa nakatatanda, pagtitiyaga, at pagtanggap ng pagkatalo nang may dangal.
+            </p>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.03);border-left:4px solid var(--brand-accent);padding:20px 24px;border-radius:0 12px 12px 0;">
+            <p style="font-size:17px;line-height:1.6;">
+              <strong>"Sobrang mahal ng mga martial arts gym sa mga mall."</strong> May mga sisingil sa'yo ng ₱3,000 hanggang ₱5,000 bawat buwan, bukod pa ang hiwalay na uniform at exam fees na libo-libo. Sino bang may budget para doon?
+            </p>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.03);border-left:4px solid var(--brand-accent);padding:20px 24px;border-radius:0 12px 12px 0;">
+            <p style="font-size:17px;line-height:1.6;">
+              <strong>"Takot kang mag-enroll sa mga fly-by-night o hindi lisensyadong instructors."</strong> Maraming nagbubukas ng 'club' na ilang buwan pa lang nag-training. Paano ka makakasiguro sa kaligtasan at tamang form ng anak mo?
+            </p>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.03);border-left:4px solid #ef4444;padding:20px 24px;border-radius:0 12px 12px 0;">
+            <p style="font-size:17px;line-height:1.6;">
+              <strong>"Lumalaki silang mahina ang loob at madaling i-bully sa school."</strong> Walang mas masakit para sa isang magulang kaysa marinig na tinutukso o binubully ang anak sa paaralan at wala siyang kumpiyansa o lakas na tumindig para sa sarili niya.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SOLUTION BRIDGE (The Turning Point) -->
+  <section class="section-padding slash-cut-top" style="background:#0c1e14;">
+    <div class="container fc-reveal">
+      <div style="max-width:840px;margin:0 auto;text-align:left;">
+        
+        <div style="display:inline-flex;align-items:center;margin-bottom:14px;">
+          <div class="speed-stripes"><span></span><span></span><span></span></div>
+          <span style="font-family:var(--font-display);font-size:20px;letter-spacing:0.06em;color:var(--brand-accent);text-transform:uppercase;">Ang Pagbabagong Matagal Mo Nang Hinahanap</span>
+        </div>
+
+        <h2 style="font-size:clamp(32px, 5vw, 52px);margin-bottom:24px;color:#fff;">
+          Hindi Mo Kailangang Gumastos Ng Libo-Libo Para Sa <span class="accent-italic">Tunay Na Disiplina.</span>
+        </h2>
+
+        <p style="font-size:18px;line-height:1.7;color:var(--brand-text-muted);margin-bottom:20px;">
+          Narito ang totoo: Ang martial arts ay hindi ginawa para maging pribilehiyo lang ng mayayaman. Hindi rin ito tungkol sa pananakit o pagiging marahas. Ang tunay na karatedo ay tungkol sa <strong>pagkontrol sa sarili, paggalang sa kapwa, at pagbuo ng matibay na character</strong>.
+        </p>
+
+        <p style="font-size:18px;line-height:1.7;color:var(--brand-text-muted);margin-bottom:20px;">
+          Dito pumasok ang misyon ng <strong>JEV EAGLE HAND KARATEDO PHILIPPINES</strong>. Sa loob ng higit tatlong dekada dito sa Poblacion, Montemayor St., Malasiqui, binuksan namin ang aming pinto para sa bawat kabataan at matanda na nais matuto — mayaman man o payak ang pamumuhay.
+        </p>
+
+        <p style="font-size:18px;line-height:1.7;color:var(--brand-text-muted);">
+          Bakit? Dahil naniniwala kami na kapag may tamang gabay mula sa mga lehitimong Master Instructors, ang bawat mahiyain o makulit na bata ay maaaring maging isang magalang na kampeon — sa banig man o sa totoong buhay.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL DIRECTIVE: MEET OUR COACHES / ABOUT TEAM SECTION -->
+  <section class="section-padding" style="background:var(--brand-bg);">
+    <div class="container fc-reveal">
+      <div style="text-align:center;max-width:760px;margin:0 auto 48px;">
+        <div class="speed-stripes"><span></span><span></span><span></span></div>
+        <h2 style="font-size:clamp(32px, 5vw, 54px);margin-bottom:12px;color:#fff;">
+          KILALANIN ANG MGA <span class="accent-italic">Sensei at Guro</span>
+        </h2>
+        <p style="color:var(--brand-text-muted);font-size:17px;">
+          Hindi mga baguhan. Hindi mga online-certified. Tunay na master-level instruction na may dekada ng karanasan sa paghubog ng mga black belters.
+        </p>
+      </div>
+
+      <div class="cards-flex-wrap card-depth-container">
+        
+        <!-- Coach 1: Gerardo "Gerry" Valdez -->
+        <div class="card-item-standard fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.08s;text-align:center;">
+          <!-- Initials Avatar -->
+          <div style="width:96px;height:96px;border-radius:50%;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:var(--font-display);font-size:36px;font-weight:900;border:3px solid #bbf7d0;box-shadow:0 0 20px var(--brand-accent-glow);">
+            GV
+          </div>
+          <h3 style="font-size:24px;margin-bottom:4px;color:#fff;">SENSEI GERARDO “GERRY” VALDEZ</h3>
+          <div style="display:inline-block;padding:4px 12px;border-radius:999px;background:rgba(202,138,4,0.2);border:1px solid var(--brand-secondary);color:#fde047;font-size:13px;font-weight:700;margin-bottom:16px;">
+            HEAD COACH • 7TH DAN BLACK BELT
+          </div>
+          <p style="color:var(--brand-text-muted);font-size:15px;line-height:1.6;">
+            Senior karate instructor at tagapagtatag ng dojo. Higit tatlong dekada nang gumagabay sa mga mag-aaral mula sa basic white belt forms hanggang sa international at national competition levels.
+          </p>
+        </div>
+
+        <!-- Coach 2: Ernest Valdez -->
+        <div class="card-item-standard fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.16s;text-align:center;">
+          <!-- Initials Avatar -->
+          <div style="width:96px;height:96px;border-radius:50%;background:var(--brand-secondary);color:#05140b;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:var(--font-display);font-size:36px;font-weight:900;border:3px solid #fef08a;box-shadow:0 0 20px rgba(202,138,4,0.35);">
+            EV
+          </div>
+          <h3 style="font-size:24px;margin-bottom:4px;color:#fff;">ERNEST VALDEZ</h3>
+          <div style="display:inline-block;padding:4px 12px;border-radius:999px;background:rgba(22,163,74,0.2);border:1px solid var(--brand-accent);color:#86efac;font-size:13px;font-weight:700;margin-bottom:16px;">
+            SENIOR INSTRUCTOR • 5TH DAN BLACK BELT
+          </div>
+          <p style="color:var(--brand-text-muted);font-size:15px;line-height:1.6;">
+            Kapatid ni Sensei Gerry Valdez at senior karate instructor. Dalubhasa sa kumite mechanics, self-defense execution, at pagbuo ng solidong conditioning ng mga atleta.
+          </p>
+        </div>
+
+        <!-- Coach 3: Gerriemel Valdez -->
+        <div class="card-item-standard fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.24s;text-align:center;">
+          <!-- Initials Avatar -->
+          <div style="width:96px;height:96px;border-radius:50%;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:var(--font-display);font-size:36px;font-weight:900;border:3px solid #bbf7d0;box-shadow:0 0 20px var(--brand-accent-glow);">
+            GV
+          </div>
+          <h3 style="font-size:24px;margin-bottom:4px;color:#fff;">GERRIEMEL VALDEZ</h3>
+          <div style="display:inline-block;padding:4px 12px;border-radius:999px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-size:13px;font-weight:700;margin-bottom:16px;">
+            INSTRUCTOR • YOUTH & ADVANCED COACH
+          </div>
+          <p style="color:var(--brand-text-muted);font-size:15px;line-height:1.6;">
+            Anak ni Sensei Gerry Valdez at bahagi ng coaching team. Nakatutok sa youth programs, agility training, at pagpapanatili ng sigla at sigasig sa bawat training session.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. WHAT'S INCLUDED SECTION (Numbered Slabs) -->
+  <section class="section-padding slash-cut-top" style="background:var(--brand-bg-alt);">
+    <div class="container fc-reveal">
+      <div style="text-align:center;max-width:780px;margin:0 auto 50px;">
+        <div class="speed-stripes"><span></span><span></span><span></span></div>
+        <h2 style="font-size:clamp(32px, 5vw, 54px);margin-bottom:14px;color:#fff;">
+          ANO ANG KASAMA SA <span class="accent-italic">Pagsasanay Mo?</span>
+        </h2>
+        <p style="color:var(--brand-text-muted);font-size:18px;">
+          Walang tinatagong catch. Buong programa ang ibibigay sa'yo para masigurong may tunay na resulta ang bawat patak ng pawis:
+        </p>
+      </div>
+
+      <div class="cards-flex-wrap card-depth-container">
+        
+        <!-- Slab 01 -->
+        <div class="card-item-compact fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.08s;">
+          <div class="slab-number">01</div>
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:16px;">
+            1
+          </div>
+          <h3 style="font-size:20px;margin-bottom:10px;color:#fff;">UNLIMITED TRAINING UNDER 7TH & 5TH DAN</h3>
+          <p style="color:var(--brand-text-muted);font-size:14px;line-height:1.5;">
+            Direktang pagtuturo mula sa mga totoong master — ibig sabihin, tamang porma agad sa unang araw pa lang, iwas injury at mabilis ang pag-angat ng belt.
+          </p>
+        </div>
+
+        <!-- Slab 02 -->
+        <div class="card-item-compact fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.16s;">
+          <div class="slab-number">02</div>
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:16px;">
+            2
+          </div>
+          <h3 style="font-size:20px;margin-bottom:10px;color:#fff;">TROPHY-WINNING CURRICULUM ACCESS</h3>
+          <p style="color:var(--brand-text-muted);font-size:14px;line-height:1.5;">
+            Subok na training program na lumikha ng mga regional champions — matututunan mo ang tamang kata at kumite timing na pampanalo.
+          </p>
+        </div>
+
+        <!-- Slab 03 -->
+        <div class="card-item-compact fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.24s;">
+          <div class="slab-number">03</div>
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:16px;">
+            3
+          </div>
+          <h3 style="font-size:20px;margin-bottom:10px;color:#fff;">SEPARATE YOUTH & ADULT CLASSES</h3>
+          <p style="color:var(--brand-text-muted);font-size:14px;line-height:1.5;">
+            Hiwalay na focus para sa bata at matanda — ang bata ay natututo ng focus at disiplina, habang ang adults ay nakakakuha ng cardio at conditioning.
+          </p>
+        </div>
+
+        <!-- Slab 04 -->
+        <div class="card-item-compact fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.32s;">
+          <div class="slab-number">04</div>
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:16px;">
+            4
+          </div>
+          <h3 style="font-size:20px;margin-bottom:10px;color:#fff;">PRACTICAL STREET SELF-DEFENSE</h3>
+          <p style="color:var(--brand-text-muted);font-size:14px;line-height:1.5;">
+            Totoong depensa sa sarili laban sa mga panganib sa kalsada — nagbibigay ng matinding kapanatagan ng loob sa'yo at sa buong pamilya mo.
+          </p>
+        </div>
+
+        <!-- Slab 05 -->
+        <div class="card-item-compact fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.40s;">
+          <div class="slab-number">05</div>
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:16px;">
+            5
+          </div>
+          <h3 style="font-size:20px;margin-bottom:10px;color:#fff;">SAFE & FAMILY-FRIENDLY DOJO ATMOSPHERE</h3>
+          <p style="color:var(--brand-text-muted);font-size:14px;line-height:1.5;">
+            Ligtas at maaliwalas na training hall sa Montemayor St., Malasiqui — kung saan panatag ang mga magulang na magbantay habang nag-eensayo ang anak.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- GALLERY SECTION (Exact Injection) -->
+      <div style="margin-top:60px;text-align:center;">
+        <h3 style="font-size:28px;margin-bottom:8px;color:#fff;">MASDAN ANG AMING MGA KARATISTA AT KAMPEON</h3>
+        <p style="color:var(--brand-text-muted);font-size:16px;">Mga totoong kaganapan at selebrasyon ng pamilya JEV Karatedo</p>
+        
+        <div style="margin:24px 0;"><div style="display:flex;justify-content:center;gap:16px;margin-bottom:16px;"><div style="flex:1 1 0;max-width:240px;text-align:center;background:rgba(128,128,128,0.06);border-radius:16px;padding:10px 10px 14px;border:1px solid rgba(128,128,128,0.14);box-shadow:0 10px 28px rgba(0,0,0,0.16);"><img src="images/gallery-1.png" alt="3rd All LUZON MKKPI Championships" style="width:100%;aspect-ratio:4/3;object-fit:contain;display:block;border-radius:10px;mask-image:linear-gradient(to bottom,black 88%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,black 88%,transparent 100%);"><div style="font-size:13px;font-weight:600;margin-top:10px;">3rd All LUZON MKKPI Championships</div></div><div style="flex:1 1 0;max-width:240px;text-align:center;background:rgba(128,128,128,0.06);border-radius:16px;padding:10px 10px 14px;border:1px solid rgba(128,128,128,0.14);box-shadow:0 10px 28px rgba(0,0,0,0.16);"><img src="images/gallery-2.png" alt="30TH years  Anniversary  with some of our Black Belters" style="width:100%;aspect-ratio:4/3;object-fit:contain;display:block;border-radius:10px;mask-image:linear-gradient(to bottom,black 88%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,black 88%,transparent 100%);"><div style="font-size:13px;font-weight:600;margin-top:10px;">30TH years  Anniversary  with some of our Black Belters</div></div></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPECIAL DIRECTIVE: CLASS SCHEDULE TABLE -->
+  <section class="section-padding" style="background:var(--brand-bg);">
+    <div class="container fc-reveal">
+      <div style="text-align:center;max-width:760px;margin:0 auto 36px;">
+        <div class="speed-stripes"><span></span><span></span><span></span></div>
+        <h2 style="font-size:clamp(32px, 5vw, 50px);margin-bottom:12px;color:#fff;">
+          ISKEDYUL NG <span class="accent-italic">Pagsasanay</span>
+        </h2>
+        <p style="color:var(--brand-text-muted);font-size:17px;">
+          Pumili ng oras na akma sa iyong araw. Bukas kami para sa mga bata, working adults, at competition athletes.
+        </p>
+      </div>
+
+      <div class="table-container">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>PROGRAM / KLASE</th>
+              <th>MGA ARAW</th>
+              <th>ORAS</th>
+              <th>FOCUS AT LEVEL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color:var(--brand-accent);">Kids & Youth Karate</strong></td>
+              <td>Martes at Huwebes</td>
+              <td>4:30 PM – 6:00 PM</td>
+              <td>Basics, Disiplina, Agility & Anti-Bullying</td>
+            </tr>
+            <tr>
+              <td><strong style="color:#fff;">Adults & Fitness Class</strong></td>
+              <td>Lunes, Miyerkules at Biyernes</td>
+              <td>6:00 PM – 7:30 PM</td>
+              <td>Conditioning, Stress-Relief, Self-Defense</td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--brand-secondary);">Competition & Advanced Squad</strong></td>
+              <td>Sabado at Linggo</td>
+              <td>8:00 AM – 11:00 AM</td>
+              <td>Kata Excellence, Sparring (Kumite) & Tournament Prep</td>
+            </tr>
+            <tr>
+              <td><strong style="color:#86efac;">Free Assessment & Trial</strong></td>
+              <td>Bawat Sabado</td>
+              <td>2:00 PM – 3:30 PM</td>
+              <td>Para sa lahat ng bagong mag-aaral (All Ages)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. TRANSFORMATION SECTION -->
+  <section class="section-padding slash-cut-top" style="background:#0e2015;">
+    <div class="container fc-reveal">
+      <div style="text-align:center;max-width:760px;margin:0 auto 46px;">
+        <div class="speed-stripes"><span></span><span></span><span></span></div>
+        <h2 style="font-size:clamp(32px, 5vw, 52px);margin-bottom:14px;color:#fff;">
+          ANO ANG INAASAHAN MO <span class="accent-italic">Sa Unang Pagbisita?</span>
+        </h2>
+        <p style="color:var(--brand-text-muted);font-size:18px;">
+          Walang intimidation. Walang pressure. Narito ang magiging hitsura ng iyong unang araw sa dojo:
+        </p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:24px;">
+        
+        <div style="background:rgba(255,255,255,0.03);padding:30px;border-radius:16px;border:1px solid rgba(255,255,255,0.08);">
+          <div style="color:var(--brand-secondary);font-size:24px;font-weight:900;margin-bottom:12px;font-family:var(--font-display);">
+            BAGO SUMALI: ALISIN ANG KABA
+          </div>
+          <p style="color:var(--brand-text-muted);line-height:1.6;">
+            Marami ang nag-aakala na pagpasok nila ay agad silang sasaktan o papaluin. Sa JEV Karatedo, bawat baguhan ay sinasalubong nang may ngiti ni Sensei Gerry at ng buong team. Ituturo muna ang tamang pagyuko (Rei), paghinga, at simpleng depensa sa ligtas na pamamaraan.
+          </p>
+        </div>
+
+        <div style="background:rgba(22,163,74,0.08);padding:30px;border-radius:16px;border:1px solid rgba(22,163,74,0.3);">
+          <div style="color:var(--brand-accent);font-size:24px;font-weight:900;margin-bottom:12px;font-family:var(--font-display);">
+            PAGKATAPOS NG ILANG LINGGO: TUNAY NA PAGBABAGO
+          </div>
+          <p style="color:var(--brand-text-muted);line-height:1.6;">
+            Makikita mo na ang pagtindig nang tuwid ng anak mo. Mas maaga nang gigising, mas masunurin sa mga utos, at may bagong tiwala sa sarili na hindi kayang ibigay ng anumang video game. Ikaw naman bilang magulang, may kapayapaan ang isip.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. TESTIMONIALS SECTION (CSS Infinite Marquee Pattern) -->
+  <section class="section-padding" style="background:var(--brand-bg);">
+    <div class="container fc-reveal" style="margin-bottom:36px;text-align:center;">
+      <div class="speed-stripes"><span></span><span></span><span></span></div>
+      <h2 style="font-size:clamp(32px, 5vw, 52px);margin-bottom:12px;color:#fff;">
+        MGA KWENTO MULA SA <span class="accent-italic">Pamilya JEV</span>
+      </h2>
+      <p style="color:var(--brand-text-muted);font-size:17px;">
+        Mula sa mga magulang at estudyante sa Malasiqui at Pangasinan na nakaranas ng tunay na disiplina:
+      </p>
+    </div>
+
+    <!-- Infinite Continuous Marquee Wrapper -->
+    <div style="overflow:hidden;width:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);">
+      <div style="display:flex;align-items:flex-start;gap:20px;width:max-content;animation:fcTestiMarquee 42s linear infinite;">
+        
+        <!-- CARD 1 -->
+        <div style="width:310px;max-height:220px;flex-shrink:0;background:var(--brand-card-solid);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px;box-shadow:var(--shadow-subtle);">
+          <p style="color:var(--brand-text);font-size:14px;line-height:1.5;margin-bottom:14px;">
+            "Dati puro cellphone lang ang bunso ko. Simula noong nag-training kay Sensei Gerry, natutong magmano at naging focus sa school. Sobrang sulit ng ₱800!"
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">MC</div>
+            <div>
+              <div style="color:#fff;font-weight:700;font-size:13px;">Marilou Castro</div>
+              <div style="color:var(--brand-text-muted);font-size:11px;">Nanay • Malasiqui</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div style="width:310px;max-height:220px;flex-shrink:0;background:var(--brand-card-solid);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px;box-shadow:var(--shadow-subtle);">
+          <p style="color:var(--brand-text);font-size:14px;line-height:1.5;margin-bottom:14px;">
+            "Akala ko masyado na akong matanda para sa karate. 34 years old na ako pero inalalayan ako nina Coach Ernest. Nawala ang back pain at lumakas stamina ko."
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--brand-secondary);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">RB</div>
+            <div>
+              <div style="color:#fff;font-weight:700;font-size:13px;">Richard Bautista</div>
+              <div style="color:var(--brand-text-muted);font-size:11px;">Adult Student • San Carlos</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div style="width:310px;max-height:220px;flex-shrink:0;background:var(--brand-card-solid);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px;box-shadow:var(--shadow-subtle);">
+          <p style="color:var(--brand-text);font-size:14px;line-height:1.5;margin-bottom:14px;">
+            "Sa ibang gym sa Dagupan libo ang training fee kada buwan. Dito, 7th Dan pa ang nagtuturo pero pambayang presyo lang. Grabe ang legacy ng dojo na ito."
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">ED</div>
+            <div>
+              <div style="color:#fff;font-weight:700;font-size:13px;">Eduardo De Guzman</div>
+              <div style="color:var(--brand-text-muted);font-size:11px;">Tatay ng 2 Estudiyante</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div style="width:310px;max-height:220px;flex-shrink:0;background:var(--brand-card-solid);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px;box-shadow:var(--shadow-subtle);">
+          <p style="color:var(--brand-text);font-size:14px;line-height:1.5;margin-bottom:14px;">
+            "Binully ang anak ko sa school last year. Noong natuto sa JEV Karatedo, hindi siya naging pala-away pero nagkaroon ng tapang tumindig. Wala nang nambu-bully sa kanya."
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--brand-secondary);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">AR</div>
+            <div>
+              <div style="color:#fff;font-weight:700;font-size:13px;">Arlene Ramos</div>
+              <div style="color:var(--brand-text-muted);font-size:11px;">Magulang • Poblacion</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div style="width:310px;max-height:220px;flex-shrink:0;background:var(--brand-card-solid);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px;box-shadow:var(--shadow-subtle);">
+          <p style="color:var(--brand-text);font-size:14px;line-height:1.5;margin-bottom:14px;">
+            "Pang-kampeon talaga ang turo nina Sensei Gerry at Gerriemel. Dinala ako sa regional tournament at nakakuha kami ng medalya. Tunay na pamilya ang turingan dito."
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">KP</div>
+            <div>
+              <div style="color:#fff;font-weight:700;font-size:13px;">Kevin Perez</div>
+              <div style="color:var(--brand-text-muted);font-size:11px;">Brown Belt Athlete</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div style="width:310px;max-height:220px;flex-shrink:0;background:var(--brand-card-solid);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px;box-shadow:var(--shadow-subtle);">
+          <p style="color:var(--brand-text);font-size:14px;line-height:1.5;margin-bottom:14px;">
+            "Napakalinis ng dojo sa Montemayor St. at napakabait ng mga coaches. Ligtas ang anak ko at talagang tinututukan ang bawat galaw. 100% recommended!"
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--brand-secondary);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">JS</div>
+            <div>
+              <div style="color:#fff;font-weight:700;font-size:13px;">Jennifer Soriano</div>
+              <div style="color:var(--brand-text-muted);font-size:11px;">Nanay • Calasiao</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- REPEAT EXACT 6 CARDS FOR SEAMLESS LOOP -->
+        <div style="width:310px;max-height:220px;flex-shrink:0;background:var(--brand-card-solid);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px;box-shadow:var(--shadow-subtle);">
+          <p style="color:var(--brand-text);font-size:14px;line-height:1.5;margin-bottom:14px;">
+            "Dati puro cellphone lang ang bunso ko. Simula noong nag-training kay Sensei Gerry, natutong magmano at naging focus sa school. Sobrang sulit ng ₱800!"
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">MC</div>
+            <div>
+              <div style="color:#fff;font-weight:700;font-size:13px;">Marilou Castro</div>
+              <div style="color:var(--brand-text-muted);font-size:11px;">Nanay • Malasiqui</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="width:310px;max-height:220px;flex-shrink:0;background:var(--brand-card-solid);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px;box-shadow:var(--shadow-subtle);">
+          <p style="color:var(--brand-text);font-size:14px;line-height:1.5;margin-bottom:14px;">
+            "Akala ko masyado na akong matanda para sa karate. 34 years old na ako pero inalalayan ako nina Coach Ernest. Nawala ang back pain at lumakas stamina ko."
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--brand-secondary);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">RB</div>
+            <div>
+              <div style="color:#fff;font-weight:700;font-size:13px;">Richard Bautista</div>
+              <div style="color:var(--brand-text-muted);font-size:11px;">Adult Student • San Carlos</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="width:310px;max-height:220px;flex-shrink:0;background:var(--brand-card-solid);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px;box-shadow:var(--shadow-subtle);">
+          <p style="color:var(--brand-text);font-size:14px;line-height:1.5;margin-bottom:14px;">
+            "Sa ibang gym sa Dagupan libo ang training fee kada buwan. Dito, 7th Dan pa ang nagtuturo pero pambayang presyo lang. Grabe ang legacy ng dojo na ito."
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">ED</div>
+            <div>
+              <div style="color:#fff;font-weight:700;font-size:13px;">Eduardo De Guzman</div>
+              <div style="color:var(--brand-text-muted);font-size:11px;">Tatay ng 2 Estudiyante</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="width:310px;max-height:220px;flex-shrink:0;background:var(--brand-card-solid);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px;box-shadow:var(--shadow-subtle);">
+          <p style="color:var(--brand-text);font-size:14px;line-height:1.5;margin-bottom:14px;">
+            "Binully ang anak ko sa school last year. Noong natuto sa JEV Karatedo, hindi siya naging pala-away pero nagkaroon ng tapang tumindig. Wala nang nambu-bully sa kanya."
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--brand-secondary);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">AR</div>
+            <div>
+              <div style="color:#fff;font-weight:700;font-size:13px;">Arlene Ramos</div>
+              <div style="color:var(--brand-text-muted);font-size:11px;">Magulang • Poblacion</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="width:310px;max-height:220px;flex-shrink:0;background:var(--brand-card-solid);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px;box-shadow:var(--shadow-subtle);">
+          <p style="color:var(--brand-text);font-size:14px;line-height:1.5;margin-bottom:14px;">
+            "Pang-kampeon talaga ang turo nina Sensei Gerry at Gerriemel. Dinala ako sa regional tournament at nakakuha kami ng medalya. Tunay na pamilya ang turingan dito."
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">KP</div>
+            <div>
+              <div style="color:#fff;font-weight:700;font-size:13px;">Kevin Perez</div>
+              <div style="color:var(--brand-text-muted);font-size:11px;">Brown Belt Athlete</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="width:310px;max-height:220px;flex-shrink:0;background:var(--brand-card-solid);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:20px;box-shadow:var(--shadow-subtle);">
+          <p style="color:var(--brand-text);font-size:14px;line-height:1.5;margin-bottom:14px;">
+            "Napakalinis ng dojo sa Montemayor St. at napakabait ng mga coaches. Ligtas ang anak ko at talagang tinututukan ang bawat galaw. 100% recommended!"
+          </p>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--brand-secondary);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;">JS</div>
+            <div>
+              <div style="color:#fff;font-weight:700;font-size:13px;">Jennifer Soriano</div>
+              <div style="color:var(--brand-text-muted);font-size:11px;">Nanay • Calasiao</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <style>@keyframes fcTestiMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}</style>
+  </section>
+
+  <!-- 10. PARALLAX EMOTIONAL BREAK -->
+  <section style="background-image:url('images/parallax.jpg');background-size:cover;background-position:center;background-attachment:fixed;min-height:360px;position:relative;display:flex;align-items:center;justify-content:center;padding:80px 24px;text-align:center;">
+    <div style="position:absolute;inset:0;background:rgba(10,24,16,0.68);"></div>
+    <div style="position:relative;z-index:2;max-width:800px;">
+      <span style="font-family:var(--font-display);font-size:18px;letter-spacing:0.18em;text-transform:uppercase;color:var(--brand-secondary);display:block;margin-bottom:16px;font-weight:700;">
+        PAMANA NG DISIPLINA AT KARANGALAN
+      </span>
+      <h2 style="font-family:var(--font-accent);font-style:italic;font-size:clamp(32px, 5.5vw, 56px);font-weight:400;color:#fff;line-height:1.15;text-transform:none;">
+        "Hindi lang sinturon ang kinikilala rito — hinuhubog natin ang puso ng isang tunay na kampeon."
+      </h2>
+    </div>
+  </section>
+
+  <!-- 11. PROOF / SAMPLES SECTION (Exact Pre-built Injection) -->
+  <section class="section-padding slash-cut-top" style="background:var(--brand-bg-alt);">
+    <div class="container fc-reveal">
+      <div style="text-align:center;max-width:760px;margin:0 auto 20px;">
+        <div class="speed-stripes"><span></span><span></span><span></span></div>
+        <h2 style="font-size:clamp(30px, 4.5vw, 48px);color:#fff;">
+          PATUNAY NG 30-TAONG <span class="accent-italic">Tagumpay</span>
+        </h2>
+        <p style="color:var(--brand-text-muted);font-size:17px;">
+          Tingnan ang aktwal na pagsasanay at mga karangalang iniuwi ng ating dojo:
+        </p>
+      </div>
+
+      <!-- EXACT INJECTED PROOF BLOCK -->
+      <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;margin:32px 0;"><div style="flex:1 1 280px;min-width:0;display:flex;flex-direction:column;justify-content:center;"><h3 style="font-size:20px;margin-bottom:10px;">Real Students, Real Discipline: Training with JEV </h3><p style="opacity:.8;line-height:1.6;">This photo captures our active youth class in action. From beginners (white belts) to advanced students (red belts), you can see the focus and proper form instilled by Sensei Gerry and his team. It proves that our dojo is a safe, structured environment where kids learn respect and martial arts skills together.</p></div><div style="flex:1 1 280px;min-width:0;"><img src="images/proof-1.png" alt="Real Students, Real Discipline: Training with JEV " style="width:100%;border-radius:12px;display:block;mask-image:linear-gradient(to left,black 78%,transparent 100%);-webkit-mask-image:linear-gradient(to left,black 78%,transparent 100%);"></div></div><div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;margin:32px 0;"><div style="flex:1 1 280px;min-width:0;"><img src="images/proof-2.png" alt="30 Years of Building Champions in JEV" style="width:100%;border-radius:12px;display:block;mask-image:linear-gradient(to right,black 78%,transparent 100%);-webkit-mask-image:linear-gradient(to right,black 78%,transparent 100%);"></div><div style="flex:1 1 280px;min-width:0;display:flex;flex-direction:column;justify-content:center;"><h3 style="font-size:20px;margin-bottom:10px;">30 Years of Building Champions in JEV</h3><p style="opacity:.8;line-height:1.6;">A snapshot of our daily training sessions. For three decades, we have welcomed students of all ages and belt levels. This image shows the vibrant community and serious training atmosphere that has produced dozens of black belts and medalists over the years.</p></div></div><div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;margin:32px 0;"><div style="flex:1 1 280px;min-width:0;display:flex;flex-direction:column;justify-content:center;"><h3 style="font-size:20px;margin-bottom:10px;">Sama-sama sa Karate Legacy.</h3><p style="opacity:.8;line-height:1.6;">Witness our diverse karate family, from eager kids to dedicated adults, training with focus and discipline. Dito sa aming dojo, we build not just skills, but strong character and lasting bonds.</p></div><div style="flex:1 1 280px;min-width:0;"><img src="images/proof-3.png" alt="Sama-sama sa Karate Legacy." style="width:100%;border-radius:12px;display:block;mask-image:linear-gradient(to left,black 78%,transparent 100%);-webkit-mask-image:linear-gradient(to left,black 78%,transparent 100%);"></div></div>
+    </div>
+  </section>
+
+  <!-- 12. HOW IT WORKS (3 Simple Steps) -->
+  <section class="section-padding" style="background:var(--brand-bg);">
+    <div class="container fc-reveal">
+      <div style="text-align:center;max-width:760px;margin:0 auto 50px;">
+        <div class="speed-stripes"><span></span><span></span><span></span></div>
+        <h2 style="font-size:clamp(32px, 5vw, 52px);margin-bottom:12px;color:#fff;">
+          PAANO MAGSIMULA: <span class="accent-italic">3 Madaling Hakbang</span>
+        </h2>
+        <p style="color:var(--brand-text-muted);font-size:18px;">
+          Walang hassle na proseso. Narito kung paano ka makakasali o makapag-enroll ng anak mo:
+        </p>
+      </div>
+
+      <div class="cards-flex-wrap card-depth-container">
+        
+        <!-- Step 1 -->
+        <div class="card-item-standard fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.08s;">
+          <div style="width:48px;height:48px;border-radius:50%;background:rgba(22,163,74,0.2);color:var(--brand-accent);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:24px;font-weight:900;margin-bottom:20px;border:1px solid var(--brand-accent);">
+            1
+          </div>
+          <h3 style="font-size:22px;margin-bottom:10px;color:#fff;">I-RESERVE ANG LIBRENG TRIAL</h3>
+          <p style="color:var(--brand-text-muted);font-size:15px;line-height:1.6;">
+            I-click ang button sa page na ito upang kumpirmahin ang iyong slot. Walang babayarang reservation para sa trial class.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="card-item-standard fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.16s;">
+          <div style="width:48px;height:48px;border-radius:50%;background:rgba(202,138,4,0.2);color:var(--brand-secondary);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:24px;font-weight:900;margin-bottom:20px;border:1px solid var(--brand-secondary);">
+            2
+          </div>
+          <h3 style="font-size:22px;margin-bottom:10px;color:#fff;">BUMISITA SA AMING DOJO</h3>
+          <p style="color:var(--brand-text-muted);font-size:15px;line-height:1.6;">
+            Pumunta sa Poblacion, Montemayor St., Malasiqui. Magsuot lang ng komportableng pambasketball o workout clothes para sa 1st session.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="card-item-standard fc-reveal fc-hover-lift card-depth-item" style="transition-delay:0.24s;">
+          <div style="width:48px;height:48px;border-radius:50%;background:rgba(22,163,74,0.2);color:var(--brand-accent);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:24px;font-weight:900;margin-bottom:20px;border:1px solid var(--brand-accent);">
+            3
+          </div>
+          <h3 style="font-size:22px;margin-bottom:10px;color:#fff;">MAG-ENROLL AT SUMALI SA LEGACY</h3>
+          <p style="color:var(--brand-text-muted);font-size:15px;line-height:1.6;">
+            Kapag nagustuhan mo ang turo at pamilya ng dojo, bayaran lamang ang ₱800 monthly training fee (+ ₱500 1-time registration) para maging opisyal na miyembro.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. PRICE STACK SECTION -->
+
+  <section id="pricing" class="section-padding slash-cut-top" style="background:var(--brand-bg-alt);">
+    <div class="container fc-reveal">
+      <div style="max-width:680px;margin:0 auto;position:relative;">
+        
+        <!-- Price Card Slab -->
+        <div style="background:#132a1e;border:2px solid var(--brand-accent);border-radius:24px;padding:48px 36px;position:relative;box-shadow:0 24px 60px rgba(0,0,0,0.6);overflow:hidden;">
+          
+          <!-- Diagonal Ribbon: Best Value -->
+          <div style="position:absolute;top:28px;right:-40px;background:var(--brand-secondary);color:#05140b;font-family:var(--font-display);font-size:15px;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;padding:6px 48px;transform:rotate(45deg);box-shadow:0 4px 12px rgba(0,0,0,0.4);">
+            Best Value
+          </div>
+
+          <div style="text-align:center;margin-bottom:30px;">
+            <div style="display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(22,163,74,0.15);color:#86efac;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px;">
+              Poblacion, Malasiqui Special Rate
+            </div>
+            <h2 style="font-size:clamp(36px, 5vw, 54px);color:#fff;margin-bottom:8px;">
+              REGULAR MONTHLY TRAINING
+            </h2>
+            <p style="color:var(--brand-text-muted);font-size:16px;">
+              World-class instruction mula sa mga 7th Dan at 5th Dan Masters
+            </p>
+          </div>
+
+          <!-- Price Display -->
+          <div style="text-align:center;margin-bottom:30px;padding:24px;background:rgba(0,0,0,0.25);border-radius:16px;">
+            <div style="font-size:18px;color:rgba(255,255,255,0.45);text-decoration:line-through;margin-bottom:4px;font-weight:700;">
+              Karaniwang presyo sa malls: ₱3,000/buwan
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:center;gap:6px;">
+              <span style="font-family:var(--font-display);font-size:32px;color:var(--brand-accent);font-weight:900;">₱</span>
+              <span style="font-family:var(--font-display);font-size:clamp(64px, 10vw, 92px);font-weight:900;color:#fff;line-height:0.9;">800</span>
+              <span style="font-size:18px;color:var(--brand-text-muted);font-weight:600;">/ buwan</span>
+            </div>
+            <div style="margin-top:10px;font-size:14px;color:#fde047;font-weight:700;">
+              + ₱500 one-time dojo registration fee para sa bagong estudyante
+            </div>
+          </div>
+
+          <!-- Checklist -->
+          <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:36px;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span style="font-size:16px;color:#fff;">Unlimited karate sessions sa buong buwan</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span style="font-size:16px;color:#fff;">Pagtuturo nina Sensei Gerry (7th Dan) & Ernest (5th Dan)</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span style="font-size:16px;color:#fff;">Ligtas at structured na dojo environment sa Montemayor St.</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span style="font-size:16px;color:#fff;">Oportunidad sumabak sa regional & national tournaments</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#CA8A04" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span style="font-size:16px;color:#fde047;font-weight:700;">BONUS: Libreng 1st Trial Class (Zero Risk!)</span>
+            </div>
+          </div>
+
+
+
+          <!-- Main CTA Button -->
+          <div style="text-align:center;">
+            <a id="fc-cta-main" href="#" onclick="if(typeof fcTrackEvent==='function'){fcTrackEvent('InitiateCheckout');}var b=document.getElementById('fc-bump-checkbox');var bp=b&&b.checked;var ne=document.getElementById('fc-checkout-name');var ee=document.getElementById('fc-checkout-email');if(ne&&ee){var nm=ne.value.trim();var em=ee.value.trim();if(!nm||!em){alert(&quot;Pakilagay ang pangalan at email mo bago magpatuloy.&quot;);return false;}}var h=bp?&quot;&quot;:&quot;&quot;;if(h&&h!=='#'){window.open(h,'_blank','noopener');}return false;" class="btn-solid-primary" style="width:100%;font-size:24px;padding:20px 24px;">
+              <span>I-reserve ang Free Trial Class</span>
+              <span class="btn-arrow-chip">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </a>
+          </div>
+
+
+<div style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:16px 0;font-size:12px;opacity:.7;">
+<span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block;"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Secure Checkout</span>
+<span><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;display:inline-block;"><polygon points="13 2 3 14 11 14 9 22 21 10 13 10 13 2"/></svg> Instant Access</span>
+<span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block;"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg> Safe Payment</span>
+</div>
+
+          <p style="text-align:center;color:var(--brand-text-muted);font-size:13px;margin-top:16px;">
+            Walang bayad sa trial class. Pumunta, magsanay, at magdesisyon pagkatapos.
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 16. GUARANTEE SECTION (Honest Grounded Guarantee) -->
+  <section class="section-padding" style="background:var(--brand-bg);">
+    <div class="container fc-reveal">
+      <div style="max-width:760px;margin:0 auto;background:rgba(22,163,74,0.06);border:1px solid rgba(22,163,74,0.3);border-radius:20px;padding:36px;display:flex;flex-wrap:wrap;align-items:center;gap:24px;">
+        <div style="flex:0 0 72px;">
+          <div style="width:72px;height:72px;border-radius:50%;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;box-shadow:0 0 25px var(--brand-accent-glow);">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+        </div>
+        <div style="flex:1 1 300px;">
+          <h3 style="font-size:24px;margin-bottom:8px;color:#fff;">ANG AMING PANGAKO: ZERO-RISK FIRST CLASS</h3>
+          <p style="color:var(--brand-text-muted);font-size:15px;line-height:1.6;">
+            Subukan ang iyong unang klase nang libre — walang anumang commitment. Makikita mo mismo ang paraan ng pagtuturo, ang respeto sa loob ng dojo, at ang pakikitungo ng mga kapwa estudyante. Kung maramdaman mong hindi ito akma para sa'yo o sa anak mo, maaari kang umalis nang walang kailangang bayaran o ipaliwanag.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 17. FAQ ACCORDION -->
+  <section class="section-padding slash-cut-top" style="background:var(--brand-bg-alt);">
+    <div class="container fc-reveal">
+      <div style="text-align:center;max-width:760px;margin:0 auto 46px;">
+        <div class="speed-stripes"><span></span><span></span><span></span></div>
+        <h2 style="font-size:clamp(32px, 5vw, 52px);margin-bottom:12px;color:#fff;">
+          MGA MADALAS <span class="accent-italic">Itanong</span>
+        </h2>
+        <p style="color:var(--brand-text-muted);font-size:17px;">
+          Lahat ng kailangan mong malaman bago bumisita sa aming dojo sa Malasiqui:
+        </p>
+      </div>
+
+      <div style="max-width:820px;margin:0 auto;">
+        
+        <div class="faq-item fc-hover-lift">
+          <div class="faq-question">
+            <span>Saan po banda ang inyong dojo?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Ang JEV Eagle Hand Karatedo dojo ay matatagpuan sa Poblacion, Montemayor St., Malasiqui, Pangasinan Philippines 2421. Madali itong mapuntahan at accessible para sa mga taga-Malasiqui, San Carlos, Calasiao, at mga karatig-bayan.
+          </div>
+        </div>
+
+        <div class="faq-item fc-hover-lift">
+          <div class="faq-question">
+            <span>Magkano ang kabuuang babayaran kapag nag-enroll?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Ang buwanang training fee ay ₱800 lamang. Mayroong one-time dojo registration fee na ₱500 para sa mga bagong estudyante sa kanilang unang buwan. Walang ibang hidden charges sa regular sessions.
+          </div>
+        </div>
+
+        <div class="faq-item fc-hover-lift">
+          <div class="faq-question">
+            <span>Sino-sino ang magiging instructors o sensei?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Ang aming coaching team ay pinamumunuan ni Sensei Gerardo “Gerry” Valdez (Head Coach, 7th Dan), kasama ang kanyang kapatid na si Ernest Valdez (Senior Instructor, 5th Dan), at ang kanyang anak na si Gerriemel Valdez (Instructor).
+          </div>
+        </div>
+
+        <div class="faq-item fc-hover-lift">
+          <div class="faq-question">
+            <span>Kailangan ba agad bumili ng karate uniform (Gi)?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Hindi po kailangan agad! Para sa iyong libreng trial class at unang ilang linggo, maaari kang magsuot ng komportableng jogging pants, workout shorts, o t-shirt. Kapag desidido ka nang magtuloy-tuloy, saka ka namin gagabayan sa pagkuha ng tamang Gi.
+          </div>
+        </div>
+
+        <div class="faq-item fc-hover-lift">
+          <div class="faq-question">
+            <span>Paano kung mahiyain o walang background sa sports ang anak ko?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            Iyan mismo ang layunin ng dojo. Sa nakalipas na 30 taon, karamihan sa mga naging medalists at black belters namin ay nagsimula bilang mga mahiyain at walang kumpyansang bata. Matiyaga at may malasakit ang gabay nina Sensei Gerry para matutong magtiwala sa sarili ang bawat estudyante.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 18. "BEFORE YOU GO" CLOSING SECTION (Genuine Loss-Aversion Framing) -->
+  <section class="section-padding" style="background:var(--brand-bg);">
+    <div class="container fc-reveal">
+      <div style="max-width:800px;margin:0 auto;text-align:center;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);padding:44px 32px;border-radius:24px;">
+        
+        <div class="speed-stripes"><span></span><span></span><span></span></div>
+        <h2 style="font-size:clamp(30px, 4.5vw, 48px);margin-bottom:16px;color:#fff;">
+          BAGO KA UMALIS: <span class="accent-italic">Isang Paalala Mula Sa Puso</span>
+        </h2>
+
+        <p style="font-size:18px;line-height:1.7;color:var(--brand-text-muted);margin-bottom:20px;">
+          Lumilipas ang mga araw, buwan, at taon nang napakabilis. Kung hahayaan mong lumaki ang anak mo na lulong lang sa screen at walang pisikal na disiplina, mas mahirap itong itama habang tumatanda sila.
+        </p>
+
+        <p style="font-size:18px;line-height:1.7;color:var(--brand-text-muted);margin-bottom:30px;">
+          Ang ₱800 kada buwan ay madalas napupunta lang sa merienda, milk tea, o load. Pero sa halagang 'yan, maaari mong bigyan ang sarili mo o ang anak mo ng kasanayan, respeto, at tibay ng loob na dadalhin nila habambuhay.
+        </p>
+
+        <!-- Final CTA Button Anchor -->
+        <a href="#pricing" class="btn-solid-primary" style="font-size:22px;padding:18px 36px;">
+          <span>Subukan Ang Libreng Trial Class Ngayon</span>
+          <span class="btn-arrow-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- 19. P.S. LINE -->
+        <p style="font-family:var(--font-accent);font-style:italic;color:var(--brand-secondary);font-size:18px;margin-top:28px;line-height:1.6;">
+          P.S. Tandaan, libre ang unang klase mo. Walang registration fee, walang kontrata, at walang mawawala sa'yo. Pumunta ka lang sa Montemayor St., Poblacion, Malasiqui — at tingnan mo kung paano mababago ng 30-taong karatedo legacy ang buhay ng pamilya mo.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 20. FOOTER -->
+  <footer style="background:#050d08;border-top:1px solid rgba(255,255,255,0.08);padding:50px 24px 80px;text-align:center;">
+    <div class="container">
+      <div style="font-family:var(--font-display);font-size:26px;font-weight:900;letter-spacing:0.04em;color:#fff;margin-bottom:8px;">
+        JEV EAGLE HAND KARATEDO PHILIPPINES
+      </div>
+      <p style="color:var(--brand-text-muted);font-size:14px;margin-bottom:14px;">
+        Poblacion, Montemayor St., Malasiqui, Pangasinan Philippines 2421
+      </p>
+      <p style="color:rgba(255,255,255,0.4);font-size:13px;">
+        © 2025 JEV Eagle Hand Karatedo Philippines. 30 Years of Building Champions and Character.
+      </p>
+    </div>
+  </footer>
+
+  <!-- STICKY FLOATING CTA BAR (Appears after 400px scroll) -->
+  <div id="sticky-cta-bar" class="sticky-bottom-cta">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <span style="font-size:20px;">🥋</span>
+      <div>
+        <div style="font-weight:800;font-size:15px;color:#fff;">JEV KARATEDO MALASIQUI</div>
+        <div style="font-size:13px;color:var(--brand-accent);">₱800/buwan lang • Libreng First Trial Class</div>
+      </div>
+    </div>
+    <div>
+      <a href="#pricing" class="btn-solid-primary" style="padding:10px 24px;font-size:17px;">
+        <span>Mag-book ng Slot</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- SOCIAL PROOF TOAST -->
+  <div id="social-proof-toast" class="toast-popup">
+    <div style="width:38px;height:38px;border-radius:50%;background:var(--brand-accent);color:#05140b;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;flex-shrink:0;">
+      ✓
+    </div>
+    <div>
+      <div id="toast-text" style="font-size:13px;font-weight:700;color:#fff;">Bagong mag-aaral ang nag-book ng trial class!</div>
+      <div style="font-size:11px;color:var(--brand-text-muted);">Kanina lang sa Malasiqui dojo</div>
+    </div>
+  </div>
+
+  <!-- REQUIRED JAVASCRIPT LOGIC -->
+  <script>
+    // 1. Intersection Observer for fc-reveal
+    document.addEventListener('DOMContentLoaded', function(){
+      var els = document.querySelectorAll('.fc-reveal');
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            e.target.classList.add('fc-visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, {threshold: 0.15, rootMargin: '0px 0px -40px 0px'});
+      els.forEach(function(el){ io.observe(el); });
+    });
+
+    // 2. FAQ Accordion Toggle
+    document.querySelectorAll('.faq-item').forEach(function(item){
+      item.addEventListener('click', function(){
+        var isOpen = this.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+        if(!isOpen) {
+          this.classList.add('open');
+        }
+      });
+    });
+
+    // 3. Floating Sticky CTA Bar (after 400px)
+    var stickyBar = document.getElementById('sticky-cta-bar');
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 400){
+        stickyBar.classList.add('active');
+      } else {
+        stickyBar.classList.remove('active');
+      }
+    });
+
+    // 4. Social Proof Toast (every 15s with realistic Pangasinan locations & names)
+    var toast = document.getElementById('social-proof-toast');
+    var toastText = document.getElementById('toast-text');
+    var toastData = [
+      { name: "Si Danica M.", loc: "Malasiqui", action: "nag-reserve ng Free Trial Class" },
+      { name: "Si Jerome C.", loc: "San Carlos", action: "nag-enroll sa Kids Karate Program" },
+      { name: "Si Nanay Gina", loc: "Poblacion", action: "nag-inquire para sa 2 anak" },
+      { name: "Si Mark Anthony", loc: "Calasiao", action: "pumili ng Adult Conditioning Class" },
+      { name: "Si Tatay Robert", loc: "Malasiqui", action: "nag-confirm ng schedule kay Sensei Gerry" },
+      { name: "Si Lea S.", loc: "Bayambang", action: "nag-book ng Saturday trial slot" }
+    ];
+    var toastIndex = 0;
+
+    setInterval(function(){
+      var current = toastData[toastIndex];
+      toastText.innerHTML = "<strong>" + current.name + "</strong> mula sa " + current.loc + " ay " + current.action + ".";
+      toast.classList.add('visible');
+      setTimeout(function(){
+        toast.classList.remove('visible');
+      }, 5000);
+      toastIndex = (toastIndex + 1) % toastData.length;
+    }, 15000);
+  </script>
+
+<script>(function(){try{var v=document.querySelectorAll("video[data-fc-hero]");if(!v.length)return;var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;var sd=navigator.connection&&navigator.connection.saveData;for(var i=0;i<v.length;i++){if(rm||sd){v[i].removeAttribute("autoplay");v[i].pause();}else{var p=v[i].play();if(p&&p.catch)p.catch(function(){});}}}catch(e){}})();</script>
+<div id="fc-legal-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:99999;align-items:center;justify-content:center;padding:20px;">
+<div style="background:#fff;color:#111;max-width:640px;width:100%;max-height:80vh;overflow-y:auto;border-radius:12px;padding:32px;position:relative;font-family:sans-serif;">
+<button onclick="document.getElementById('fc-legal-modal').style.display='none'" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;">&times;</button>
+<div id="fc-legal-content" style="font-size:14px;line-height:1.7;"></div>
+</div>
+</div>
+<script>
+const FC_LEGAL = {"privacy":"<h2>Privacy Policy</h2><p>JEV EAGLE HAND KARATEDO PHILIPPINES ('we', 'us') respects your privacy. This page collects information you voluntarily submit (such as name, email, and payment details) solely to process your order and communicate with you. We do not sell your personal data to third parties. We may use third-party services (payment processors, analytics, advertising pixels) that collect data per their own privacy policies. By using this page, you consent to this collection. Contact us at jeveaglehandaikidokaratedo@gmail.com for any privacy requests, including data deletion.</p>","terms":"<h2>Terms of Service</h2><p>By purchasing or using this product from JEV EAGLE HAND KARATEDO PHILIPPINES, you agree to use it for lawful, personal, or business purposes only, and not to resell, redistribute, or copy the materials without permission. All content is provided 'as is' without warranties beyond what is explicitly stated on this page. JEV EAGLE HAND KARATEDO PHILIPPINES reserves the right to modify pricing, offers, or availability at any time. Contact jeveaglehandaikidokaratedo@gmail.com with any questions.</p>","disclaimer":"<h2>Earnings &amp; Results Disclaimer</h2><p>Any results, outcomes, or examples mentioned on this page are not guaranteed. Individual results vary based on effort, background, and circumstances. This offer is for educational/informational purposes and is not a promise or guarantee of specific results, income, or performance. Always do your own due diligence before purchasing. Contact jeveaglehandaikidokaratedo@gmail.com with questions.</p>"};
+function fcShowLegal(type){document.getElementById('fc-legal-content').innerHTML=FC_LEGAL[type];document.getElementById('fc-legal-modal').style.display='flex';}
+</script>
+<div style="text-align:center;padding:18px 12px;font-size:12px;background:#1a1a1a;color:rgba(255,255,255,0.75);">
+<a href="#" onclick="fcShowLegal('privacy');return false;" style="color:#fff;text-decoration:underline;margin:0 8px;">Privacy Policy</a>
+<a href="#" onclick="fcShowLegal('terms');return false;" style="color:#fff;text-decoration:underline;margin:0 8px;">Terms</a>
+<a href="#" onclick="fcShowLegal('disclaimer');return false;" style="color:#fff;text-decoration:underline;margin:0 8px;">Disclaimer</a>
+</div>
+
+<div style="text-align:center;padding:24px;background:rgba(0,0,0,0.15);">
+<div style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font-size:13px;">
+<a href="#about" style="color:#F0FDF4;opacity:.65;text-decoration:none;">About</a><a href="#services" style="color:#F0FDF4;opacity:.65;text-decoration:none;">Services</a><a href="#faq" style="color:#F0FDF4;opacity:.65;text-decoration:none;">FAQ</a><a href="#contact" style="color:#F0FDF4;opacity:.65;text-decoration:none;">Contact</a><a href="#booking" style="color:#F0FDF4;opacity:.65;text-decoration:none;">Book a Call</a>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="fc-page-about" class="fc-page" style="display:none;min-height:100vh;background:#0A1810;color:#F0FDF4;">
+
+<div style="position:sticky;top:0;z-index:999;background:#0A1810;border-bottom:1px solid rgba(255,255,255,0.08);">
+<div style="max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:14px 24px;">
+<a href="#sales" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+<span style="font-weight:700;color:#F0FDF4;font-size:16px;">JEV EAGLE HAND KARATEDO PHILIPPINES</span>
+</a>
+<div style="display:flex;gap:22px;flex-wrap:wrap;font-size:13px;">
+<a href="#sales" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Home</a>
+<a href="#about" style="color:#F0FDF4;opacity:.75;text-decoration:none;">About</a><a href="#services" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Services</a><a href="#faq" style="color:#F0FDF4;opacity:.75;text-decoration:none;">FAQ</a><a href="#contact" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Contact</a><a href="#booking" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Book a Call</a>
+</div>
+</div>
+</div>
+<div style="max-width:680px;margin:0 auto;padding:60px 24px;">
+<h1 style="font-size:clamp(28px,5vw,40px);margin-bottom:24px;">About Us</h1>
+<img src="images/about.jpg" alt="About us" style="width:160px;height:160px;object-fit:cover;border-radius:50%;margin-bottom:24px;display:block;">
+<p style="opacity:.85;line-height:1.8;font-size:16px;white-space:pre-line;">30 Years of Martial Arts Excellence in PANGASINAN Welcome to JEV Eagle Hand Karate Do Club Dojo, located at Poblacion Montemayor St., Malasiqui, Philippines. For over three decades, we have been more than just a gym—we are a family institution dedicated to building character, strength, and discipline. Our dojo is led by Sensei Gerardo "Gerry" Valdez, a highly respected 7th Dan Black Belt with 30 years of teaching experience. He is joined by his brother, Ernest Valdez (5th Dan), and his son, Gerriemel Valdez, creating a unique multi-generational team of instructors who treat every student like family. Our walls are lined with trophies and medals earned by our students in local and national competitions—a testament to our proven training methods. …</p>
+</div>
+</div>
+
+<div id="fc-page-services" class="fc-page" style="display:none;min-height:100vh;background:#0A1810;color:#F0FDF4;">
+
+<div style="position:sticky;top:0;z-index:999;background:#0A1810;border-bottom:1px solid rgba(255,255,255,0.08);">
+<div style="max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:14px 24px;">
+<a href="#sales" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+<span style="font-weight:700;color:#F0FDF4;font-size:16px;">JEV EAGLE HAND KARATEDO PHILIPPINES</span>
+</a>
+<div style="display:flex;gap:22px;flex-wrap:wrap;font-size:13px;">
+<a href="#sales" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Home</a>
+<a href="#about" style="color:#F0FDF4;opacity:.75;text-decoration:none;">About</a><a href="#services" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Services</a><a href="#faq" style="color:#F0FDF4;opacity:.75;text-decoration:none;">FAQ</a><a href="#contact" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Contact</a><a href="#booking" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Book a Call</a>
+</div>
+</div>
+</div>
+<div style="max-width:680px;margin:0 auto;padding:60px 24px;">
+<h1 style="font-size:clamp(28px,5vw,40px);margin-bottom:28px;">Services &amp; Products</h1>
+<div style="padding:16px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;margin-bottom:12px;font-size:15px;">Service Title: Youth Karate Program (Ages 6-12)</div><div style="padding:16px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;margin-bottom:12px;font-size:15px;">Description: Focuses on discipline, respect, and basic self-defense. Perfect for building confidence and keeping kids active after school. Taught in a fun but structured environment.</div><div style="padding:16px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;margin-bottom:12px;font-size:15px;">Service Title: Teen & Adult Self-Defense</div><div style="padding:16px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;margin-bottom:12px;font-size:15px;">Description: Advanced techniques, sparring, and physical conditioning. Ideal for stress relief, fitness, and learning real-world protection skills under the guidance of 7th Dan masters.</div><div style="padding:16px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;margin-bottom:12px;font-size:15px;">Service Title: Competition Training</div><div style="padding:16px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;margin-bottom:12px;font-size:15px;">Description: Specialized coaching for students aiming to join tournaments. We prepare our students for kata and kumite competitions, just like our many medal-winning graduates.</div><div style="padding:16px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;margin-bottom:12px;font-size:15px;">Service Title: Private / Semi-Private Lessons</div><div style="padding:16px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;margin-bottom:12px;font-size:15px;">Description: One-on-one or small group sessions for faster progression. Great for beginners who want extra attention or advanced students refining their black belt requirements.</div>
+</div>
+</div>
+
+
+<div id="fc-page-faq" class="fc-page" style="display:none;min-height:100vh;background:#0A1810;color:#F0FDF4;">
+
+<div style="position:sticky;top:0;z-index:999;background:#0A1810;border-bottom:1px solid rgba(255,255,255,0.08);">
+<div style="max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:14px 24px;">
+<a href="#sales" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+<span style="font-weight:700;color:#F0FDF4;font-size:16px;">JEV EAGLE HAND KARATEDO PHILIPPINES</span>
+</a>
+<div style="display:flex;gap:22px;flex-wrap:wrap;font-size:13px;">
+<a href="#sales" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Home</a>
+<a href="#about" style="color:#F0FDF4;opacity:.75;text-decoration:none;">About</a><a href="#services" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Services</a><a href="#faq" style="color:#F0FDF4;opacity:.75;text-decoration:none;">FAQ</a><a href="#contact" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Contact</a><a href="#booking" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Book a Call</a>
+</div>
+</div>
+</div>
+<div style="max-width:680px;margin:0 auto;padding:60px 24px;">
+<h1 style="font-size:clamp(28px,5vw,40px);margin-bottom:28px;">Frequently Asked Questions</h1>
+<div style="opacity:.75;line-height:1.8;white-space:pre-line;">Q: Magkano ang bayad sa Valdez Karate Dojo?
+A: Ang aming monthly fee ay ₱800 lamang. May one-time registration fee na 500 para sa new students. Walang hidden charges—affordable quality training for everyone!
+
+Q: Ano ang schedule ng classes?
+A: Bukas kami every Weekdays from 1:00 PM to 5:00 PM (perfect for after-school training) at Saturdays from 8:00 AM to 4:00 PM. Flexible ang schedule para sa mga estudyante at working adults.
+
+Q: Saan exact location ng dojo?
+A: Kami ay matatagpuan sa Poblacion Montemayor St., Malasiqui, Philippines 2421. Madali lang kami puntahan at may sapat na parking space.
+
+Q: Pwede bang magsimula kahit walang experience o kaya naman sobrang bata/matanda?
+A: Oo naman! Tinatanggap namin ang students mula age 6 pataas hanggang sa adults. Hindi kailangan ng prior experience. Ang aming instructors, led by Sensei Gerry (7th Dan), ay sanay magturo sa lahat ng level mula white belt hanggang black belt.
+
+Q: May trial class ba kayo?
+A: Yes! Inaanyayahan namin kayong dumaloy sa dojo para makita ang training firsthand. Maaari kang mag-observe o sumubok ng isang session bago mag-decide. Gusto naming siguraduhing comfortable ka sa aming environment.
+
+Q: Kailangan ba akong bumili ng uniform (Gi) agad?
+A: Para sa trial o first few classes, pwedeng mag-training clothes muna (t-shirt at jogging pants). Kapag nag-commit ka na, bibigyan ka namin ng advice kung saan makakakuha ng proper uniform.</div>
+</div>
+</div>
+
+<div id="fc-page-contact" class="fc-page" style="display:none;min-height:100vh;background:#0A1810;color:#F0FDF4;">
+
+<div style="position:sticky;top:0;z-index:999;background:#0A1810;border-bottom:1px solid rgba(255,255,255,0.08);">
+<div style="max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:14px 24px;">
+<a href="#sales" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+<span style="font-weight:700;color:#F0FDF4;font-size:16px;">JEV EAGLE HAND KARATEDO PHILIPPINES</span>
+</a>
+<div style="display:flex;gap:22px;flex-wrap:wrap;font-size:13px;">
+<a href="#sales" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Home</a>
+<a href="#about" style="color:#F0FDF4;opacity:.75;text-decoration:none;">About</a><a href="#services" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Services</a><a href="#faq" style="color:#F0FDF4;opacity:.75;text-decoration:none;">FAQ</a><a href="#contact" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Contact</a><a href="#booking" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Book a Call</a>
+</div>
+</div>
+</div>
+<div style="max-width:520px;margin:0 auto;padding:60px 24px;text-align:center;">
+<h1 style="font-size:clamp(28px,5vw,40px);margin-bottom:24px;">Get In Touch</h1>
+<p style="margin:8px 0;font-size:15px;"><strong>Email:</strong> <a href="mailto:jeveaglehandaikidokaratedo@gmail.com" style="color:#F0FDF4;text-decoration:underline;">jeveaglehandaikidokaratedo@gmail.com</a></p>
+
+
+<div style="display:flex;gap:14px;justify-content:center;margin-top:20px;">
+<a href="https://web.facebook.com/profile.php?id=61593599176152" target="_blank" rel="noopener" aria-label="Facebook" style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.1);color:#F0FDF4;text-decoration:none;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
+</div>
+
+<div style="max-width:600px;margin:28px auto 0;border-radius:12px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,0.16);">
+https://www.bing.com/maps/search?v=2&pc=FACEBK&mid=8100&mkt=en-US&fbclid=IwY2xjawUfEhhwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMXQ1QVZRSzdtUXc3aktUVWNzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEe8UkklHm-59D2Qw4L5owt29sTp9xa6PrBRi7CxTOcdsLdk27YKHeAi_M_Bfw_aem_8s4F7DQdpfVWJVo3k7NJrQ&FORM=FBKPL1&q=Poblacion+Montemayor+St%2C+Malasiqui%2C+Philippines%2C+2421&cp=15.921417%7E120.413595&lvl=16&style=r
+</div>
+</div>
+</div>
+
+
+<div id="fc-page-booking" class="fc-page" style="display:none;min-height:100vh;background:#0A1810;color:#F0FDF4;">
+  
+<div style="position:sticky;top:0;z-index:999;background:#0A1810;border-bottom:1px solid rgba(255,255,255,0.08);">
+<div style="max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:14px 24px;">
+<a href="#sales" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+<span style="font-weight:700;color:#F0FDF4;font-size:16px;">JEV EAGLE HAND KARATEDO PHILIPPINES</span>
+</a>
+<div style="display:flex;gap:22px;flex-wrap:wrap;font-size:13px;">
+<a href="#sales" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Home</a>
+<a href="#about" style="color:#F0FDF4;opacity:.75;text-decoration:none;">About</a><a href="#services" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Services</a><a href="#faq" style="color:#F0FDF4;opacity:.75;text-decoration:none;">FAQ</a><a href="#contact" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Contact</a><a href="#booking" style="color:#F0FDF4;opacity:.75;text-decoration:none;">Book a Call</a>
+</div>
+</div>
+</div>
+  <div style="max-width:900px;margin:0 auto;padding:60px 24px;">
+    <div style="text-align:center;margin-bottom:40px;">
+      <h1 style="font-size:clamp(28px,5vw,40px);margin-bottom:16px;">Want a personal walkthrough?</h1>
+      <p style="opacity:0.8;max-width:600px;margin:0 auto;">Click the button below to book directly.</p>
+    </div>
+    <div style="min-height:200px;width:100%;">
+      <div style="text-align:center;padding:60px 20px;background:rgba(255,255,255,0.05);border-radius:12px;border:1px dashed rgba(255,255,255,0.2);">
+        <p style="margin-bottom:20px;opacity:0.8;font-size:16px;">Ready to get started?</p>
+        <a href="0908 124 8808" target="_blank" rel="noopener" style="display:inline-block;background:#16A34A;color:#fff;padding:18px 36px;border-radius:8px;font-weight:700;text-decoration:none;font-size:16px;">Book My Spot Now <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;display:inline-block;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function(){
+var order = ["sales","about","services","faq","contact","booking"];
+function showPage(){
+var hash = (location.hash || '').replace('#','');
+if (order.indexOf(hash) === -1) hash = order[0];
+order.forEach(function(p){
+var el = document.getElementById('fc-page-'+p);
+if (el) el.style.display = (p === hash) ? (el.getAttribute('data-display') || 'block') : 'none';
+});
+if (hash === 'thankyou' && !window.__fcPurchaseFired && typeof fcTrackEvent === 'function') {
+window.__fcPurchaseFired = true;
+fcTrackEvent('Purchase');
+}
+}
+window.addEventListener('hashchange', showPage);
+window.addEventListener('DOMContentLoaded', showPage);
+showPage();
+})();
+</script>
+
+<style>
+@media (max-width: 768px) {
+.fc-sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 9998; background: #8a2be2; padding: 14px; text-align: center; box-shadow: 0 -4px 15px rgba(0,0,0,0.3); border-top: 2px solid #d4a843; }
+.fc-sticky-cta a { color: #fff; font-weight: 800; text-decoration: none; display: block; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; }
+body { padding-bottom: 70px !important; }
+}
+</style>
+<div class="fc-sticky-cta"><a href="#checkout" onclick="document.getElementById('checkout')?.scrollIntoView({behavior:'smooth'}); return false;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block;"><path d="M12 3v10"/><path d="M8 9l4-4 4 4"/><rect x="7" y="13" width="10" height="8" rx="2"/></svg> Get Instant Access Now</a></div>
+</body>
+</html>
