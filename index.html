@@ -2,791 +2,876 @@
 <html lang="en">
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JEV Eagle Hand Karatedo | World-Class Karate sa Malasiqui</title>
-  <meta name="description" content="Maging disiplinado, malakas, at confident sa ilalim ng 7th Dan & 5th Dan masters sa Malasiqui, Pangasinan. ₱800/buwan lang. Subukan ang libreng trial class!">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --bg: #0A0808;
-      --bg-card: rgba(26, 20, 20, 0.7);
-      --bg-card-hover: rgba(38, 28, 28, 0.9);
-      --accent: #DC4A2A;
-      --accent-glow: rgba(220, 74, 42, 0.35);
-      --secondary: #F97316;
-      --text: #FFF5F2;
-      --text-muted: rgba(255, 245, 242, 0.7);
-      --border-line: rgba(255, 245, 242, 0.1);
-      --font-display: 'Unbounded', sans-serif;
-      --font-accent: 'Cormorant Garamond', serif;
-      --font-body: 'Poppins', sans-serif;
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 24px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEV EAGLE HAND KARATEDO PH: Disiplina, Lakas, Tagumpay</title>
+    <meta name="description" content="Master world-class karate sa JEV EAGLE HAND KARATEDO PH para sa ₱800/buwan. Hubugin ang disiplina, lakas, at kumpiyansa sa 30-taong legacy dojo. Kumuha ng libreng trial class ngayon!">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-bg: #0A0808;
+            --brand-accent: #DC4A2A;
+            --brand-secondary: #F97316;
+            --brand-text: #FFF5F2;
+            --brand-text-muted: rgba(255, 245, 242, 0.7);
+            --card-bg: rgba(255, 245, 242, 0.04); /* Slightly lighter than main bg for cards */
+            --border-color: rgba(255, 245, 242, 0.08);
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.2);
+            --shadow-medium: 0 10px 28px rgba(0, 0, 0, 0.25);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 48px;
+            --spacing-xl: clamp(72px, 10vw, 140px);
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.6;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    /* Scroll Animations & Hover */
-    .fc-reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
-    }
-    .fc-reveal.fc-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .fc-hover-lift {
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-    .fc-hover-lift:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 45px rgba(220, 74, 42, 0.18);
-    }
-    .fc-btn-primary, [id="fc-cta-main"] {
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .fc-btn-primary:hover, [id="fc-cta-main"]:hover {
-      transform: translateY(-2px) scale(1.02);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .fc-reveal { opacity: 1; transform: none; transition: none; }
-      .fc-hover-lift:hover, .fc-btn-primary:hover, [id="fc-cta-main"]:hover { transform: none; }
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--brand-bg);
+            color: var(--brand-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
 
-    /* Typography & Utilities */
-    h1, h2, h3, h4, .display-font {
-      font-family: var(--font-display);
-      text-transform: uppercase;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-    }
+        a {
+            color: var(--brand-accent);
+            text-decoration: none;
+        }
 
-    .accent-italic {
-      font-family: var(--font-accent);
-      font-style: italic;
-      font-weight: 500;
-      color: var(--secondary);
-      text-transform: none;
-    }
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-sm);
+        }
 
-    .outline-txt {
-      color: transparent;
-      -webkit-text-stroke: 1.5px var(--text);
-    }
+        section {
+            padding: var(--spacing-xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Unbounded', sans-serif;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            font-weight: 700;
+            color: var(--brand-text);
+            text-transform: uppercase;
+        }
+        h1 { font-size: clamp(40px, 7vw, 88px); line-height: 0.95; }
+        h2 { font-size: clamp(32px, 5vw, 64px); line-height: 1; margin-bottom: var(--spacing-lg); }
+        h3 { font-size: clamp(24px, 4vw, 36px); line-height: 1.1; margin-bottom: var(--spacing-md); }
 
-    .outline-accent {
-      color: transparent;
-      -webkit-text-stroke: 1.5px var(--accent);
-    }
+        p {
+            color: var(--brand-text-muted);
+            margin-bottom: var(--spacing-sm);
+        }
 
-    .container {
-      width: 100%;
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 24px;
-      position: relative;
-      z-index: 2;
-    }
+        strong {
+            color: var(--brand-text);
+        }
 
-    section {
-      padding: clamp(70px, 9vw, 130px) 0;
-      position: relative;
-      background: var(--bg);
-    }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            border-radius: 999px;
+            font-family: 'Unbounded', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            color: var(--brand-bg);
+            background-color: var(--brand-accent);
+            box-shadow: var(--shadow-medium);
+            transition: transform .2s ease, box-shadow .2s ease;
+            white-space: nowrap;
+        }
 
-    /* Section Ghost Numerals */
-    .section-header-wrap {
-      position: relative;
-      margin-bottom: 54px;
-    }
-    .ghost-num {
-      position: absolute;
-      top: -45px;
-      left: -10px;
-      font-family: var(--font-display);
-      font-size: clamp(80px, 12vw, 140px);
-      font-weight: 900;
-      color: rgba(255, 255, 255, 0.03);
-      line-height: 1;
-      pointer-events: none;
-      z-index: 1;
-      user-select: none;
-    }
-    .section-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-display);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--secondary);
-      margin-bottom: 12px;
-      background: rgba(249, 115, 22, 0.1);
-      padding: 6px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(249, 115, 22, 0.25);
-    }
-    .section-title {
-      font-size: clamp(28px, 4.5vw, 46px);
-      font-weight: 900;
-      color: var(--text);
-      position: relative;
-      z-index: 2;
-    }
-    .section-sub {
-      color: var(--text-muted);
-      font-size: 17px;
-      max-width: 680px;
-      margin-top: 14px;
-    }
+        .btn:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--brand-accent);
+            color: var(--brand-accent);
+            box-shadow: none;
+        }
+        .btn-outline:hover {
+            background: var(--brand-accent);
+            color: var(--brand-bg);
+            box-shadow: var(--shadow-medium);
+        }
 
-    /* 3D Depth Card Grid Helpers */
-    .card-deck {
-      perspective: 800px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 24px;
-    }
-    .stadium-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border-line);
-      border-left: 4px solid var(--accent);
-      padding: 30px 24px;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-    .stadium-card:hover {
-      transform: translateY(-6px) rotateX(2deg);
-      box-shadow: 0 20px 45px rgba(220, 74, 42, 0.2);
-      border-color: rgba(220, 74, 42, 0.4);
-      border-left-color: var(--secondary);
-    }
+        .fc-reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+        }
+        .fc-reveal.fc-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fc-hover-lift {
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .fc-hover-lift:hover {
+            transform: translateY(-6px) rotateX(2deg);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+            perspective: 800px; /* on parent */
+        }
+        .fc-btn-primary, [id="fc-main-cta"] {
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .fc-btn-primary:hover, [id="fc-main-cta"]:hover {
+            transform: translateY(-2px) scale(1.02);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .fc-reveal { opacity: 1; transform: none; transition: none; }
+            .fc-hover-lift:hover, .fc-btn-primary:hover, [id="fc-main-cta"]:hover { transform: none; }
+            .fc-headline-word { transform: none !important; opacity: 1 !important; filter: none !important; }
+            .fc-ticker-wrap { animation: none !important; }
+        }
 
-    /* 1. Announcement Bar */
-    .announcement-bar {
-      background: linear-gradient(90deg, #180d0d, #2d120d, #180d0d);
-      border-bottom: 1px solid rgba(220, 74, 42, 0.3);
-      padding: 12px 20px;
-      text-align: center;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-    }
-    .announcement-bar span {
-      color: var(--secondary);
-      font-weight: 700;
-    }
+        /* Specific styles for Stadium Lights template */
+        .hero {
+            position: relative;
+            min-height: 92svh;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: var(--spacing-xl);
+            overflow: hidden;
+            background: radial-gradient(circle at center, var(--brand-bg) 0%, rgba(10, 8, 8, 0.9) 70%, var(--brand-bg) 100%);
+        }
+        .hero video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        .hero::before { /* Dark overlay for readability */
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 40%, transparent 100%);
+            z-index: -1;
+        }
+        .hero::after { /* Volumetric spotlight cones + embers */
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 10% 70%, rgba(252, 165, 165, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(251, 191, 36, 0.03) 0%, transparent 40%);
+            pointer-events: none;
+            animation: lightSweep 18s linear infinite alternate, emberRise 20s linear infinite;
+            z-index: -1;
+        }
 
-    /* 2. Hero Section */
-    .hero-section {
-      min-height: 100svh;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow: hidden;
-      padding: 30px 0 60px 0;
-    }
-    .hero-media {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      filter: contrast(1.15) brightness(0.65);
-    }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(10,8,8,0.4) 0%, rgba(10,8,8,0.7) 60%, rgba(10,8,8,1) 100%);
-      z-index: 1;
-    }
-    .volumetric-cone-1 {
-      position: absolute;
-      top: -20%;
-      left: 10%;
-      width: 60vw;
-      height: 120vh;
-      background: conic-gradient(from 180deg at 50% 0%, rgba(220, 74, 42, 0.15) 0deg, transparent 40deg);
-      transform: rotate(-15deg);
-      pointer-events: none;
-      z-index: 2;
-    }
-    .volumetric-cone-2 {
-      position: absolute;
-      top: -20%;
-      right: 5%;
-      width: 50vw;
-      height: 120vh;
-      background: conic-gradient(from 180deg at 50% 0%, rgba(249, 115, 22, 0.12) 0deg, transparent 35deg);
-      transform: rotate(20deg);
-      pointer-events: none;
-      z-index: 2;
-    }
-    .hero-nav {
-      position: relative;
-      z-index: 10;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 10px;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 10;
-      margin-top: auto;
-      padding-bottom: 20px;
-    }
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 18px;
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(14px) saturate(1.4);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 24px;
-    }
-    .pulse-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--accent);
-      border-radius: 50%;
-      box-shadow: 0 0 10px var(--accent);
-    }
-    .hero-h1 {
-      font-size: clamp(34px, 6.2vw, 76px);
-      font-weight: 900;
-      line-height: 1.02;
-      margin-bottom: 24px;
-      max-width: 980px;
-      text-shadow: 0 4px 30px rgba(0,0,0,0.8);
-    }
-    .hero-sub {
-      font-size: clamp(16px, 2vw, 20px);
-      color: var(--text-muted);
-      max-width: 650px;
-      line-height: 1.6;
-      margin-bottom: 36px;
-    }
+        @keyframes lightSweep {
+            0% { background-position: 0% 0%, 0% 0%; }
+            100% { background-position: 100% 100%, 100% 100%; }
+        }
+        @keyframes emberRise {
+            0% { opacity: 0; transform: translateY(100px) scale(0.5); }
+            50% { opacity: 0.06; }
+            100% { opacity: 0; transform: translateY(-100px) scale(1.5); }
+        }
 
-    /* Docked CTA Stage */
-    .hero-docked-cta {
-      display: inline-flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 18px;
-      padding: 12px 18px;
-      background: rgba(20, 14, 14, 0.75);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 999px;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.6);
-    }
-    .btn-main {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: var(--accent);
-      color: #FFF;
-      font-family: var(--font-display);
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      padding: 16px 30px;
-      border-radius: 999px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 0 25px var(--accent-glow);
-    }
-    .btn-main .arrow-chip {
-      width: 24px;
-      height: 24px;
-      background: rgba(255,255,255,0.2);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero-proof-chips {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding-right: 12px;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-muted);
-    }
-    .proof-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-sm);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+        }
 
-    /* Ticker Band */
-    .ticker-band-wrap {
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      overflow: hidden;
-      background: var(--accent);
-      padding: 16px 0;
-      transform: rotate(-2deg);
-      box-shadow: 0 0 30px rgba(220, 74, 42, 0.4);
-      z-index: 12;
-      position: relative;
-      margin-top: 30px;
-      margin-bottom: 50px;
-    }
-    .ticker-track {
-      display: flex;
-      width: max-content;
-      animation: tickerLoop 24s linear infinite;
-      white-space: nowrap;
-    }
-    .ticker-item {
-      font-family: var(--font-display);
-      font-size: 17px;
-      font-weight: 900;
-      color: #FFF;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-    @keyframes tickerLoop {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+        .hero h1 {
+            font-size: clamp(48px, 9vw, 100px);
+            line-height: 0.9;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            text-align: left;
+            margin-bottom: var(--spacing-sm);
+        }
+        .hero h1 span.outlined {
+            -webkit-text-stroke: 2px var(--brand-text);
+            color: transparent;
+            font-weight: 900;
+        }
+        .hero h1 span.accent-italic {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 600;
+            color: var(--brand-accent);
+            -webkit-text-stroke: 0;
+        }
 
-    /* SVG Icon styles */
-    .icon-badge {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: rgba(220, 74, 42, 0.15);
-      border: 1px solid rgba(220, 74, 42, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--secondary);
-      margin-bottom: 18px;
-    }
+        .hero-subheadline {
+            font-size: clamp(18px, 2.5vw, 24px);
+            font-weight: 500;
+            color: var(--brand-text-muted);
+            line-height: 1.3;
+            max-width: 800px;
+            margin-bottom: var(--spacing-md);
+            opacity: 0.85;
+            text-align: left;
+        }
 
-    /* Pain Points Section */
-    .pain-card {
-      flex: 0 1 340px;
-      background: rgba(20, 14, 14, 0.6);
-      border-left: 4px solid #571c14;
-      border-radius: var(--radius-md);
-      padding: 24px;
-      border-top: 1px solid var(--border-line);
-      border-right: 1px solid var(--border-line);
-      border-bottom: 1px solid var(--border-line);
-    }
-    .pain-card:hover {
-      border-left-color: var(--accent);
-    }
-    .pain-card h4 {
-      font-size: 17px;
-      margin-bottom: 8px;
-      color: #ff9d8a;
-    }
+        .announcement-pill {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(14px) saturate(1.4);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 999px;
+            padding: 8px 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--brand-text);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-sm);
+            box-shadow: var(--shadow-light);
+        }
+        .announcement-pill .dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--brand-accent);
+            border-radius: 50%;
+            display: inline-block;
+        }
 
-    /* Solution Bridge */
-    .solution-box {
-      background: linear-gradient(135deg, rgba(220,74,42,0.12) 0%, rgba(20,12,12,0.9) 100%);
-      border: 1px solid rgba(220, 74, 42, 0.3);
-      border-radius: var(--radius-lg);
-      padding: clamp(32px, 5vw, 60px);
-      position: relative;
-      overflow: hidden;
-    }
+        .hero-cta-dock {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(18px) saturate(1.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
+            box-shadow: 0 -8px 20px rgba(0,0,0,0.3);
+        }
 
-    /* Transformation Grid */
-    .transform-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-top: 36px;
-    }
-    @media (max-width: 768px) {
-      .transform-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-    .transform-col {
-      background: var(--bg-card);
-      border-radius: var(--radius-md);
-      padding: 32px;
-      border: 1px solid var(--border-line);
-    }
-    .transform-col.before {
-      border-left: 4px solid #666;
-    }
-    .transform-col.after {
-      border-left: 4px solid var(--secondary);
-      background: rgba(30, 20, 16, 0.85);
-      box-shadow: 0 10px 30px rgba(249, 115, 22, 0.1);
-    }
-    .transform-col h3 {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-    .transform-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .transform-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 15px;
-    }
+        @media (min-width: 768px) {
+            .hero-cta-dock {
+                width: auto;
+                left: var(--spacing-md);
+                bottom: var(--spacing-md);
+                max-width: 400px;
+                border-radius: 999px;
+                border: 1px solid rgba(255, 255, 255, 0.16);
+                padding: 12px 28px;
+            }
+        }
 
-    /* Team Members Section */
-    .team-card {
-      flex: 0 1 320px;
-      text-align: center;
-      background: var(--bg-card);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border-line);
-      border-left: 4px solid var(--accent);
-      padding: 30px 20px;
-    }
-    .team-avatar {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 18px;
-      border: 3px solid var(--accent);
-      display: block;
-      box-shadow: 0 8px 24px rgba(220, 74, 42, 0.3);
-    }
-    .team-name {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .team-rank {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 12px;
-    }
-    .team-bio {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
+        .hero-cta-dock .cta-info {
+            font-size: 14px;
+            color: var(--brand-text-muted);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+        }
+        .hero-cta-dock .cta-info strong {
+            color: var(--brand-text);
+            font-size: 16px;
+        }
+        .hero-cta-dock .btn {
+            margin-left: var(--spacing-md);
+        }
 
-    /* Testimonials Marquee */
-    .testi-card {
-      width: 320px;
-      max-height: 220px;
-      flex-shrink: 0;
-      background: #181212;
-      border: 1px solid rgba(255, 245, 242, 0.12);
-      border-left: 4px solid var(--accent);
-      border-radius: var(--radius-md);
-      padding: 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
-    }
-    .testi-quote {
-      font-size: 14px;
-      color: var(--text);
-      line-height: 1.5;
-      font-style: italic;
-    }
-    .testi-author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-top: 14px;
-    }
-    .testi-avatar-init {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #FFF;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      font-weight: 700;
-      font-family: var(--font-display);
-    }
-    .testi-meta {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
+        .hero-proof-chips {
+            display: flex;
+            gap: 12px;
+            margin-top: var(--spacing-md);
+        }
+        .hero-proof-chip {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 999px;
+            padding: 8px 16px;
+            font-size: 13px;
+            color: var(--brand-text);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: var(--shadow-light);
+        }
 
-    /* Parallax Section */
-    .parallax-section {
-      min-height: 360px;
-      background-image: url('images/parallax.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 24px;
-    }
-    .parallax-scrim {
-      position: absolute;
-      inset: 0;
-      background: rgba(10, 8, 8, 0.72);
-      z-index: 1;
-    }
-    .parallax-content {
-      position: relative;
-      z-index: 2;
-      max-width: 760px;
-    }
+        .ticker-band {
+            background-color: var(--brand-secondary);
+            color: var(--brand-bg);
+            padding: 12px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            transform: rotate(-2deg);
+            margin: var(--spacing-xl) 0;
+            position: relative;
+            z-index: 1;
+        }
+        .ticker-inner {
+            display: inline-block;
+            animation: fcTicker 25s linear infinite;
+        }
+        .ticker-item {
+            display: inline-block;
+            font-family: 'Unbounded', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0 40px;
+        }
+        @keyframes fcTicker {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
 
-    /* Steps Grid */
-    .step-card {
-      flex: 0 1 320px;
-      background: var(--bg-card);
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border-line);
-      border-left: 4px solid var(--secondary);
-      padding: 30px 24px;
-      position: relative;
-    }
-    .step-num {
-      font-family: var(--font-display);
-      font-size: 32px;
-      font-weight: 900;
-      color: var(--secondary);
-      margin-bottom: 12px;
-      line-height: 1;
-    }
+        .section-heading-wrapper {
+            position: relative;
+            z-index: 1;
+            margin-bottom: var(--spacing-lg);
+            text-align: center;
+        }
+        .ghost-num {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Unbounded', sans-serif;
+            font-size: clamp(100px, 15vw, 200px);
+            color: var(--brand-text);
+            opacity: 0.04;
+            pointer-events: none;
+            z-index: -1;
+            line-height: 1;
+            white-space: nowrap;
+        }
 
-    /* Ticket / Price Stack */
-    .ticket-container {
-      max-width: 720px;
-      margin: 0 auto;
-      background: linear-gradient(145deg, #1f1414, #120b0b);
-      border: 2px dashed rgba(220, 74, 42, 0.4);
-      border-radius: var(--radius-lg);
-      padding: clamp(32px, 6vw, 54px);
-      position: relative;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
-    }
-    .ticket-badge {
-      display: inline-block;
-      background: var(--secondary);
-      color: #0A0808;
-      font-family: var(--font-display);
-      font-size: 11px;
-      font-weight: 900;
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 16px;
-      letter-spacing: 0.05em;
-    }
-    .price-row {
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-      margin: 20px 0;
-      flex-wrap: wrap;
-    }
-    .old-price {
-      font-size: 24px;
-      color: rgba(255, 245, 242, 0.4);
-      text-decoration: line-through;
-    }
-    .new-price {
-      font-family: var(--font-display);
-      font-size: clamp(44px, 7vw, 64px);
-      font-weight: 900;
-      color: var(--accent);
-      line-height: 1;
-    }
-    .price-period {
-      font-size: 16px;
-      color: var(--text-muted);
-    }
+        /* Card styles for general grids */
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--spacing-md);
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            flex: 0 1 300px; /* Default card width */
+            min-height: 180px;
+            box-shadow: var(--shadow-light);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background-color: var(--brand-accent);
+        }
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: var(--spacing-xs);
+            text-transform: none;
+            line-height: 1.3;
+        }
+        .card p {
+            font-size: 15px;
+            color: var(--brand-text-muted);
+            flex-grow: 1;
+        }
+        .card .icon-wrapper {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-sm);
+            flex-shrink: 0;
+        }
+        .card .icon-wrapper svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--brand-accent);
+            stroke-width: 1.8;
+        }
 
-    /* FAQ Accordion */
-    .faq-wrapper {
-      max-width: 780px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .faq-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border-line);
-      border-left: 4px solid var(--accent);
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      cursor: pointer;
-    }
-    .faq-question {
-      padding: 20px 24px;
-      font-family: var(--font-display);
-      font-size: 16px;
-      font-weight: 700;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      user-select: none;
-    }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease, padding 0.35s ease;
-      padding: 0 24px;
-      color: var(--text-muted);
-      font-size: 15px;
-      line-height: 1.6;
-    }
-    .faq-item.active .faq-answer {
-      max-height: 250px;
-      padding: 0 24px 22px 24px;
-    }
-    .faq-icon {
-      transition: transform 0.3s ease;
-    }
-    .faq-item.active .faq-icon {
-      transform: rotate(180deg);
-    }
+        /* Testimonials */
+        .testimonial-card {
+            background-color: rgba(255, 245, 242, 0.08); /* Distinct background for contrast */
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            flex-shrink: 0;
+            width: 320px; /* Fixed width for marquee */
+            max-height: 220px; /* Fixed height for consistency */
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform .25s ease, box-shadow .25s ease;
+            position: relative;
+        }
+        .testimonial-card::before {
+            content: '“';
+            font-family: 'Unbounded', sans-serif;
+            font-size: 80px;
+            color: var(--brand-text);
+            opacity: 0.08;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            z-index: 0;
+            line-height: 1;
+        }
+        .testimonial-card p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--brand-text); /* Full opacity for quote text */
+            margin-bottom: var(--spacing-sm);
+            position: relative;
+            z-index: 1;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-top: auto; /* Push to bottom */
+            position: relative;
+            z-index: 1;
+        }
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--brand-secondary);
+            color: var(--brand-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .testimonial-author-info strong {
+            display: block;
+            font-size: 16px;
+            color: var(--brand-text);
+        }
+        .testimonial-author-info span {
+            font-size: 14px;
+            color: var(--brand-text-muted);
+        }
 
-    /* Sticky CTA Bar */
-    .sticky-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(14, 10, 10, 0.95);
-      backdrop-filter: blur(14px);
-      border-top: 1px solid rgba(220, 74, 42, 0.3);
-      padding: 12px 20px;
-      z-index: 999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      transform: translateY(100%);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .sticky-bar.visible {
-      transform: translateY(0);
-    }
+        .fc-ticker-wrap {
+            overflow: hidden;
+            width: 100%;
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+        }
+        .fc-ticker-inner {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            width: max-content;
+            animation: fcTestiMarquee 40s linear infinite;
+        }
+        @keyframes fcTestiMarquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
 
-    /* Social Proof Toast */
-    .toast-box {
-      position: fixed;
-      bottom: 24px;
-      left: 24px;
-      background: rgba(26, 18, 18, 0.95);
-      border: 1px solid var(--accent);
-      border-radius: var(--radius-sm);
-      padding: 12px 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      z-index: 998;
-      transform: translateY(120px);
-      opacity: 0;
-      transition: transform 0.4s ease, opacity 0.4s ease;
-      pointer-events: none;
-      max-width: 320px;
-    }
-    .toast-box.show {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    .toast-dot {
-      width: 10px;
-      height: 10px;
-      background: #22c55e;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
+        /* Parallax Section */
+        .parallax-section {
+            background-image: url('images/parallax.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .parallax-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+        }
+        .parallax-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: var(--spacing-md);
+        }
+        .parallax-content .eyebrow {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--brand-accent);
+            margin-bottom: var(--spacing-xs);
+        }
+        .parallax-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: clamp(32px, 5vw, 56px);
+            line-height: 1.2;
+            color: var(--brand-text);
+            margin-bottom: 0;
+            text-transform: none;
+        }
 
-    /* Mobile Adaptations */
-    @media (max-width: 760px) {
-      .hero-docked-cta {
-        width: 100%;
-        border-radius: var(--radius-md);
-        justify-content: center;
-      }
-      .btn-main {
-        width: 100%;
-        justify-content: center;
-      }
-      .hero-proof-chips {
-        padding-right: 0;
-        width: 100%;
-        justify-content: center;
-      }
-      .card-deck {
-        flex-direction: column;
-        align-items: center;
-      }
-      .stadium-card, .pain-card, .team-card, .step-card {
-        width: 100%;
-        max-width: 100%;
-      }
-      .sticky-bar {
-        padding: 10px 14px;
-      }
-      .sticky-bar span {
-        display: none;
-      }
-      .sticky-bar .btn-main {
-        padding: 12px 20px;
-        font-size: 13px;
-      }
-    }
-  </style>
+        /* How it works */
+        .how-it-works-step {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+        .how-it-works-step:last-child {
+            margin-bottom: 0;
+        }
+        .how-it-works-step .step-num {
+            font-family: 'Unbounded', sans-serif;
+            font-size: clamp(48px, 6vw, 80px);
+            font-weight: 900;
+            color: var(--brand-accent);
+            line-height: 1;
+            flex-shrink: 0;
+            opacity: 0.8;
+        }
+        .how-it-works-step .step-content h3 {
+            font-size: 24px;
+            margin-bottom: var(--spacing-xs);
+            text-transform: none;
+        }
+        .how-it-works-step .step-content p {
+            font-size: 16px;
+            color: var(--brand-text-muted);
+        }
+        @media (max-width: 768px) {
+            .how-it-works-step {
+                flex-direction: column;
+                text-align: center;
+            }
+            .how-it-works-step .step-num {
+                margin-bottom: var(--spacing-sm);
+            }
+        }
+
+        /* Price Stack */
+        .price-stack {
+            background-color: rgba(255, 245, 242, 0.08);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-lg) var(--spacing-md);
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .price-stack::before { /* Ticket stub style */
+            content: '';
+            position: absolute;
+            top: 20px;
+            bottom: 20px;
+            left: -10px;
+            right: -10px;
+            border: 1px dashed rgba(255, 245, 242, 0.2);
+            border-radius: 20px;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .price-stack .original-price {
+            font-size: 20px;
+            color: var(--brand-text-muted);
+            text-decoration: line-through;
+            margin-bottom: var(--spacing-xs);
+            font-weight: 500;
+        }
+        .price-stack .current-price {
+            font-size: clamp(48px, 8vw, 72px);
+            font-weight: 900;
+            color: var(--brand-accent);
+            line-height: 1;
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 8px;
+        }
+        .price-stack .current-price span {
+            font-size: clamp(24px, 4vw, 36px);
+            align-self: flex-start;
+        }
+        .price-stack .description {
+            font-size: 18px;
+            color: var(--brand-text);
+            margin-bottom: var(--spacing-md);
+            font-weight: 500;
+        }
+        .price-stack .btn {
+            width: 100%;
+            margin-top: var(--spacing-md);
+        }
+
+        /* Guarantee */
+        .guarantee-section {
+            background-color: rgba(255, 245, 242, 0.06);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .guarantee-section .container {
+            max-width: 800px;
+        }
+        .guarantee-section .icon-wrapper {
+            margin: 0 auto var(--spacing-md);
+            width: 80px;
+            height: 80px;
+            background-color: var(--brand-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .guarantee-section .icon-wrapper svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--brand-bg);
+            stroke-width: 1.8;
+        }
+        .guarantee-section h3 {
+            font-size: clamp(28px, 4vw, 40px);
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.2;
+            text-transform: none;
+        }
+        .guarantee-section p {
+            font-size: 18px;
+            color: var(--brand-text);
+            line-height: 1.5;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: box-shadow .2s ease;
+        }
+        .faq-item:hover {
+            box-shadow: var(--shadow-medium);
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md);
+            cursor: pointer;
+            font-family: 'Unbounded', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--brand-text);
+            text-transform: none;
+        }
+        .faq-question svg {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+            stroke: var(--brand-accent);
+            stroke-width: 2;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            padding: 0 var(--spacing-md);
+            color: var(--brand-text-muted);
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .faq-answer.open {
+            max-height: 200px; /* Adjust as needed for content */
+            padding-bottom: var(--spacing-md);
+        }
+        .faq-question.active svg {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            padding: var(--spacing-lg) var(--spacing-sm);
+            text-align: center;
+            font-size: 14px;
+            color: var(--brand-text-muted);
+            border-top: 1px solid var(--border-color);
+        }
+        footer p {
+            margin-bottom: var(--spacing-xs);
+        }
+        footer strong {
+            color: var(--brand-text);
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--spacing-md);
+        }
+        .team-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            text-align: center;
+            flex: 0 1 280px;
+            box-shadow: var(--shadow-light);
+            transition: transform .25s ease, box-shadow .25s ease;
+            position: relative;
+        }
+        .team-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto var(--spacing-sm);
+            border: 3px solid var(--brand-accent);
+            padding: 2px;
+        }
+        .team-card h3 {
+            font-size: 20px;
+            margin-bottom: 4px;
+            text-transform: none;
+            color: var(--brand-text);
+        }
+        .team-card .role {
+            font-size: 15px;
+            color: var(--brand-secondary);
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+        }
+        .team-card p {
+            font-size: 14px;
+            color: var(--brand-text-muted);
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: clamp(38px, 10vw, 60px); }
+            h2 { font-size: clamp(28px, 8vw, 48px); }
+            .hero-content { align-items: center; text-align: center; }
+            .hero-subheadline { text-align: center; }
+            .ticker-item { font-size: 16px; padding: 0 20px; }
+            .card { flex: 0 1 100%; }
+            .testimonial-card { width: 90vw; }
+            .how-it-works-step { flex-direction: column; text-align: center; }
+            .how-it-works-step .step-num { margin-bottom: var(--spacing-sm); }
+            .btn { width: 100%; }
+            .hero-cta-dock { padding: var(--spacing-sm) var(--spacing-sm); border-radius: 0; }
+            .hero-cta-dock .cta-info { display: none; }
+            .hero-cta-dock .btn { margin-left: 0; flex-grow: 1; }
+        }
+
+        .cta-arrow {
+            display: inline-flex;
+            width: 24px;
+            height: 24px;
+            background-color: var(--brand-bg);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin-left: 8px;
+        }
+        .cta-arrow svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--brand-accent);
+            stroke-width: 2;
+        }
+
+        .p-s-line {
+            font-size: 15px;
+            color: var(--brand-text-muted);
+            margin-top: var(--spacing-md);
+            text-align: center;
+        }
+
+        /* Headline stagger animation */
+        .fc-headline-word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(14px) blur(8px);
+            animation: fcWordLoad .7s forwards;
+            animation-timing-function: cubic-bezier(.16,1,.3,1);
+        }
+
+        @keyframes fcWordLoad {
+            to { opacity: 1; transform: translateY(0) blur(0); }
+        }
+        
+    </style>
 
 <!-- SEO: meta description (search engines look for this exact tag — separate from the og:description used by social sharing previews below) -->
 <meta name="description" content="Affordable, world-class karate training under 7th Dan and 5th Dan masters for only ₱800/month. Join a 30-year legacy dojo in Poblacion, Malasiqui that builds di">
@@ -830,852 +915,735 @@ if (v) { localStorage.setItem('fc_ref', v); break; }
 </div>
 
 
-  <!-- 1. ANNOUNCEMENT BAR (Normal Flow) -->
-  <div class="announcement-bar">
-    Limited Slots Available: Bagong Batch Para Sa Malasiqui Dojos &bull; <span>₱800/Buwan Na Lang</span> (Orihinal: ₱3,000) &bull; Libre Ang Unang Trial Class!
-  </div>
-
-  <!-- 2. HERO SECTION -->
-  <header class="hero-section">
-    <div class="hero-media">
-      <video data-fc-hero src="https://res.cloudinary.com/dqo0bc4u/video/upload/v1791590129/Martial_artists_practicing_synch__20261010075506_vvd2r8.mp4" poster="images/hero.jpg" autoplay muted loop playsinline preload="metadata" disablepictureinpicture aria-label="FunnelCraft" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="volumetric-cone-1"></div>
-    <div class="volumetric-cone-2"></div>
-
-    <div class="container hero-nav">
-      <div>
-        <img src="images/logo.jpg" alt="JEV EAGLE HAND KARATEDO PHILIPPINES logo" style="height:44px;object-fit:contain;">
-      </div>
-      <div style="font-size: 13px; font-weight: 600; color: var(--secondary); letter-spacing: 0.05em; text-transform: uppercase;">
-        Poblacion, Malasiqui, Pangasinan
-      </div>
+    <!-- Announcement Bar -->
+    <div style="background-color: var(--brand-secondary); color: var(--brand-bg); padding: 12px 0; text-align: center; font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; position: relative; z-index: 101;">
+        <span>LIMITED SLOTS: WORLD-CLASS KARATE TRAINING FOR ONLY ₱800/BUWAN!</span>
     </div>
 
-    <div class="container hero-content">
-      <div class="hero-pill">
-        <span class="pulse-dot"></span>
-        <span>30-Year Legacy Dojo &bull; World-Class Masters</span>
-      </div>
-
-      <h1 id="fc-main-headline" class="hero-h1">
-        MAGING <span class="outline-txt">DISIPLINADO AT MALAKAS</span> SA ILALIM NG 7TH DAN MASTERS
-      </h1>
-
-      <p class="hero-sub">
-        Ilayo ang mga anak sa cellphone at screen addiction. Ibalik ang focus, self-defense skills, at kumpiyansa sa sarili sa pinaka-respetadong karate dojo sa Malasiqui — sa abot-kayang halaga.
-      </p>
-
-      <div class="hero-docked-cta">
-        <a id="fc-main-cta" href="#" onclick="if(typeof fcTrackEvent==='function'){fcTrackEvent('InitiateCheckout');}var b=document.getElementById('fc-bump-checkbox');var bp=b&&b.checked;var ne=document.getElementById('fc-checkout-name');var ee=document.getElementById('fc-checkout-email');if(ne&&ee){var nm=ne.value.trim();var em=ee.value.trim();if(!nm||!em){alert(&quot;Pakilagay ang pangalan at email mo bago magpatuloy.&quot;);return false;}}var h=bp?&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;:&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;;if(h&&h!=='#'){window.open(h,'_blank','noopener');}return false;" class="btn-main fc-btn-primary">
-          <span>I-BOOK ANG FREE TRIAL CLASS</span>
-          <span class="arrow-chip">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
-        </a>
-        <div class="hero-proof-chips">
-          <div class="proof-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Safe &amp; Family Dojo</span>
-          </div>
-          <div class="proof-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-            <span>Trophy-Winning Lineage</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ANGLED TICKER BAND -->
-  <div class="ticker-band-wrap">
-    <div class="ticker-track">
-      <div class="ticker-item">DISIPLINA <span>&bull;</span> RESPETO <span>&bull;</span> SELF-DEFENSE <span>&bull;</span> CONFIDENCE <span>&bull;</span> CHAMPION MINDSET <span>&bull;</span></div>
-      <div class="ticker-item">DISIPLINA <span>&bull;</span> RESPETO <span>&bull;</span> SELF-DEFENSE <span>&bull;</span> CONFIDENCE <span>&bull;</span> CHAMPION MINDSET <span>&bull;</span></div>
-      <div class="ticker-item">DISIPLINA <span>&bull;</span> RESPETO <span>&bull;</span> SELF-DEFENSE <span>&bull;</span> CONFIDENCE <span>&bull;</span> CHAMPION MINDSET <span>&bull;</span></div>
-      <div class="ticker-item">DISIPLINA <span>&bull;</span> RESPETO <span>&bull;</span> SELF-DEFENSE <span>&bull;</span> CONFIDENCE <span>&bull;</span> CHAMPION MINDSET <span>&bull;</span></div>
-    </div>
-  </div>
-
-  <!-- 4. THIS IS FOR YOU IF... -->
-  <section>
-    <div class="container fc-reveal">
-      <div class="section-header-wrap">
-        <span class="ghost-num">01</span>
-        <div class="section-eyebrow">Para Kanino Ito?</div>
-        <h2 class="section-title">Para Sa&rsquo;yo Ang JEV Eagle Hand Kung...</h2>
-        <p class="section-sub">Hindi mo kailangang maging atleta para magsimula. Ginawa ang training na ito para sa mga pamilya at indibidwal na nais magbago ang takbo ng buhay.</p>
-      </div>
-
-      <div class="card-deck">
-        <div class="stadium-card fc-reveal fc-hover-lift" style="flex: 0 1 320px; transition-delay: .08s;">
-          <div class="icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          </div>
-          <h3 style="font-size: 19px; margin-bottom: 10px;">Magulang Na Pagod Sa Screen Addiction</h3>
-          <p style="color: var(--text-muted); font-size: 15px;">Gusto mong makitang tumayo ang anak mo mula sa maghapong pag-upo sa tablet at matutong magpokus at sumunod sa utos nang may kusa.</p>
-        </div>
-
-        <div class="stadium-card fc-reveal fc-hover-lift" style="flex: 0 1 320px; transition-delay: .16s;">
-          <div class="icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 style="font-size: 19px; margin-bottom: 10px;">Naghahanap Ng Tunay Na Self-Defense</h3>
-          <p style="color: var(--text-muted); font-size: 15px;">Nais mong matutong protektahan ang iyong sarili at ang iyong pamilya sa totoong panganib gamit ang tradisyunal at epektibong karatedo.</p>
-        </div>
-
-        <div class="stadium-card fc-reveal fc-hover-lift" style="flex: 0 1 320px; transition-delay: .24s;">
-          <div class="icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3 style="font-size: 19px; margin-bottom: 10px;">Adults Na Gustong Magbawas Ng Stress</h3>
-          <p style="color: var(--text-muted); font-size: 15px;">Pumapalya sa mamahaling gym? Dito, mabilis kang papawisan, lalakas ang stamina mo, at gagaan ang pakiramdam pagkatapos ng trabaho.</p>
-        </div>
-
-        <div class="stadium-card fc-reveal fc-hover-lift" style="flex: 0 1 320px; transition-delay: .32s;">
-          <div class="icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <h3 style="font-size: 19px; margin-bottom: 10px;">Nais Matuto Sa Lehitimong Masters</h3>
-          <p style="color: var(--text-muted); font-size: 15px;">Ayaw mo sa mga fly-by-night martial arts clubs. Gusto mo ng dojo na may 30 taong track record at pinamumunuan ng 7th Dan at 5th Dan black belts.</p>
-        </div>
-
-        <div class="stadium-card fc-reveal fc-hover-lift" style="flex: 0 1 320px; transition-delay: .40s;">
-          <div class="icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <h3 style="font-size: 19px; margin-bottom: 10px;">Praktikal at Budget-Conscious</h3>
-          <p style="color: var(--text-muted); font-size: 15px;">Naghahanap ka ng de-kalidad na aktibidad para sa sarili o mga bata na hindi sisira sa buwanang gastusin ng pamilya.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. PAIN POINTS SECTION -->
-  <section style="background: #0f0b0b;">
-    <div class="container fc-reveal">
-      <div class="section-header-wrap">
-        <span class="ghost-num">02</span>
-        <div class="section-eyebrow">Relate Ka Ba Dito?</div>
-        <h2 class="section-title">Ang Hirap Pag Walang <span class="outline-txt">Direksyon</span> Ang Katawan at Isip</h2>
-        <p class="section-sub">Ito ang madalas na ikinababahala ng mga magulang at indibidwal sa Pangasinan bago sila pumasok sa pinto ng aming dojo:</p>
-      </div>
-
-      <div class="card-deck">
-        <div class="pain-card fc-reveal fc-hover-lift" style="transition-delay: .08s;">
-          <h4>1. &ldquo;Buong araw nakatutok sa cellphone ang anak ko.&rdquo;</h4>
-          <p style="color: var(--text-muted); font-size: 14px;">Mula umaga hanggang gabi, laro lang sa online games o social media. Napapabayaan ang gawaing-bahay, humihina ang resistensya, at madaling magmaktol.</p>
-        </div>
-
-        <div class="pain-card fc-reveal fc-hover-lift" style="transition-delay: .16s;">
-          <h4>2. &ldquo;Laging pagod pero hindi makatulog sa gabi.&rdquo;</h4>
-          <p style="color: var(--text-muted); font-size: 14px;">Bilang adult, naipon ang stress sa trabaho at kabuhayan. Walang maayos na outlet para maglabas ng tensyon kaya madalas sumakit ang likod at katawan.</p>
-        </div>
-
-        <div class="pain-card fc-reveal fc-hover-lift" style="transition-delay: .24s;">
-          <h4>3. &ldquo;Takot ma-bully o hindi marunong magtanggol ng sarili.&rdquo;</h4>
-          <p style="color: var(--text-muted); font-size: 14px;">Nandiyan ang kaba tuwing papasok sa eskwela o lalabas ng gabi. Walang tiwala sa sariling kakayahan kapag may sumubok manggipit.</p>
-        </div>
-
-        <div class="pain-card fc-reveal fc-hover-lift" style="transition-delay: .32s;">
-          <h4>4. &ldquo;Masyadong mahal ang ibang fitness centers.&rdquo;</h4>
-          <p style="color: var(--text-muted); font-size: 14px;">May mga martial arts gym sa siyudad na naniningil ng ₱2,500 hanggang ₱4,000 kada buwan, bukod pa ang hiwalay na bayad sa bawat session.</p>
-        </div>
-
-        <div class="pain-card fc-reveal fc-hover-lift" style="transition-delay: .40s;">
-          <h4>5. &ldquo;Baka aggressive o delikado ang training?&rdquo;</h4>
-          <p style="color: var(--text-muted); font-size: 14px;">Takot kang dalhin ang bata sa mga gym kung saan puro yabangan, walang tamang supervision, o baka magka-injury lang dahil kulang sa credentials ang nagtuturo.</p>
-        </div>
-
-        <div class="pain-card fc-reveal fc-hover-lift" style="transition-delay: .48s;">
-          <h4>6. &ldquo;Walang focus at madaling sumuko sa mga hamon.&rdquo;</h4>
-          <p style="color: var(--text-muted); font-size: 14px;">Kapag humirap ang sitwasyon, atras agad. Walang grit, walang matibay na pundasyon ng respeto, at kulang sa lakas ng loob humarap sa buhay.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. SOLUTION BRIDGE -->
-  <section>
-    <div class="container fc-reveal">
-      <div class="solution-box">
-        <div class="section-eyebrow">Ang Bagong Simula</div>
-        <h2 style="font-size: clamp(26px, 4vw, 40px); margin-bottom: 20px;">
-          Hindi Kailangang Maging Ganyan Palagi. Heto Ang Katotohanan:
-        </h2>
-        <p style="font-size: 16px; margin-bottom: 16px; line-height: 1.7; color: var(--text);">
-          Ang kailangan mo — o ng anak mo — ay hindi sermon, kundi isang <strong>ligtas at disiplinadong kapaligiran</strong> kung saan itinuturo ang halaga ng bawat galaw, bawat bow, at bawat patak ng pawis.
-        </p>
-        <p style="font-size: 16px; margin-bottom: 20px; line-height: 1.7; color: var(--text-muted);">
-          Dito pumapasok ang <strong>JEV EAGLE HAND KARATEDO PHILIPPINES</strong>. Sa loob ng tatlong dekada sa Malasiqui, Pangasinan, napatunayan namin na ang tunay na lakas ay hindi nanggagaling sa pananakit ng iba, kundi sa pagkontrol sa sariling isip at katawan. Sa ilalim ng gabay ng mga certified master instructors, ang mahiyain ay nagiging matapang, ang magalaw ay nagiging focused, at ang simpleng mag-aaral ay hinuhubog na maging kampeon sa buhay.
-        </p>
-        <div style="display: inline-flex; align-items: center; gap: 12px; color: var(--secondary); font-weight: 700;">
-          <span>Ang dojo na kinikilala sa Pangasinan sa loob ng 30 taon.</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. WHAT'S INCLUDED -->
-  <section style="background: #0d0909;">
-    <div class="container fc-reveal">
-      <div class="section-header-wrap">
-        <span class="ghost-num">03</span>
-        <div class="section-eyebrow">Lahat Ng Kasama</div>
-        <h2 class="section-title">Anong Makukuha Mo Sa Pag-Enroll?</h2>
-        <p class="section-sub">Bawat klase ay dinisenyo upang magbigay ng tunay na pagbabago sa iyong katawan at pag-uugali.</p>
-      </div>
-
-      <div class="card-deck">
-        <div class="stadium-card fc-reveal fc-hover-lift" style="flex: 0 1 320px; transition-delay: .08s;">
-          <div class="icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-2.34"/><path d="M18 14.66V17c0 .55-.45 1-1 1h-2c-.55 0-1-.45-1-1v-2.34"/><path d="M12 2v20"/></svg>
-          </div>
-          <h3 style="font-size: 18px; margin-bottom: 8px;">Master-Level Mentorship</h3>
-          <p style="color: var(--text-muted); font-size: 14px;">Direktang pagtuturo mula kay Sensei Gerry Valdez (7th Dan) at Ernest Valdez (5th Dan) — tunay na kaalaman, hindi bara-bara.</p>
-        </div>
-
-        <div class="stadium-card fc-reveal fc-hover-lift" style="flex: 0 1 320px; transition-delay: .16s;">
-          <div class="icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3 style="font-size: 18px; margin-bottom: 8px;">Hiwalay Na Youth &amp; Adult Sessions</h3>
-          <p style="color: var(--text-muted); font-size: 14px;">Angkop na programa para sa bawat edad: masaya at may disiplina para sa bata, nakatutok sa stamina at depensa para sa matatanda.</p>
-        </div>
-
-        <div class="stadium-card fc-reveal fc-hover-lift" style="flex: 0 1 320px; transition-delay: .24s;">
-          <div class="icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <h3 style="font-size: 18px; margin-bottom: 8px;">Trophy-Winning Training Curriculum</h3>
-          <p style="color: var(--text-muted); font-size: 14px;">Sanayin ang sarili sa parehong tradisyunal na Kata at Kumite drills na nagluwal ng maraming medalya at black belt passers sa aming dojo.</p>
-        </div>
-
-        <div class="stadium-card fc-reveal fc-hover-lift" style="flex: 0 1 320px; transition-delay: .32s;">
-          <div class="icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 style="font-size: 18px; margin-bottom: 8px;">Praktikal Na Self-Defense Drills</h3>
-          <p style="color: var(--text-muted); font-size: 14px;">Matutong mag-react nang mabilis, umiwas sa peligro, at protektahan ang sarili kapag kinakailangan.</p>
-        </div>
-
-        <div class="stadium-card fc-reveal fc-hover-lift" style="flex: 0 1 320px; transition-delay: .40s;">
-          <div class="icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <h3 style="font-size: 18px; margin-bottom: 8px;">Ligtas at Family-Friendly Dojo</h3>
-          <p style="color: var(--text-muted); font-size: 14px;">Matatagpuan sa Poblacion, Montemayor St., Malasiqui — madaling puntahan, may respeto sa bawat mag-aaral, at walang toxic na yabangan.</p>
-        </div>
-
-        <div class="stadium-card fc-reveal fc-hover-lift" style="flex: 0 1 320px; transition-delay: .48s;">
-          <div class="icon-badge">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-          </div>
-          <h3 style="font-size: 18px; margin-bottom: 8px;">Libreng Assessment / Trial Session</h3>
-          <p style="color: var(--text-muted); font-size: 14px;">Bago ka magbayad ng buwanang membership, subukan muna ang unang klase nang libre para maranasan ang tunay na JEV training.</p>
-        </div>
-      </div>
-
-      <!-- GALLERY SECTION INJECTION -->
-      <div style="margin-top: 60px;">
-        <h3 style="font-size: 22px; text-align: center; margin-bottom: 24px;">Silipin Ang Loob Ng Aming Komunidad</h3>
-        <div style="margin:24px 0;"><div style="display:flex;justify-content:center;gap:16px;margin-bottom:16px;"><div style="flex:1 1 0;max-width:240px;text-align:center;background:rgba(128,128,128,0.06);border-radius:16px;padding:10px 10px 14px;border:1px solid rgba(128,128,128,0.14);box-shadow:0 10px 28px rgba(0,0,0,0.16);"><img src="images/gallery-1.png" alt="3rd All LUZON MKKPI Championships" style="width:100%;aspect-ratio:4/3;object-fit:contain;display:block;border-radius:10px;mask-image:linear-gradient(to bottom,black 88%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,black 88%,transparent 100%);"><div style="font-size:13px;font-weight:600;margin-top:10px;">3rd All LUZON MKKPI Championships</div></div><div style="flex:1 1 0;max-width:240px;text-align:center;background:rgba(128,128,128,0.06);border-radius:16px;padding:10px 10px 14px;border:1px solid rgba(128,128,128,0.14);box-shadow:0 10px 28px rgba(0,0,0,0.16);"><img src="images/gallery-2.png" alt="30TH years  Anniversary  with some of our Black Belters" style="width:100%;aspect-ratio:4/3;object-fit:contain;display:block;border-radius:10px;mask-image:linear-gradient(to bottom,black 88%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,black 88%,transparent 100%);"><div style="font-size:13px;font-weight:600;margin-top:10px;">30TH years  Anniversary  with some of our Black Belters</div></div><div style="flex:1 1 0;max-width:240px;text-align:center;background:rgba(128,128,128,0.06);border-radius:16px;padding:10px 10px 14px;border:1px solid rgba(128,128,128,0.14);box-shadow:0 10px 28px rgba(0,0,0,0.16);"><img src="images/gallery-3.png" alt="International Competition " style="width:100%;aspect-ratio:4/3;object-fit:contain;display:block;border-radius:10px;mask-image:linear-gradient(to bottom,black 88%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,black 88%,transparent 100%);"><div style="font-size:13px;font-weight:600;margin-top:10px;">International Competition </div></div></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. TRANSFORMATION SECTION -->
-  <section>
-    <div class="container fc-reveal">
-      <div class="section-header-wrap">
-        <span class="ghost-num">04</span>
-        <div class="section-eyebrow">Ang Pagbabago</div>
-        <h2 class="section-title">Sino Ka Bago at Pagkatapos Ng JEV?</h2>
-        <p class="section-sub">Hindi lang ito basta pagsipa at pagsuntok. Ito ay transformasyon ng iyong pagkatao.</p>
-      </div>
-
-      <div class="transform-grid">
-        <div class="transform-col before">
-          <h3 style="color: #bbb;">Dati (Kung Walang Gabay):</h3>
-          <ul class="transform-list">
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-              <span><strong>Laging nakayuko sa gadget</strong>, walang kusa sa gawaing bahay, at madaling mawalan ng gana.</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-              <span><strong>Mababa ang kompiyansa sa sarili</strong>, madaling kabahan sa harap ng ibang tao o sa eskwelahan.</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-              <span><strong>Laging nanghihina ang katawan</strong> at mabilis sumuko sa mga simpleng hamon.</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="transform-col after">
-          <h3 style="color: var(--secondary);">Ngayon (Kasama Ang JEV Karatedo):</h3>
-          <ul class="transform-list">
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>May kusa at disiplina</strong>, marespeto sa mga magulang at guro, at mataas ang pokus sa pag-aaral.</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>May matatag na loob</strong>, kayang tumindig para sa sarili, at may kumpiyansang humarap kaninuman.</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Maliksi at malakas ang pangangatawan</strong>, may grit na lumaban at magtagumpay sa araw-araw na buhay.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MEET THE TEAM / COACHES SECTION -->
-  <section style="background: #0f0b0b;">
-    <div class="container fc-reveal">
-      <div class="section-header-wrap">
-        <span class="ghost-num">05</span>
-        <div class="section-eyebrow">Aming Mga Guro</div>
-        <h2 class="section-title">Kilalanin Ang Mga Master Coaches</h2>
-        <p class="section-sub">Ang kalidad ng dojo ay nakasalalay sa kadalubhasaan ng mga nagtuturo. Sa JEV, tunay na mga beterano ang gagabay sa iyo.</p>
-      </div>
-
-      <div class="card-deck">
-        <div class="team-card fc-reveal fc-hover-lift" style="transition-delay: .08s;">
-          <img src="images/coach-1.jpg" alt="Sensei Gerardo “Gerry” Valdez" class="team-avatar">
-          <div class="team-name">Sensei Gerardo “Gerry” Valdez</div>
-          <div class="team-rank">Head Coach, 7th Dan</div>
-          <p class="team-bio">Head coach ng dojo at senior karate instructor. Siya ang haligi ng 30 taong legasiya ng paghubog ng mga kampeon at black belters sa Malasiqui.</p>
-        </div>
-
-        <div class="team-card fc-reveal fc-hover-lift" style="transition-delay: .16s;">
-          <img src="images/coach-2.jpg" alt="Ernest Valdez" class="team-avatar">
-          <div class="team-name">Ernest Valdez</div>
-          <div class="team-rank">Senior Instructor, 5th Dan</div>
-          <p class="team-bio">Senior karate instructor at kapatid ni Head Coach Sensei Gerry Valdez. Eksperto sa technical mastery, forms, at disiplina sa training.</p>
-        </div>
-
-        <div class="team-card fc-reveal fc-hover-lift" style="transition-delay: .24s;">
-          <img src="images/coach-3.jpg" alt="Gerriemel Valdez" class="team-avatar">
-          <div class="team-name">Gerriemel Valdez</div>
-          <div class="team-rank">Instructor</div>
-          <p class="team-bio">Karate instructor at anak ni Head Coach Sensei Gerry Valdez. Aktibong gumagabay sa mga kabataan at bagong henerasyon ng martial artists.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. TESTIMONIALS MARQUEE -->
-  <section style="overflow: hidden; padding-bottom: 90px;">
-    <div class="container fc-reveal" style="margin-bottom: 30px;">
-      <div class="section-header-wrap">
-        <span class="ghost-num">06</span>
-        <div class="section-eyebrow">Kuwento Ng Pagbabago</div>
-        <h2 class="section-title">Ano Ang Sinasabi Ng Mga Estudyante&rsquo;t Magulang?</h2>
-      </div>
-    </div>
-
-    <div style="overflow:hidden;width:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);">
-      <div style="display:flex;align-items:flex-start;gap:20px;width:max-content;animation:fcTestiMarquee 42s linear infinite;">
-        <!-- Card 1 -->
-        <div class="testi-card">
-          <p class="testi-quote">&ldquo;Malaking tulong kay bunso. Dati tutok lang sa cellphone, ngayon excited na mag-ensayo tuwing may klase. Mas magalang na rin sa bahay!&rdquo;</p>
-          <div class="testi-author">
-            <div class="testi-avatar-init">ML</div>
-            <div>
-              <div style="font-weight: 700; font-size: 14px;">Maricel Lopez</div>
-              <div class="testi-meta">Magulang mula sa Malasiqui</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <video data-fc-hero src="https://res.cloudinary.com/dqo0bc4u/video/upload/v1791590129/Martial_artists_practicing_synch__20261010075506_vvd2r8.mp4" poster="images/hero.jpg" autoplay muted loop playsinline preload="metadata" disablepictureinpicture aria-label="FunnelCraft" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>
+        <div class="hero-content">
+            <div class="announcement-pill">
+                <span class="dot"></span>
+                <span class="fc-headline-word" style="animation-delay: 0.0s;">JEV</span> 
+                <span class="fc-headline-word" style="animation-delay: 0.08s;">Eagle</span> 
+                <span class="fc-headline-word" style="animation-delay: 0.16s;">Hand</span> 
+                <span class="fc-headline-word" style="animation-delay: 0.24s;">Karatedo</span> 
+                <span class="fc-headline-word" style="animation-delay: 0.32s;">Philippines</span>
             </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="testi-card">
-          <p class="testi-quote">&ldquo;Sulit na sulit ang ₱800/month. Bihira makahanap ng 7th Dan master na personal na nagtuturo sa bawat bata. Ramdam mo ang tunay na respeto dito.&rdquo;</p>
-          <div class="testi-author">
-            <div class="testi-avatar-init">RP</div>
-            <div>
-              <div style="font-weight: 700; font-size: 14px;">Rico Panganiban</div>
-              <div class="testi-meta">Adult Practitioner, Bayambang</div>
+            <h1 id="fc-main-headline">
+                <span class="fc-headline-word" style="animation-delay: 0.40s;">Hubugin</span> 
+                <span class="fc-headline-word outlined" style="animation-delay: 0.48s;">Disiplina,</span> 
+                <span class="fc-headline-word accent-italic" style="animation-delay: 0.56s;">Lakas,</span> 
+                <span class="fc-headline-word" style="animation-delay: 0.64s;">Tagumpay.</span>
+            </h1>
+            <p class="hero-subheadline fc-headline-word" style="animation-delay: 0.72s; opacity: 0.85;">
+                Maging parte ng 30-taong legacy ng world-class karate training na naghuhubog ng champions sa dojo at sa buhay. Para sa mga batang nangangailangan ng focus at mga adult na gustong maging fit at confident.
+            </p>
+            <div class="hero-proof-chips">
+                <div class="hero-proof-chip fc-headline-word" style="animation-delay: 0.80s;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.87"></path><path d="M12 11V5"></path><path d="M12 17V17"></path></svg>
+                    Master Instructors
+                </div>
+                <div class="hero-proof-chip fc-headline-word" style="animation-delay: 0.88s;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    30+ Years Legacy
+                </div>
             </div>
-          </div>
         </div>
-
-        <!-- Card 3 -->
-        <div class="testi-card">
-          <p class="testi-quote">&ldquo;Dito natutong lumaban sa hiya ang anak ko. From white belt hanggang sa magka-medalya, kitang-kita ang pagtangkad ng kanyang kumpiyansa.&rdquo;</p>
-          <div class="testi-author">
-            <div class="testi-avatar-init">CS</div>
-            <div>
-              <div style="font-weight: 700; font-size: 14px;">Carla Santos</div>
-              <div class="testi-meta">Nanay ng Youth Student</div>
+        <div class="hero-cta-dock">
+            <div class="cta-info">
+                <strong>₱800/Buwan lang</strong>
+                <span>Simulan ang iyong journey ngayon</span>
             </div>
-          </div>
+            <a href="#" id="fc-main-cta" class="btn fc-btn-primary" onclick="if(typeof fcTrackEvent==='function'){fcTrackEvent('InitiateCheckout');}var b=document.getElementById('fc-bump-checkbox');var bp=b&&b.checked;var ne=document.getElementById('fc-checkout-name');var ee=document.getElementById('fc-checkout-email');if(ne&&ee){var nm=ne.value.trim();var em=ee.value.trim();if(!nm||!em){alert(&quot;Pakilagay ang pangalan at email mo bago magpatuloy.&quot;);return false;}}var h=bp?&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;:&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;;if(h&&h!=='#'){window.open(h,'_blank','noopener');}return false;">
+                Kumuha ng Libreng Trial Class
+                <span class="cta-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 17 12 12 7 7"></polyline></svg></span>
+            </a>
         </div>
+    </section>
 
-        <!-- Card 4 -->
-        <div class="testi-card">
-          <p class="testi-quote">&ldquo;Ligtas ang kapaligiran. Walang yabangan o takot sa injury dahil maingat at propesyonal ang pagtuturo nila Sensei Gerry at Sensei Ernest.&rdquo;</p>
-          <div class="testi-author">
-            <div class="testi-avatar-init">EG</div>
-            <div>
-              <div style="font-weight: 700; font-size: 14px;">Eduardo Garcia</div>
-              <div class="testi-meta">Local Business Owner, San Carlos</div>
-            </div>
-          </div>
+    <!-- Ticker Band -->
+    <div class="ticker-band">
+        <div class="ticker-inner">
+            <span class="ticker-item">TRAIN HARD.</span>
+            <span class="ticker-item">ACHIEVE GREATNESS.</span>
+            <span class="ticker-item">CONQUER YOUR FEARS.</span>
+            <span class="ticker-item">BUILD DISCIPLINE.</span>
+            <span class="ticker-item">MASTER YOURSELF.</span>
+            <span class="ticker-item">TRAIN HARD.</span>
+            <span class="ticker-item">ACHIEVE GREATNESS.</span>
+            <span class="ticker-item">CONQUER YOUR FEARS.</span>
+            <span class="ticker-item">BUILD DISCIPLINE.</span>
+            <span class="ticker-item">MASTER YOURSELF.</span>
         </div>
-
-        <!-- Card 5 -->
-        <div class="testi-card">
-          <p class="testi-quote">&ldquo;Naging panlaban ko sa stress sa trabaho ang karate. Pawis kung pawis pero pag-uwi ko, magaan ang pakiramdam at mas malinaw ang pag-iisip.&rdquo;</p>
-          <div class="testi-author">
-            <div class="testi-avatar-init">JD</div>
-            <div>
-              <div style="font-weight: 700; font-size: 14px;">Joemari De Vera</div>
-              <div class="testi-meta">Poblacion Resident</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="testi-card">
-          <p class="testi-quote">&ldquo;30 taon na ang dojo kaya alam mong subok na. Dito mo makikita ang tunay na diwa ng martial arts — may puso, may tapang, may dangal.&rdquo;</p>
-          <div class="testi-author">
-            <div class="testi-avatar-init">AT</div>
-            <div>
-              <div style="font-weight: 700; font-size: 14px;">Arnel Torralba</div>
-              <div class="testi-meta">Karate Enthusiast</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- DUPLICATE FOR SEAMLESS LOOP -->
-        <div class="testi-card">
-          <p class="testi-quote">&ldquo;Malaking tulong kay bunso. Dati tutok lang sa cellphone, ngayon excited na mag-ensayo tuwing may klase. Mas magalang na rin sa bahay!&rdquo;</p>
-          <div class="testi-author">
-            <div class="testi-avatar-init">ML</div>
-            <div>
-              <div style="font-weight: 700; font-size: 14px;">Maricel Lopez</div>
-              <div class="testi-meta">Magulang mula sa Malasiqui</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card">
-          <p class="testi-quote">&ldquo;Sulit na sulit ang ₱800/month. Bihira makahanap ng 7th Dan master na personal na nagtuturo sa bawat bata. Ramdam mo ang tunay na respeto dito.&rdquo;</p>
-          <div class="testi-author">
-            <div class="testi-avatar-init">RP</div>
-            <div>
-              <div style="font-weight: 700; font-size: 14px;">Rico Panganiban</div>
-              <div class="testi-meta">Adult Practitioner, Bayambang</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card">
-          <p class="testi-quote">&ldquo;Dito natutong lumaban sa hiya ang anak ko. From white belt hanggang sa magka-medalya, kitang-kita ang pagtangkad ng kanyang kumpiyansa.&rdquo;</p>
-          <div class="testi-author">
-            <div class="testi-avatar-init">CS</div>
-            <div>
-              <div style="font-weight: 700; font-size: 14px;">Carla Santos</div>
-              <div class="testi-meta">Nanay ng Youth Student</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card">
-          <p class="testi-quote">&ldquo;Ligtas ang kapaligiran. Walang yabangan o takot sa injury dahil maingat at propesyonal ang pagtuturo nila Sensei Gerry at Sensei Ernest.&rdquo;</p>
-          <div class="testi-author">
-            <div class="testi-avatar-init">EG</div>
-            <div>
-              <div style="font-weight: 700; font-size: 14px;">Eduardo Garcia</div>
-              <div class="testi-meta">Local Business Owner, San Carlos</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card">
-          <p class="testi-quote">&ldquo;Naging panlaban ko sa stress sa trabaho ang karate. Pawis kung pawis pero pag-uwi ko, magaan ang pakiramdam at mas malinaw ang pag-iisip.&rdquo;</p>
-          <div class="testi-author">
-            <div class="testi-avatar-init">JD</div>
-            <div>
-              <div style="font-weight: 700; font-size: 14px;">Joemari De Vera</div>
-              <div class="testi-meta">Poblacion Resident</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card">
-          <p class="testi-quote">&ldquo;30 taon na ang dojo kaya alam mong subok na. Dito mo makikita ang tunay na diwa ng martial arts — may puso, may tapang, may dangal.&rdquo;</p>
-          <div class="testi-author">
-            <div class="testi-avatar-init">AT</div>
-            <div>
-              <div style="font-weight: 700; font-size: 14px;">Arnel Torralba</div>
-              <div class="testi-meta">Karate Enthusiast</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    <style>@keyframes fcTestiMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}</style>
-  </section>
 
-  <!-- 10. PARALLAX EMOTIONAL BREAK -->
-  <section class="parallax-section">
-    <div class="parallax-scrim"></div>
-    <div class="parallax-content fc-reveal">
-      <div class="section-eyebrow" style="color: #FFF; border-color: rgba(255,255,255,0.3); background: rgba(0,0,0,0.5);">
-        30 TAONG DANGAL AT RESPETO
-      </div>
-      <h2 style="font-size: clamp(30px, 5.5vw, 56px); margin: 20px 0 16px; font-weight: 700;">
-        Hindi Lang Kami Nagtuturo Ng Depensa. <span class="accent-italic">Humuhubog Kami Ng Pagkatao.</span>
-      </h2>
-      <p style="color: var(--text-muted); font-size: 18px; max-width: 600px; margin: 0 auto;">
-        Ihanda ang iyong sarili o ang iyong anak sa totoong hamon ng mundo nang may lakas, dignidad, at tapang.
-      </p>
-    </div>
-  </section>
-
-  <!-- 11. PROOF/SAMPLES SECTION -->
-  <section>
-    <div class="container fc-reveal">
-      <div class="section-header-wrap">
-        <span class="ghost-num">07</span>
-        <div class="section-eyebrow">Tunay Na Patunay</div>
-        <h2 class="section-title">Mga Tunay Na Estudyante, Tunay Na Resulta</h2>
-      </div>
-
-      <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;margin:32px 0;"><div style="flex:1 1 280px;min-width:0;display:flex;flex-direction:column;justify-content:center;"><h3 style="font-size:20px;margin-bottom:10px;">Real Students, Real Discipline: Training with JEV </h3><p style="opacity:.8;line-height:1.6;">This photo captures our active youth class in action. From beginners (white belts) to advanced students (red belts), you can see the focus and proper form instilled by Sensei Gerry and his team. It proves that our dojo is a safe, structured environment where kids learn respect and martial arts skills together.</p></div><div style="flex:1 1 280px;min-width:0;"><img src="images/proof-1.png" alt="Real Students, Real Discipline: Training with JEV " style="width:100%;border-radius:12px;display:block;mask-image:linear-gradient(to left,black 78%,transparent 100%);-webkit-mask-image:linear-gradient(to left,black 78%,transparent 100%);"></div></div><div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;margin:32px 0;"><div style="flex:1 1 280px;min-width:0;"><img src="images/proof-2.png" alt="30 Years of Building Champions in JEV" style="width:100%;border-radius:12px;display:block;mask-image:linear-gradient(to right,black 78%,transparent 100%);-webkit-mask-image:linear-gradient(to right,black 78%,transparent 100%);"></div><div style="flex:1 1 280px;min-width:0;display:flex;flex-direction:column;justify-content:center;"><h3 style="font-size:20px;margin-bottom:10px;">30 Years of Building Champions in JEV</h3><p style="opacity:.8;line-height:1.6;">A snapshot of our daily training sessions. For three decades, we have welcomed students of all ages and belt levels. This image shows the vibrant community and serious training atmosphere that has produced dozens of black belts and medalists over the years.</p></div></div><div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;margin:32px 0;"><div style="flex:1 1 280px;min-width:0;display:flex;flex-direction:column;justify-content:center;"><h3 style="font-size:20px;margin-bottom:10px;">Discipline Starts Here, Para Sa Lahat</h3><p style="opacity:.8;line-height:1.6;">Witness our diverse dojo family, from young aspirants with yellow belts to seasoned practitioners with black belts, all united in the pursuit of martial arts excellence. Dito, you'll find disciplined training and a supportive community ready to build your confidence, one step at a time.</p></div><div style="flex:1 1 280px;min-width:0;"><img src="images/proof-3.png" alt="Discipline Starts Here, Para Sa Lahat" style="width:100%;border-radius:12px;display:block;mask-image:linear-gradient(to left,black 78%,transparent 100%);-webkit-mask-image:linear-gradient(to left,black 78%,transparent 100%);"></div></div>
-    </div>
-  </section>
-
-  <!-- 12. HOW IT WORKS -->
-  <section style="background: #0d0909;">
-    <div class="container fc-reveal">
-      <div class="section-header-wrap">
-        <span class="ghost-num">08</span>
-        <div class="section-eyebrow">Madaling Proseso</div>
-        <h2 class="section-title">Paano Magsimula Sa 3 Simpleng Hakbang</h2>
-        <p class="section-sub">Walang kumplikadong requirements. Ganito kadali pumasok sa dojo:</p>
-      </div>
-
-      <div class="card-deck">
-        <div class="step-card fc-reveal fc-hover-lift" style="transition-delay: .08s;">
-          <div class="step-num">01</div>
-          <h3 style="font-size: 19px; margin-bottom: 8px;">Mag-Message Para Sa Free Class</h3>
-          <p style="color: var(--text-muted); font-size: 14px;">I-click ang button sa page na ito upang kumonekta sa aming opisyal na Facebook page. Ipaalam kung kailan mo gustong sumubok.</p>
+    <!-- This is for you if... -->
+    <section>
+        <div class="container fc-reveal">
+            <div class="section-heading-wrapper">
+                <h2 style="text-align: center;">Para Sa'yo 'To Kung...</h2>
+                <span class="ghost-num" style="top: 60%;">01</span>
+            </div>
+            <div class="card-grid">
+                <div class="card fc-reveal fc-hover-lift" style="transition-delay:0.08s;">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <h3>Gusto Mong I-develop ang Disiplina</h3>
+                    <p>Hinahanap mo ang paraan para matuto ang anak mo (o ikaw mismo!) ng focus at self-control na mawawala sa gadgets. Ito ang simula ng pagiging mas organisado at responsable.</p>
+                </div>
+                <div class="card fc-reveal fc-hover-lift" style="transition-delay:0.16s;">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                    </div>
+                    <h3>Kailangan Mo ng Effective Self-Defense</h3>
+                    <p>Gusto mong matuto ng practical self-defense skills pero ayaw mo ng agresibong environment. Dito, safe at systematic ang pagtuturo para maging handa ka sa anumang hamon.</p>
+                </div>
+                <div class="card fc-reveal fc-hover-lift" style="transition-delay:0.24s;">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 14V2H7v12l5 4 5-4z"></path><path d="M12 22v-4"></path></svg>
+                    </div>
+                    <h3>Hanap Mo ay World-Class Training</h3>
+                    <p>Ayaw mo sa mga 'unknown' na gym na may questionable instructors. Gusto mo ng authentic, dekalidad na training mula sa master instructors na may subok na 30-year legacy.</p>
+                </div>
+                <div class="card fc-reveal fc-hover-lift" style="transition-delay:0.32s;">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9zm-9 3h6"></path></svg>
+                    </div>
+                    <h3>Gusto Mong Maging Part ng Komunidad</h3>
+                    <p>Naghahanap ka ng family-oriented na dojo kung saan hindi lang skills ang nahuhubog, kundi pati ang character. Isang lugar kung saan may suporta at magandang samahan.</p>
+                </div>
+                <div class="card fc-reveal fc-hover-lift" style="transition-delay:0.40s;">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5z"></path><polyline points="3 7 12 12 21 7"></polyline><polyline points="12 22 12 12"></polyline></svg>
+                    </div>
+                    <h3>Pangasinan-Based, Affordable na Option</h3>
+                    <p>Nasa Pangasinan ka at gusto mo ng dekalidad na martial arts training na hindi magbubutas sa bulsa. Mura na, world-class pa, at malapit lang sa Poblacion, Malasiqui.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="step-card fc-reveal fc-hover-lift" style="transition-delay: .16s;">
-          <div class="step-num">02</div>
-          <h3 style="font-size: 19px; margin-bottom: 8px;">Pumunta Sa Dojo Sa Malasiqui</h3>
-          <p style="color: var(--text-muted); font-size: 14px;">Matatagpuan kami sa Poblacion, Montemayor St., Malasiqui. Magsuot lang ng komportableng workout clothes para sa iyong libreng trial.</p>
+    <!-- Pain points -->
+    <section style="background-color: rgba(0,0,0,0.2);">
+        <div class="container fc-reveal">
+            <div class="section-heading-wrapper">
+                <h2 style="text-align: center;">Nararamdaman Mo Ba Ito?</h2>
+                <span class="ghost-num" style="top: 60%; transform: translate(-50%, -60%) scale(0.8);">02</span>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p>Kung parent ka, nakikita mo ba ang anak mo na halos buong araw nakatutok sa screen, nawawalan ng focus, at parang kulang sa energy? O kung ikaw naman ang adult, nararamdaman mo ba ang stress, pagiging out of shape, at parang walang accessible na paraan para maging physically active?</p>
+                <p>Madalas, nahihirapan tayong humanap ng tamang environment para sa personal development. Lalo na kung ang hanap mo ay: </p>
+                <ul style="list-style: none; padding-left: 0; margin-top: var(--spacing-md);">
+                    <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: flex-start; gap: 12px; font-size: 16px; color: var(--brand-text);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin-top:2px;flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        <strong>Kids na masyadong nakatutok sa gadgets:</strong> Palaging nasa phone o tablet, kulang sa physical activity at social interaction.
+                    </li>
+                    <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: flex-start; gap: 12px; font-size: 16px; color: var(--brand-text);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin-top:2px;flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        <strong>Kakulangan sa disiplina at focus:</strong> Hirap sundin ang instructions, madaling ma-distract, at walang self-control.
+                    </li>
+                    <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: flex-start; gap: 12px; font-size: 16px; color: var(--brand-text);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin-top:2px;flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        <strong>Adults na stressed at out of shape:</strong> Kailangan ng physical outlet at mental break pero walang affordable o convenient na gym.
+                    </li>
+                    <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: flex-start; gap: 12px; font-size: 16px; color: var(--brand-text);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin-top:2px;flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        <strong>Takot sa hindi kilalang martial arts school:</strong> Paano kung hindi qualified ang instructors? Paano kung hindi safe ang environment?
+                    </li>
+                    <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: flex-start; gap: 12px; font-size: 16px; color: var(--brand-text);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin-top:2px;flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        <strong>Naghahanap ng character-building, hindi lang fighting:</strong> Gusto mo ng lugar na huhubog sa buong pagkatao, hindi lang sa physical skills.
+                    </li>
+                </ul>
+                <p style="margin-top: var(--spacing-md); font-weight: 500; color: var(--brand-accent);">Sound familiar, diba? Hindi ka nag-iisa. Pero may solusyon. </p>
+            </div>
         </div>
+    </section>
 
-        <div class="step-card fc-reveal fc-hover-lift" style="transition-delay: .24s;">
-          <div class="step-num">03</div>
-          <h3 style="font-size: 19px; margin-bottom: 8px;">Simulan Ang Regular Na Pag-Enrol</h3>
-          <p style="color: var(--text-muted); font-size: 14px;">Kung nagustuhan mo ang turo at vibes ng dojo, bayaran lamang ang ₱500 registration at ₱800 buwanang training fee para maging opisyal na miyembro.</p>
+    <!-- Solution bridge -->
+    <section>
+        <div class="container fc-reveal">
+            <h2 style="text-align: center;">Ang Sagot sa Iyong Paghahanap</h2>
+            <p style="max-width: 800px; margin: 0 auto var(--spacing-lg); text-align: center;">
+                Imaginin na lang kung may isang lugar na kayang tugunan lahat ng mga concerns na 'yan. Isang dojo na hindi lang nagtuturo ng karate, kundi naghuhubog din ng disiplina, kumpiyansa, at lakas ng loob sa bawat student.
+            </p>
+            <p style="max-width: 800px; margin: 0 auto var(--spacing-lg); text-align: center;">
+                Dito sa JEV EAGLE HAND KARATEDO PHILIPPINES, hindi lang kami nag-e-offer ng training; nag-e-offer kami ng transformation. Ito ang pagkakataon mong maging parte ng isang legacy na nagbigay na ng kahulugan sa buhay ng maraming estudyante sa loob ng 30 taon.
+            </p>
+            <p style="max-width: 800px; margin: 0 auto var(--spacing-lg); text-align: center; font-weight: 600; color: var(--brand-accent);">
+                Ready ka na bang baguhin ang kwento mo?
+            </p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 14. PRICE STACK SECTION -->
-  <section>
-    <div class="container fc-reveal">
-      <div class="section-header-wrap" style="text-align: center;">
-        <span class="ghost-num" style="left: 50%; transform: translateX(-50%);">09</span>
-        <div class="section-eyebrow">Subok Na Halaga</div>
-        <h2 class="section-title">World-Class Mentorship Sa Abot-Kayang Presyo</h2>
-      </div>
-
-
-
-      <div class="ticket-container fc-hover-lift">
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-line); padding-bottom: 16px; margin-bottom: 20px;">
-          <span class="ticket-badge">ALL-ACCESS DOJO PASS</span>
-          <span style="font-size: 13px; color: var(--secondary); font-weight: 600;">POBLACION, MALASIQUI</span>
+    </section>
+    
+    <!-- About / Team section -->
+    <section style="background-color: rgba(0,0,0,0.2);">
+        <div class="container fc-reveal">
+            <div class="section-heading-wrapper">
+                <h2 style="text-align: center;">Kilalanin ang Mga Masters Natin</h2>
+                <span class="ghost-num" style="top: 60%;">03</span>
+            </div>
+            <p style="max-width: 800px; margin: 0 auto var(--spacing-lg); text-align: center;">
+                Sa JEV EAGLE HAND KARATEDO PHILIPPINES, ipinagmamalaki namin ang aming team ng dedikado at world-class na instructors. Sa ilalim ng kanilang gabay, sigurado kang matututo mula sa pinakamagaling.
+            </p>
+            <div class="team-grid">
+                <div class="team-card fc-reveal fc-hover-lift" style="transition-delay:0.08s;">
+                    <img src="images/coach-1.jpg" alt="Sensei Gerardo “Gerry” Valdez">
+                    <h3>Sensei Gerardo “Gerry” Valdez</h3>
+                    <div class="role">Head Coach, 7th Dan</div>
+                    <p>Ang nagtatag at Head Coach ng dojo. Sa loob ng mahigit 30 taon, si Sensei Gerry ang nagbigay-buhay sa JEV Eagle Hand, naghuhubog ng daan-daang black belters at medalists gamit ang kanyang malalim na kaalaman at passion sa karate.</p>
+                </div>
+                <div class="team-card fc-reveal fc-hover-lift" style="transition-delay:0.16s;">
+                    <img src="images/coach-2.jpg" alt="Ernest Valdez">
+                    <h3>Ernest Valdez</h3>
+                    <div class="role">Senior Instructor, 5th Dan</div>
+                    <p>Bilang kapatid ni Sensei Gerry, si Ernest Valdez ay isa ring pillar ng dojo. Sa kanyang 5th Dan rank, siya ang kasama sa pagtuturo ng advanced techniques at paggabay sa aming mga senior students. Dedikado sa excellence at disiplina.</p>
+                </div>
+                <div class="team-card fc-reveal fc-hover-lift" style="transition-delay:0.24s;">
+                    <img src="images/coach-3.jpg" alt="Gerriemel Valdez">
+                    <h3>Gerriemel Valdez</h3>
+                    <div class="role">Instructor</div>
+                    <p>Anak ni Sensei Gerry, si Gerriemel ay lumaki sa dojo at nagpatuloy sa yapak ng kanyang ama. Isa siyang passionate na instructor na nagbibigay inspirasyon sa mga batang estudyante, at nagtatanim ng solid foundations sa karate.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <h3 style="font-size: 26px; margin-bottom: 12px;">Buwanang Karate Membership</h3>
-        <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 20px;">
-          Direktang pagsasanay sa ilalim ng 7th Dan at 5th Dan masters. Walang hidden fees, walang long-term lock-in contract.
-        </p>
-
-        <div style="background: rgba(0,0,0,0.3); border-radius: var(--radius-sm); padding: 16px; margin-bottom: 24px; border: 1px solid var(--border-line);">
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
-            <li style="display: flex; align-items: center; gap: 10px;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Regular na pagsasanay sa Kata at Kumite</span>
-            </li>
-            <li style="display: flex; align-items: center; gap: 10px;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Hiwalay na klase para sa bata at matanda</span>
-            </li>
-            <li style="display: flex; align-items: center; gap: 10px;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Access sa competition training &amp; belt promotions</span>
-            </li>
-            <li style="display: flex; align-items: center; gap: 10px;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>One-time Registration Fee: ₱500 lang</span>
-            </li>
-          </ul>
+    <!-- What's Included -->
+    <section>
+        <div class="container fc-reveal">
+            <div class="section-heading-wrapper">
+                <h2 style="text-align: center;">Ang Matatanggap Mo Dito</h2>
+                <span class="ghost-num" style="top: 60%; transform: translate(-50%, -60%) scale(0.8);">04</span>
+            </div>
+            <p style="max-width: 800px; margin: 0 auto var(--spacing-lg); text-align: center;">
+                Hindi lang training ang binabayaran mo. Binabayaran mo ang access sa isang sistema na proven nang naghahatid ng resulta at naghuhubog ng mga indibidwal na may tibay ng loob at galing sa karate.
+            </p>
+            <div class="card-grid">
+                <div class="card fc-reveal fc-hover-lift" style="flex: 0 1 260px; transition-delay:0.08s;">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <h3>Unlimited Classes kasama ang Masters</h3>
+                    <p>Direktang matuto mula kina Sensei Gerry (7th Dan) at Ernest (5th Dan), na may gabay na walang katulad para sa mabilis na pag-unlad mo.</p>
+                </div>
+                <div class="card fc-reveal fc-hover-lift" style="flex: 0 1 260px; transition-delay:0.16s;">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01"></path><path d="M18 20h.01"></path><path d="M6 20h.01"></path><path d="M4 12v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"></path><path d="M10 20h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2z"></path></svg>
+                    </div>
+                    <h3>Access sa Trophy-Winning Programs</h3>
+                    <p>Sumali sa mga training na nagprodyus na ng maraming medalya at trophies sa mga kompetisyon. Ito ang tunay na patunay ng aming galing.</p>
+                </div>
+                <div class="card fc-reveal fc-hover-lift" style="flex: 0 1 260px; transition-delay:0.24s;">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h3>Hiwalay na Sessions: Youth at Adult</h3>
+                    <p>May tailored training kami para sa bawat age group, kaya mas effective at mas focus ang pagkatuto, at mas komportable ang lahat.</p>
+                </div>
+                <div class="card fc-reveal fc-hover-lift" style="flex: 0 1 260px; transition-delay:0.32s;">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                    </div>
+                    <h3>Self-Defense at Competition Prep</h3>
+                    <p>Mula sa pagiging handa sa totoong buhay hanggang sa paghahanda sa mga tournaments, lahat ay kasama sa aming comprehensive training.</p>
+                </div>
+                <div class="card fc-reveal fc-hover-lift" style="flex: 0 1 260px; transition-delay:0.40s;">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    </div>
+                    <h3>Safe, Family-Friendly Dojo Environment</h3>
+                    <p>Matuto sa isang lugar na may respeto, disiplina, at positive energy. Dito, ang bawat student ay parte ng aming pamilya, matatagpuan sa Poblacion, Montemayor St.</p>
+                </div>
+                <div class="card fc-reveal fc-hover-lift" style="flex: 0 1 260px; transition-delay:0.48s;">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    </div>
+                    <h3>Bonus: Libreng Assessment / Trial Class</h3>
+                    <p>Subukan muna bago mag-commit! Isang free trial class para maranasan mo mismo ang aming training at community nang walang risk.</p>
+                </div>
+            </div>
+            <h3 style="text-align: center; margin-top: var(--spacing-lg);">Silipin ang Aming Gallery!</h3>
+            <div style="margin:24px 0;"><div style="display:flex;justify-content:center;gap:16px;margin-bottom:16px;"><div style="flex:1 1 0;max-width:240px;text-align:center;background:rgba(128,128,128,0.06);border-radius:16px;padding:10px 10px 14px;border:1px solid rgba(128,128,128,0.14);box-shadow:0 10px 28px rgba(0,0,0,0.16);"><img src="images/gallery-1.png" alt="3rd All LUZON MKKPI Championships" style="width:100%;aspect-ratio:4/3;object-fit:contain;display:block;border-radius:10px;mask-image:linear-gradient(to bottom,black 88%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,black 88%,transparent 100%);"><div style="font-size:13px;font-weight:600;margin-top:10px;">3rd All LUZON MKKPI Championships</div></div><div style="flex:1 1 0;max-width:240px;text-align:center;background:rgba(128,128,128,0.06);border-radius:16px;padding:10px 10px 14px;border:1px solid rgba(128,128,128,0.14);box-shadow:0 10px 28px rgba(0,0,0,0.16);"><img src="images/gallery-2.png" alt="30TH years  Anniversary  with some of our Black Belters" style="width:100%;aspect-ratio:4/3;object-fit:contain;display:block;border-radius:10px;mask-image:linear-gradient(to bottom,black 88%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,black 88%,transparent 100%);"><div style="font-size:13px;font-weight:600;margin-top:10px;">30TH years  Anniversary  with some of our Black Belters</div></div><div style="flex:1 1 0;max-width:240px;text-align:center;background:rgba(128,128,128,0.06);border-radius:16px;padding:10px 10px 14px;border:1px solid rgba(128,128,128,0.14);box-shadow:0 10px 28px rgba(0,0,0,0.16);"><img src="images/gallery-3.png" alt="International Competition " style="width:100%;aspect-ratio:4/3;object-fit:contain;display:block;border-radius:10px;mask-image:linear-gradient(to bottom,black 88%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,black 88%,transparent 100%);"><div style="font-size:13px;font-weight:600;margin-top:10px;">International Competition </div></div></div></div>
         </div>
+    </section>
 
-        <div class="price-row">
-          <div class="old-price">₱3,000</div>
-          <div class="new-price">₱800</div>
-          <div class="price-period">/ kada buwan</div>
+    <!-- Transformation - Before/After -->
+    <section style="background-color: rgba(0,0,0,0.2);">
+        <div class="container fc-reveal">
+            <div class="section-heading-wrapper">
+                <h2 style="text-align: center;">Mula sa Hamon Patungong Tagumpay</h2>
+                <span class="ghost-num" style="top: 60%; transform: translate(-50%, -60%) scale(0.8);">05</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-lg); max-width: 900px; margin: 0 auto; align-items: center;">
+                <div style="flex: 1 1 400px; min-width: 0;">
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--brand-text); margin-bottom: var(--spacing-sm);">Bago Ka Sumali...</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: flex-start; gap: 12px; font-size: 16px; color: var(--brand-text-muted);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin-top:2px;flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            <strong>Kulanga sa Disiplina at Focus:</strong> Madaling ma-distract, hirap tapusin ang gawain, kulang sa structure.
+                        </li>
+                        <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: flex-start; gap: 12px; font-size: 16px; color: var(--brand-text-muted);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin-top:2px;flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            <strong>Medyo Wala sa Kilos o Stressed:</strong> Hindi aktibo, pakiramdam ay pagod, at walang outlet para sa stress.
+                        </li>
+                        <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: flex-start; gap: 12px; font-size: 16px; color: var(--brand-text-muted);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin-top:2px;flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                            <strong>Kulang sa Kumpiyansa:</strong> May pag-aalinlangan sa sarili, hirap magsalita o kumilos nang may desisyon.
+                        </li>
+                    </ul>
+                </div>
+                <div style="flex: 1 1 400px; min-width: 0;">
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--brand-accent); margin-bottom: var(--spacing-sm);">Pagkatapos ng Training...</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: flex-start; gap: 12px; font-size: 16px; color: var(--brand-text);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin-top:2px;flex-shrink:0;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <strong>Disiplinado at Focused:</strong> Mas organisado, may tiyaga, at kayang mag-concentrate nang mas matagal.
+                        </li>
+                        <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: flex-start; gap: 12px; font-size: 16px; color: var(--brand-text);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin-top:2px;flex-shrink:0;"><polyline points="20 6 9 17 4 12"></polyline></polyline></svg>
+                            <strong>Malakas at Energetic:</strong> Mas aktibo, fit, at may bagong drive sa araw-araw na gawain.
+                        </li>
+                        <li style="margin-bottom: var(--spacing-sm); display: flex; align-items: flex-start; gap: 12px; font-size: 16px; color: var(--brand-text);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin-top:2px;flex-shrink:0;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <strong>Confident at May Lakas-loob:</strong> Naniniwala sa sariling kakayahan, handang harapin ang challenges.
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
-
-
-        <div style="margin-top: 24px;">
-          <a id="fc-cta-main" href="#" onclick="if(typeof fcTrackEvent==='function'){fcTrackEvent('InitiateCheckout');}var b=document.getElementById('fc-bump-checkbox');var bp=b&&b.checked;var ne=document.getElementById('fc-checkout-name');var ee=document.getElementById('fc-checkout-email');if(ne&&ee){var nm=ne.value.trim();var em=ee.value.trim();if(!nm||!em){alert(&quot;Pakilagay ang pangalan at email mo bago magpatuloy.&quot;);return false;}}var h=bp?&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;:&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;;if(h&&h!=='#'){window.open(h,'_blank','noopener');}return false;" class="btn-main fc-btn-primary" style="width: 100%; justify-content: center; padding: 18px 24px;">
-            <span>MAG-INQUIRE &amp; I-CLAIM ANG FREE TRIAL</span>
-            <span class="arrow-chip">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </a>
+    <!-- Testimonials -->
+    <section>
+        <div class="container fc-reveal">
+            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Ang Sabi ng Aming Komunidad</h2>
+            <div style="overflow:hidden;width:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);">
+                <div style="display:flex;align-items:flex-start;gap:20px;width:max-content;animation:fcTestiMarquee 40s linear infinite;">
+                    <!-- Testimonial Cards -->
+                    <div class="testimonial-card fc-hover-lift">
+                        <p>“Simula nang sumali ang anak ko, malaki ang pinagbago. Mas naging disiplinado at focused siya sa pag-aaral. Hindi na lang siya puro gadgets. Maraming salamat, Sensei!”</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">JD</div>
+                            <div class="testimonial-author-info">
+                                <strong>Jenny D.</strong>
+                                <span>Proud Parent</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fc-hover-lift">
+                        <p>“As an adult, I needed a way to de-stress and get fit. JEV Eagle Hand gave me that and more. I've learned practical self-defense and feel so much stronger, physically and mentally.”</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">RC</div>
+                            <div class="testimonial-author-info">
+                                <strong>Roberto C.</strong>
+                                <span>Adult Student</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fc-hover-lift">
+                        <p>“Napansin ko agad ang professionalism ng mga instructors. Talagang masters sila sa craft nila. Safe ang environment at super welcoming sa lahat ng belt levels. Highly recommended!”</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AM</div>
+                            <div class="testimonial-author-info">
+                                <strong>Ana M.</strong>
+                                <span>New Student</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fc-hover-lift">
+                        <p>“The community here is amazing. It's like a second family. We push each other to be better, and the support from Sensei Gerry and Ernest is unwavering. I've grown so much.”</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">EL</div>
+                            <div class="testimonial-author-info">
+                                <strong>Enrico L.</strong>
+                                <span>Long-time Member</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fc-hover-lift">
+                        <p>“Sobrang sulit ng ₱800 monthly fee! Quality training from masters at a very affordable price. Hindi mo mahahanap ito sa ibang lugar dito sa Pangasinan.”</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MK</div>
+                            <div class="testimonial-author-info">
+                                <strong>Maria K.</strong>
+                                <span>Value Seeker</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fc-hover-lift">
+                        <p>“My son used to be shy, but after a few months, he's more confident and makes friends easily. He even wants to join competitions now! It's incredible to see the change.”</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SF</div>
+                            <div class="testimonial-author-info">
+                                <strong>Susan F.</strong>
+                                <span>Happy Parent</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- REPEAT THE SAME 6 CARDS FOR SEAMLESS LOOP -->
+                    <div class="testimonial-card fc-hover-lift">
+                        <p>“Simula nang sumali ang anak ko, malaki ang pinagbago. Mas naging disiplinado at focused siya sa pag-aaral. Hindi na lang siya puro gadgets. Maraming salamat, Sensei!”</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">JD</div>
+                            <div class="testimonial-author-info">
+                                <strong>Jenny D.</strong>
+                                <span>Proud Parent</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fc-hover-lift">
+                        <p>“As an adult, I needed a way to de-stress and get fit. JEV Eagle Hand gave me that and more. I've learned practical self-defense and feel so much stronger, physically and mentally.”</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">RC</div>
+                            <div class="testimonial-author-info">
+                                <strong>Roberto C.</strong>
+                                <span>Adult Student</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fc-hover-lift">
+                        <p>“Napansin ko agad ang professionalism ng mga instructors. Talagang masters sila sa craft nila. Safe ang environment at super welcoming sa lahat ng belt levels. Highly recommended!”</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AM</div>
+                            <div class="testimonial-author-info">
+                                <strong>Ana M.</strong>
+                                <span>New Student</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fc-hover-lift">
+                        <p>“The community here is amazing. It's like a second family. We push each other to be better, and the support from Sensei Gerry and Ernest is unwavering. I've grown so much.”</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">EL</div>
+                            <div class="testimonial-author-info">
+                                <strong>Enrico L.</strong>
+                                <span>Long-time Member</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fc-hover-lift">
+                        <p>“Sobrang sulit ng ₱800 monthly fee! Quality training from masters at a very affordable price. Hindi mo mahahanap ito sa ibang lugar dito sa Pangasinan.”</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MK</div>
+                            <div class="testimonial-author-info">
+                                <strong>Maria K.</strong>
+                                <span>Value Seeker</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fc-hover-lift">
+                        <p>“My son used to be shy, but after a few months, he's more confident and makes friends easily. He even wants to join competitions now! It's incredible to see the change.”</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SF</div>
+                            <div class="testimonial-author-info">
+                                <strong>Susan F.</strong>
+                                <span>Happy Parent</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
+    <!-- Parallax Emotional Break -->
+    <section class="parallax-section">
+        <div class="parallax-overlay"></div>
+        <div class="parallax-content">
+            <p class="eyebrow">ISANG SANDALI NG INSPIRASYON</p>
+            <h2>Dito, Hinuhubog ang iyong *Kinabukasan*.</h2>
+        </div>
+    </section>
 
+    <!-- Proof/Samples Section -->
+    <section>
+        <div class="container fc-reveal">
+            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Silipin Natin ang Aksyon!</h2>
+            <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;margin:32px 0;"><div style="flex:1 1 280px;min-width:0;display:flex;flex-direction:column;justify-content:center;"><h3 style="font-size:20px;margin-bottom:10px;">Real Students, Real Discipline: Training with JEV </h3><p style="opacity:.8;line-height:1.6;">This photo captures our active youth class in action. From beginners (white belts) to advanced students (red belts), you can see the focus and proper form instilled by Sensei Gerry and his team. It proves that our dojo is a safe, structured environment where kids learn respect and martial arts skills together.</p></div><div style="flex:1 1 280px;min-width:0;"><img src="images/proof-1.png" alt="Real Students, Real Discipline: Training with JEV " style="width:100%;border-radius:12px;display:block;mask-image:linear-gradient(to left,black 78%,transparent 100%);-webkit-mask-image:linear-gradient(to left,black 78%,transparent 100%);"></div></div><div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;margin:32px 0;"><div style="flex:1 1 280px;min-width:0;"><img src="images/proof-2.png" alt="30 Years of Building Champions in JEV" style="width:100%;border-radius:12px;display:block;mask-image:linear-gradient(to right,black 78%,transparent 100%);-webkit-mask-image:linear-gradient(to right,black 78%,transparent 100%);"></div><div style="flex:1 1 280px;min-width:0;display:flex;flex-direction:column;justify-content:center;"><h3 style="font-size:20px;margin-bottom:10px;">30 Years of Building Champions in JEV</h3><p style="opacity:.8;line-height:1.6;">A snapshot of our daily training sessions. For three decades, we have welcomed students of all ages and belt levels. This image shows the vibrant community and serious training atmosphere that has produced dozens of black belts and medalists over the years.</p></div></div><div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;margin:32px 0;"><div style="flex:1 1 280px;min-width:0;display:flex;flex-direction:column;justify-content:center;"><h3 style="font-size:20px;margin-bottom:10px;">Discipline Starts Here, Para Sa Lahat</h3><p style="opacity:.8;line-height:1.6;">Witness our diverse dojo family, from young aspirants with yellow belts to seasoned practitioners with black belts, all united in the pursuit of martial arts excellence. Dito, you'll find disciplined training and a supportive community ready to build your confidence, one step at a time.</p></div><div style="flex:1 1 280px;min-width:0;"><img src="images/proof-3.png" alt="Discipline Starts Here, Para Sa Lahat" style="width:100%;border-radius:12px;display:block;mask-image:linear-gradient(to left,black 78%,transparent 100%);-webkit-mask-image:linear-gradient(to left,black 78%,transparent 100%);"></div></div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section style="background-color: rgba(0,0,0,0.2);">
+        <div class="container fc-reveal">
+            <h2 style="text-align: center;">Paano Ito Nagwo-work</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="how-it-works-step fc-reveal" style="transition-delay:0.08s;">
+                    <span class="step-num">01</span>
+                    <div class="step-content">
+                        <h3>Kumuha ng Libreng Trial Class</h3>
+                        <p>Simulan ang iyong journey sa JEV Eagle Hand nang walang obligasyon. Maranasan ang aming training method, kilalanin ang mga instructors, at maramdaman ang welcoming atmosphere ng dojo.</p>
+                    </div>
+                </div>
+                <div class="how-it-works-step fc-reveal" style="transition-delay:0.16s;">
+                    <span class="step-num">02</span>
+                    <div class="step-content">
+                        <h3>Mag-enroll at Maging Opisyal na Miyembro</h3>
+                        <p>Kapag nasubukan mo na at nagustuhan, mag-enroll para sa monthly training fee na ₱800 at registration fee na ₱500. Ito ang iyong ticket para sa unlimited access sa world-class training.</p>
+                    </div>
+                </div>
+                <div class="how-it-works-step fc-reveal" style="transition-delay:0.24s;">
+                    <span class="step-num">03</span>
+                    <div class="step-content">
+                        <h3>Simulan ang Iyong Transformation</h3>
+                        <p>Regular na sumali sa aming sessions. Unti-unti mong makikita ang pagbabago sa iyong disiplina, physical strength, self-confidence, at sa kakayahan mong ipagtanggol ang sarili. Welcome sa JEV family!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- Price stack -->
+    <section>
+        <div class="container fc-reveal">
+            <h2 style="text-align: center;">Huwag Palampasin ang Pagkakataon</h2>
+            <p style="max-width: 800px; margin: 0 auto var(--spacing-lg); text-align: center;">
+                Ang world-class karate training na hinahanap mo, ngayon ay abot-kaya na. Gawin ang first step tungo sa mas malakas, mas disiplinado, at mas confident na ikaw.
+            </p>
+            <div class="price-stack fc-reveal fc-hover-lift">
+                <div class="original-price">Original Monthly Training: <s>₱3,000</s></div>
+                <div class="current-price"><span>₱</span>800<span>/buwan</span></div>
+                <p class="description">World-Class Karate Training sa Ilalim ng Master Instructors</p>
+                <p style="font-size: 14px; color: var(--brand-text-muted); margin-bottom: var(--spacing-sm);">Plus, one-time registration fee na ₱500.</p>
+                
+                
+                
+                <a href="#" class="btn fc-btn-primary" onclick="if(typeof fcTrackEvent==='function'){fcTrackEvent('InitiateCheckout');}var b=document.getElementById('fc-bump-checkbox');var bp=b&&b.checked;var ne=document.getElementById('fc-checkout-name');var ee=document.getElementById('fc-checkout-email');if(ne&&ee){var nm=ne.value.trim();var em=ee.value.trim();if(!nm||!em){alert(&quot;Pakilagay ang pangalan at email mo bago magpatuloy.&quot;);return false;}}var h=bp?&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;:&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;;if(h&&h!=='#'){window.open(h,'_blank','noopener');}return false;">
+                    Kumuha ng Libreng Trial Class Ngayon
+                    <span class="cta-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 17 12 12 7 7"></polyline></svg></span>
+                </a>
+            </div>
+            
 <div style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:16px 0;font-size:12px;opacity:.7;">
 <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block;"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Secure Checkout</span>
 <span><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;display:inline-block;"><polygon points="13 2 3 14 11 14 9 22 21 10 13 10 13 2"/></svg> Instant Access</span>
 <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block;"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg> Safe Payment</span>
 </div>
-
-        <p style="text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 14px;">
-          Subukan muna ang unang klase nang walang bayad. Zero risk, walang pilitan.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 16. GUARANTEE SECTION -->
-  <section style="background: #0f0b0b;">
-    <div class="container fc-reveal">
-      <div style="max-width: 680px; margin: 0 auto; text-align: center; background: rgba(220,74,42,0.06); border: 1px solid rgba(220,74,42,0.3); border-radius: var(--radius-md); padding: 40px 24px;">
-        <div style="width: 56px; height: 56px; margin: 0 auto 16px; background: rgba(220,74,42,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--secondary);">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h3 style="font-size: 24px; margin-bottom: 12px;">Ang Aming Pangako: 100% Risk-Free Trial</h3>
-        <p style="color: var(--text-muted); font-size: 16px; line-height: 1.6;">
-          Try your first class for free — no commitment required. Maranasan ang aktwal na takbo ng pagsasanay kasama ang aming mga sensei. Love it or walk away with zero risk. Ganun kami kakompiyansa sa kalidad ng aming dojo.
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 17. FAQ ACCORDION -->
-  <section>
-    <div class="container fc-reveal">
-      <div class="section-header-wrap" style="text-align: center;">
-        <span class="ghost-num" style="left: 50%; transform: translateX(-50%);">10</span>
-        <div class="section-eyebrow">Mga Tanong &amp; Sagot</div>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-      </div>
-
-      <div class="faq-wrapper">
-        <div class="faq-item fc-reveal fc-hover-lift">
-          <div class="faq-question">
-            <span>Saan eksakto matatagpuan ang inyong dojo?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </div>
-          <div class="faq-answer">
-            Ang dojo ay matatagpuan sa Poblacion, Montemayor St., Malasiqui, Pangasinan Philippines 2421. Accessible ito at madaling puntahan mula sa iba&rsquo;t ibang barangay at kalapit na bayan.
-          </div>
+    <!-- Guarantee section -->
+    <section class="guarantee-section">
+        <div class="container fc-reveal">
+            <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-8.87"></path><path d="M12 2V12"></path><path d="M12 17V17"></path></svg>
+            </div>
+            <h3>Subukan Mo Muna, Walang Risk!</h3>
+            <p>
+                Naiintindihan namin na gusto mong makasiguro. Kaya, para sa mga bagong estudyante, subukan ang iyong <strong>unang klase nang LIBRE – walang commitment na kailangan.</strong> Kung hindi mo magustuhan, pwede kang umalis nang walang anumang bayad o obligasyon. Zero risk, 100% chance na mag-enjoy ka!
+            </p>
         </div>
+    </section>
 
-        <div class="faq-item fc-reveal fc-hover-lift">
-          <div class="faq-question">
-            <span>Magkano ang kabuuang babayaran kapag nag-enroll?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </div>
-          <div class="faq-answer">
-            Ang buwanang training fee ay ₱800 lamang. Mayroong isang beses na registration fee na ₱500 para sa mga bagong estudyante. Walang anumang hidden charges.
-          </div>
+    <!-- FAQ accordion -->
+    <section style="background-color: rgba(0,0,0,0.2);">
+        <div class="container fc-reveal">
+            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Mga Madalas Itanong</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item fc-reveal fc-hover-lift" style="transition-delay:0.08s;">
+                    <div class="faq-question">
+                        <span>Sino ang pwede sumali sa JEV Eagle Hand?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Lahat po ay welcome! Mayroon kaming hiwalay na training sessions para sa youth at adult. Ang training ay idinisenyo para sa lahat ng age group at belt levels, mula beginners hanggang advanced.</p>
+                    </div>
+                </div>
+                <div class="faq-item fc-reveal fc-hover-lift" style="transition-delay:0.16s;">
+                    <div class="faq-question">
+                        <span>Magkano ang monthly training fee at registration?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ang monthly training fee ay ₱800. Mayroon ding one-time registration fee na ₱500 para sa lahat ng bagong estudyante.</p>
+                    </div>
+                </div>
+                <div class="faq-item fc-reveal fc-hover-lift" style="transition-delay:0.24s;">
+                    <div class="faq-question">
+                        <span>Saan matatagpuan ang dojo ninyo?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ang JEV Eagle Hand Karatedo Philippines dojo ay matatagpuan sa Poblacion, Montemayor St., Malasiqui, Pangasinan Philippines 2421. Madali lang po kaming hanapin!</p>
+                    </div>
+                </div>
+                <div class="faq-item fc-reveal fc-hover-lift" style="transition-delay:0.32s;">
+                    <div class="faq-question">
+                        <span>Kailangan ko ba ng experience sa martial arts?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Hindi po! Karamihan sa aming mga estudyante ay nagsisimula nang walang experience. Step-by-step ang aming pagtuturo, kaya mabilis kang matututo ng basics at magpro-progress.</p>
+                    </div>
+                </div>
+                <div class="faq-item fc-reveal fc-hover-lift" style="transition-delay:0.40s;">
+                    <div class="faq-question">
+                        <span>Anong klase ng karate ang itinuturo ninyo?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nagtuturo kami ng world-class karate na nakatuon sa paghuhubog ng disiplina, self-defense, at competition skills. Ang aming mga master instructors ay 7th Dan at 5th Dan, kaya sigurado kang nasa mabuting kamay ka.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="faq-item fc-reveal fc-hover-lift">
-          <div class="faq-question">
-            <span>Sino-sino ang mga magtuturo sa klase?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </div>
-          <div class="faq-answer">
-            Ang pagsasanay ay pinangungunahan ni Head Coach Sensei Gerardo &ldquo;Gerry&rdquo; Valdez (7th Dan), kasama si Senior Instructor Ernest Valdez (5th Dan), at si Instructor Gerriemel Valdez.
-          </div>
+    <!-- "Before You Go" closing section -->
+    <section style="background-color: var(--brand-bg);">
+        <div class="container fc-reveal">
+            <h2 style="text-align: center;">Bago Ka Umalis, Isipin Mo Ito...</h2>
+            <p style="max-width: 800px; margin: 0 auto var(--spacing-lg); text-align: center; color: var(--brand-text);">
+                Araw-araw, may pinipili tayong direksyon sa buhay. Ngayon, may pagkakataon kang pumili ng landas na magbibigay sa'yo (o sa anak mo) ng higit pa sa skills – magbibigay ito ng character, kumpiyansa, at isang komunidad.
+            </p>
+            <p style="max-width: 800px; margin: 0 auto var(--spacing-lg); text-align: center; color: var(--brand-text-muted);">
+                Huwag hayaang ang mga problema tulad ng kawalan ng disiplina, stress, o takot ang maging hadlang sa pag-abot ng iyong potensyal. Ang ₱800/buwan ay maliit na puhunan para sa malaking pagbabago na makukuha mo.
+            </p>
+            <p style="max-width: 800px; margin: 0 auto var(--spacing-lg); text-align: center; font-weight: 600; color: var(--brand-accent);">
+                Ang desisyon ay nasa iyo. Handa ka na bang simulan ang iyong journey?
+            </p>
         </div>
+    </section>
 
-        <div class="faq-item fc-reveal fc-hover-lift">
-          <div class="faq-question">
-            <span>Kailangan ba ng karate gi (uniform) agad sa unang araw?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </div>
-          <div class="faq-answer">
-            Hindi kailangan! Sa iyong libreng trial class at unang mga session, maaari kang magsuot ng simpleng jogging pants o shorts at komportableng t-shirt. Matutulungan ka naming mag-order ng gi kapag tuluyan ka nang mag-aaral.
-          </div>
+    <!-- Final CTA -->
+    <section style="padding-top: 0; text-align: center;">
+        <div class="container fc-reveal">
+            <a href="#" class="btn fc-btn-primary" onclick="if(typeof fcTrackEvent==='function'){fcTrackEvent('InitiateCheckout');}var b=document.getElementById('fc-bump-checkbox');var bp=b&&b.checked;var ne=document.getElementById('fc-checkout-name');var ee=document.getElementById('fc-checkout-email');if(ne&&ee){var nm=ne.value.trim();var em=ee.value.trim();if(!nm||!em){alert(&quot;Pakilagay ang pangalan at email mo bago magpatuloy.&quot;);return false;}}var h=bp?&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;:&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;;if(h&&h!=='#'){window.open(h,'_blank','noopener');}return false;">
+                YES, GUSTO KONG SUMALI! Kumuha ng Libreng Trial Class
+                <span class="cta-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 17 12 12 7 7"></polyline></svg></span>
+            </a>
+            <p class="p-s-line">
+                <strong>P.S.</strong> Ang iyong libreng trial class ay naghihintay. Isang click lang, at simulan mo na ang paglalakbay mo tungo sa disiplina, lakas, at kumpiyansa. Walang mawawala, maliban sa pagkakataon.
+            </p>
         </div>
+    </section>
 
-        <div class="faq-item fc-reveal fc-hover-lift">
-          <div class="faq-question">
-            <span>Puwede ba ang mga bata at matatanda na walang karanasan?</span>
-            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </div>
-          <div class="faq-answer">
-            Opo! Karamihan sa aming mga black belters ngayon ay nagsimula bilang zero-knowledge beginners. May hiwalay kaming sesyon at gabay batay sa edad at fitness level ng bawat estudyante.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer>
+        <p><img src="images/logo.jpg" alt="JEV EAGLE HAND KARATEDO PHILIPPINES logo" style="height:44px;object-fit:contain; margin-bottom: 10px;"></p>
+        <p>&copy; 2024 JEV EAGLE HAND KARATEDO PHILIPPINES. Lahat ng karapatan ay nakalaan.</p>
+        <p>Hubugin Disiplina, Lakas, Tagumpay.</p>
+    </footer>
 
-  <!-- 18. BEFORE YOU GO (Closing Loss Aversion) -->
-  <section style="background: #090606;">
-    <div class="container fc-reveal">
-      <div style="max-width: 720px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: clamp(24px, 4vw, 36px); margin-bottom: 18px;">Bago Ka Umalis, Pag-Isipan Mo Ito Sandali:</h2>
-        <p style="color: var(--text-muted); font-size: 16px; line-height: 1.7; margin-bottom: 20px;">
-          Kung palalampasin mo ang araw na ito, bukas babalik na naman ang dati: isa na namang buong araw na nakatutok sa screen, kawalan ng direksyon, at nasasayang na oportunidad na matutong maging matapang at disiplinado.
-        </p>
-        <p style="color: var(--text); font-size: 16px; line-height: 1.7; margin-bottom: 28px;">
-          Ang ₱800 kada buwan ay madaling maubos sa merienda o online shopping, ngunit ang disiplina at kumpiyansang maitatanim ng isang 30-year legacy dojo ay dadalhin habambuhay.
-        </p>
-        <div style="font-size: 14px; color: var(--secondary); font-weight: 700; text-transform: uppercase;">
-          Walang mawawala dahil libre ang unang subok.
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- REQUIRED JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth toggle for FAQ accordion
+            document.querySelectorAll('.faq-question').forEach(function(question) {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isActive = this.classList.toggle('active');
+                    if (isActive) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        answer.classList.add('open');
+                    } else {
+                        answer.style.maxHeight = '0';
+                        answer.classList.remove('open');
+                    }
+                });
+            });
 
-  <!-- 19. FINAL CTA -->
-  <section style="background: linear-gradient(180deg, #090606 0%, #170d0d 100%); padding-bottom: 120px;">
-    <div class="container fc-reveal" style="text-align: center;">
-      <h2 style="font-size: clamp(32px, 5.5vw, 54px); margin-bottom: 16px;">
-        HANDA KA NA BANG MAGING <span class="outline-accent">CHAMPION?</span>
-      </h2>
-      <p style="color: var(--text-muted); font-size: 18px; max-width: 620px; margin: 0 auto 36px;">
-        Sumali sa pamilya ng JEV Eagle Hand Karatedo Philippines sa Malasiqui. I-click ang button sa ibaba para mag-inquire sa aming official page ngayon.
-      </p>
+            // Floating sticky CTA bar after scrolling 400px
+            const ctaDock = document.querySelector('.hero-cta-dock');
+            let isDocked = false; // Track if it's currently at the bottom of the hero
 
-      <a href="#" onclick="if(typeof fcTrackEvent==='function'){fcTrackEvent('InitiateCheckout');}var b=document.getElementById('fc-bump-checkbox');var bp=b&&b.checked;var ne=document.getElementById('fc-checkout-name');var ee=document.getElementById('fc-checkout-email');if(ne&&ee){var nm=ne.value.trim();var em=ee.value.trim();if(!nm||!em){alert(&quot;Pakilagay ang pangalan at email mo bago magpatuloy.&quot;);return false;}}var h=bp?&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;:&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;;if(h&&h!=='#'){window.open(h,'_blank','noopener');}return false;" class="btn-main fc-btn-primary" style="display: inline-flex; font-size: 16px; padding: 18px 36px;">
-        <span>MAG-ENROLL / I-CLAIM ANG FREE CLASS</span>
-        <span class="arrow-chip">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </span>
-      </a>
+            window.addEventListener('scroll', function() {
+                const scrollY = window.scrollY || window.pageYOffset;
+                const heroBottom = document.querySelector('.hero').offsetHeight;
 
-      <p style="font-size: 13px; color: var(--text-muted); margin-top: 24px; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.5;">
-        <strong>P.S.</strong> Limitado ang tinatanggap na mga baguhan bawat batch upang mapanatili ang personalized attention mula kina Sensei Gerry at Sensei Ernest. Mag-message na habang bukas pa ang libreng trial slots ngayong buwan!
-      </p>
-    </div>
-  </section>
+                if (window.innerWidth >= 768) { // Desktop behavior
+                    if (scrollY > heroBottom - ctaDock.offsetHeight - 50 && !isDocked) { // Adjust value as needed
+                        ctaDock.style.position = 'fixed';
+                        ctaDock.style.bottom = 'var(--spacing-md)';
+                        ctaDock.style.left = 'var(--spacing-md)';
+                        ctaDock.style.right = 'auto';
+                        ctaDock.style.maxWidth = '400px';
+                        ctaDock.style.width = 'auto';
+                        ctaDock.style.borderRadius = '999px';
+                        ctaDock.style.zIndex = '1000';
+                        isDocked = true;
+                    } else if (scrollY <= heroBottom - ctaDock.offsetHeight - 50 && isDocked) {
+                        ctaDock.style.position = 'absolute';
+                        ctaDock.style.bottom = '0';
+                        ctaDock.style.left = 'var(--spacing-md)';
+                        ctaDock.style.maxWidth = '400px';
+                        ctaDock.style.width = 'auto';
+                        ctaDock.style.borderRadius = '999px';
+                        ctaDock.style.zIndex = '100';
+                        isDocked = false;
+                    }
+                } else { // Mobile behavior - always sticky full-width bottom bar
+                    ctaDock.style.position = 'fixed';
+                    ctaDock.style.bottom = '0';
+                    ctaDock.style.left = '0';
+                    ctaDock.style.right = '0';
+                    ctaDock.style.maxWidth = '100%';
+                    ctaDock.style.width = '100%';
+                    ctaDock.style.borderRadius = '0';
+                    ctaDock.style.zIndex = '1000';
+                }
+            });
 
-  <!-- 20. FOOTER -->
-  <footer style="background: #050404; border-top: 1px solid var(--border-line); padding: 40px 0; text-align: center;">
-    <div class="container">
-      <div style="font-family: var(--font-display); font-size: 16px; font-weight: 700; margin-bottom: 8px;">
-        JEV EAGLE HAND KARATEDO PHILIPPINES
-      </div>
-      <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 8px;">
-        Poblacion, Montemayor St., Malasiqui, Pangasinan Philippines 2421
-      </p>
-      <p style="color: rgba(255, 245, 242, 0.4); font-size: 12px;">
-        &copy; JEV Eagle Hand Karatedo Philippines. All rights reserved. 30 Years of Building Champions.
-      </p>
-    </div>
-  </footer>
+            // Social proof toast every 15 seconds
+            const socialProofNames = [
+                { name: "Juan Dela Cruz", city: "Malasiqui" },
+                { name: "Maria Santos", city: "Dagupan" },
+                { name: "Pedro Reyes", city: "Urdaneta" },
+                { name: "Ana Gomez", city: "Mangaldan" },
+                { name: "Jose Lim", city: "San Carlos" },
+                { name: "Carla David", city: "Sta. Barbara" },
+                { name: "Anton Ramos", city: "Calasiao" },
+                { name: "Sofia Garcia", city: "Tayug" }
+            ];
 
-  <!-- STICKY CTA BAR -->
-  <div id="fc-sticky-bar" class="sticky-bar">
-    <span style="font-size: 14px; font-weight: 600;">JEV Karatedo Malasiqui &bull; ₱800/Month</span>
-    <a href="#" onclick="if(typeof fcTrackEvent==='function'){fcTrackEvent('InitiateCheckout');}var b=document.getElementById('fc-bump-checkbox');var bp=b&&b.checked;var ne=document.getElementById('fc-checkout-name');var ee=document.getElementById('fc-checkout-email');if(ne&&ee){var nm=ne.value.trim();var em=ee.value.trim();if(!nm||!em){alert(&quot;Pakilagay ang pangalan at email mo bago magpatuloy.&quot;);return false;}}var h=bp?&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;:&quot;https://web.facebook.com/profile.php?id=61593599176152&quot;;if(h&&h!=='#'){window.open(h,'_blank','noopener');}return false;" class="btn-main fc-btn-primary" style="padding: 10px 22px; font-size: 13px;">
-      <span>I-CLAIM ANG FREE TRIAL</span>
-    </a>
-  </div>
+            function showSocialProofToast() {
+                const randomIndex = Math.floor(Math.random() * socialProofNames.length);
+                const randomPerson = socialProofNames[randomIndex];
+                const message = `${randomPerson.name} from ${randomPerson.city} just enrolled in a FREE trial class!`;
 
-  <!-- SOCIAL PROOF TOAST -->
-  <div id="fc-social-toast" class="toast-box">
-    <div class="toast-dot"></div>
-    <div style="font-size: 12px; line-height: 1.4;">
-      <div id="toast-text" style="font-weight: 600;">Angelo M. mula Malasiqui</div>
-      <div style="color: var(--text-muted);">Kababook lang ng Free Trial Class!</div>
-    </div>
-  </div>
+                const toast = document.createElement('div');
+                toast.style.cssText = `
+                    position: fixed;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: rgba(0, 0, 0, 0.85);
+                    color: var(--brand-text);
+                    padding: 12px 20px;
+                    border-radius: 8px;
+                    font-size: 14px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                    z-index: 9999;
+                    opacity: 0;
+                    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                `;
+                toast.innerHTML = `
+                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;flex-shrink:0;">
+                        <path d="M17 17l5 5"></path><path d="M10 10l-2 2-2-2"></path><circle cx="12" cy="12" r="10"></circle><path d="M12 6V3"></path><path d="M18 12h3"></path><path d="M6 12H3"></path><path d="M12 18v3"></path>
+                    </svg>
+                    <span>${message}</span>
+                `;
+                document.body.appendChild(toast);
 
-  <!-- REQUIRED SCRIPT: SCROLL REVEAL -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      var els = document.querySelectorAll('.fc-reveal');
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if(e.isIntersecting){
-            e.target.classList.add('fc-visible');
-            io.unobserve(e.target);
-          }
+                setTimeout(() => {
+                    toast.style.opacity = '1';
+                    toast.style.transform = 'translateX(-50%) translateY(0)';
+                }, 100);
+
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    toast.style.transform = 'translateX(-50%) translateY(20px)';
+                    toast.addEventListener('transitionend', () => toast.remove());
+                }, 5000); // Toast visible for 5 seconds
+            }
+
+            // Start showing toasts after an initial delay
+            setTimeout(() => {
+                showSocialProofToast();
+                setInterval(showSocialProofToast, 15000); // Repeat every 15 seconds
+            }, 5000); // First toast after 5 seconds
         });
-      }, {threshold: 0.15, rootMargin: '0px 0px -40px 0px'});
-      els.forEach(function(el){ io.observe(el); });
-    });
-  </script>
-
-  <!-- REQUIRED JAVASCRIPT: ACCORDION, STICKY BAR, & TOAST -->
-  <script>
-    // 1. FAQ Accordion
-    document.querySelectorAll('.faq-item').forEach(function(item) {
-      item.addEventListener('click', function() {
-        var isOpen = this.classList.contains('active');
-        document.querySelectorAll('.faq-item').forEach(function(el) {
-          el.classList.remove('active');
-        });
-        if (!isOpen) {
-          this.classList.add('active');
-        }
-      });
-    });
-
-    // 2. Floating Sticky CTA Bar (After 400px)
-    var stickyBar = document.getElementById('fc-sticky-bar');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 400) {
-        stickyBar.classList.add('visible');
-      } else {
-        stickyBar.classList.remove('visible');
-      }
-    });
-
-    // 3. Social Proof Toast (Every 15s)
-    var realisticLeads = [
-      "Mark D. mula sa Malasiqui",
-      "Jessica T. mula sa San Carlos",
-      "Coach Dave mula sa Bayambang",
-      "Nanay Grace mula sa Malasiqui",
-      "Christian R. mula sa Calasiao",
-      "Reynaldo B. mula sa Malasiqui"
-    ];
-    var toast = document.getElementById('fc-social-toast');
-    var toastText = document.getElementById('toast-text');
-
-    function triggerToast() {
-      var randomName = realisticLeads[Math.floor(Math.random() * realisticLeads.length)];
-      toastText.textContent = randomName;
-      toast.classList.add('show');
-      setTimeout(function() {
-        toast.classList.remove('show');
-      }, 4500);
-    }
-
-    setInterval(triggerToast, 15000);
-    setTimeout(triggerToast, 4000);
-  </script>
+    </script>
+    <script>document.addEventListener('DOMContentLoaded',function(){var els=document.querySelectorAll('.fc-reveal');var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('fc-visible');io.unobserve(e.target);}});},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){io.observe(el);});});</script>
 <script>(function(){
 if(window.__fcMotion)return;window.__fcMotion=1;
 var L='modern',D=document,W=window,H=D.documentElement;
@@ -1759,7 +1727,7 @@ function motion(){
       var d=parseInt(el.style.getPropertyValue('--fc-d'))||0;
       setTimeout(function(){el.classList.add('fc-m-done');el.style.setProperty('--fc-d','0ms');},d+950);
     });
-  },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  },{threshold:0,rootMargin:'0px 0px -8% 0px'});
 
   function skip(el){
     if(/^(SCRIPT|STYLE|NAV|HEADER|FOOTER|FORM|VIDEO|IFRAME|NOSCRIPT|BUTTON|INPUT|SELECT|TEXTAREA|LINK|META)$/.test(el.tagName))return true;
@@ -1890,6 +1858,7 @@ ready(function(){
 });
 })();
 </script>
+<style>#fc-legal-content,#fc-legal-content *{color:#1f2937 !important;background:transparent !important;opacity:1 !important;text-shadow:none !important}#fc-legal-content h1,#fc-legal-content h2,#fc-legal-content h3,#fc-legal-content strong{color:#111827 !important}#fc-legal-content a{color:#2563eb !important;text-decoration:underline}</style>
 <div id="fc-legal-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:99999;align-items:center;justify-content:center;padding:20px;">
 <div style="background:#fff;color:#111;max-width:640px;width:100%;max-height:80vh;overflow-y:auto;border-radius:12px;padding:32px;position:relative;font-family:sans-serif;">
 <button onclick="document.getElementById('fc-legal-modal').style.display='none'" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;">&times;</button>
